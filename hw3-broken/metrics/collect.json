@@ -1,0 +1,37 @@
+{
+  "version": "v1",
+  "source": "levos06/ru_wiki_qa",
+  "source_revision": "23b9d3a",
+  "source_sha256": "eda25935bf95b7da5bfc2dc4f8602d653fd19e6120e562aa812dd84beb26d235",
+  "source_columns": [
+    "answer",
+    "original_id",
+    "question"
+  ],
+  "context_included": false,
+  "quality_filter_applied": false,
+  "quality_threshold": null,
+  "rows_scanned": 92340,
+  "rows_written": 2600,
+  "eligible_candidates": 92338,
+  "source_articles": 30780,
+  "selected_articles": 2518,
+  "max_per_article": 2,
+  "sampling": {
+    "method": "answer-length-stratified real-source sampling",
+    "source_tail_fraction": 0.08,
+    "tail_pool_size": 7388,
+    "raw_answer_len_ratios": {
+      "v1": 1.74,
+      "v2": 1.75
+    },
+    "short_pool_answer_length_max": 275,
+    "long_pool_answer_length_min": 432
+  },
+  "system_prompt_variants": 5,
+  "dropped_missing": 0,
+  "dropped_lengths": 2,
+  "dropped_quality": 0,
+  "dropped_source_duplicate": 0,
+  "seconds": 2.57
+}

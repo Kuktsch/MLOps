@@ -1,0 +1,283 @@
+schema: '2.0'
+stages:
+  source:
+    cmd: python -m scripts.download_source
+    deps:
+    - path: scripts/download_source.py
+      hash: md5
+      md5: f4a51769d1ba2748ac4f3ed3d0f2d73d
+      size: 2342
+    - path: src/config.py
+      hash: md5
+      md5: d4ac2c081c2c92844fd58a330f6a82f5
+      size: 1327
+    params:
+      params.yaml:
+        source:
+          repository: levos06/ru_wiki_qa
+          revision: 23b9d3a
+          filename: final_qa_dataset.parquet
+          sha256: 
+            eda25935bf95b7da5bfc2dc4f8602d653fd19e6120e562aa812dd84beb26d235
+          url: 
+            https://huggingface.co/datasets/levos06/ru_wiki_qa/resolve/23b9d3a/final_qa_dataset.parquet
+          output: data/source/ru_wiki_qa.parquet
+          retries: 3
+    outs:
+    - path: data/source/ru_wiki_qa.parquet
+      hash: md5
+      md5: 69b8af465f9ec18c8da523d95200b5a9
+      size: 37326996
+  collect:
+    cmd: python -m src.collect
+    deps:
+    - path: data/source/ru_wiki_qa.parquet
+      hash: md5
+      md5: 69b8af465f9ec18c8da523d95200b5a9
+      size: 37326996
+    - path: src/collect.py
+      hash: md5
+      md5: eeb1e96694f04203cdaeda639a4eea41
+      size: 7193
+    - path: src/config.py
+      hash: md5
+      md5: d4ac2c081c2c92844fd58a330f6a82f5
+      size: 1327
+    - path: src/sampling.py
+      hash: md5
+      md5: 6a4263899e973c1b74d251481be19cb7
+      size: 5265
+    - path: src/stats.py
+      hash: md5
+      md5: a54925032eff4769647b5775d72dd423
+      size: 2222
+    - path: src/textnorm.py
+      hash: md5
+      md5: 499eb6f532bbaa8f81951d5e47fb1545
+      size: 2277
+    params:
+      params.yaml:
+        collect:
+          version: v1
+          sources:
+            v1:
+            - data/source/ru_wiki_qa.parquet
+            v2:
+            - data/source/ru_wiki_qa.parquet
+          rows:
+            v1: 2600
+            v2: 4200
+          min_quality_prob: 0.85
+          max_examples_per_article: 3
+          min_context_chars: 150
+          max_context_chars: 2700
+          min_question_chars: 25
+          min_answer_chars: 40
+          max_answer_chars: 1100
+          seed: 42
+          system_prompts:
+          - Ответь на энциклопедический вопрос по-русски. Не придумывай факты, 
+            если не уверен в ответе.
+          - Дай точный и содержательный ответ на следующий фактологический 
+            вопрос.
+          - Сформулируй ясный ответ на вопрос, избегая неподтверждённых 
+            утверждений.
+          - Ответь по существу на русскоязычный энциклопедический вопрос.
+          - Объясни кратко и понятно, что известно по заданному вопросу.
+        diversity.min_answer_len_ratio: 1.6
+        paths.metrics_collect: metrics/collect.json
+        paths.raw: data/raw.jsonl
+        source.repository: levos06/ru_wiki_qa
+        source.revision: 23b9d3a
+        source.sha256: 
+          eda25935bf95b7da5bfc2dc4f8602d653fd19e6120e562aa812dd84beb26d235
+    outs:
+    - path: data/raw.jsonl
+      hash: md5
+      md5: fab8656c5f62f4f5c0809c65e0707f38
+      size: 2885585
+    - path: metrics/collect.json
+      hash: md5
+      md5: 1af212e3fd51bccad780b2c8b906b3ae
+      size: 959
+  clean:
+    cmd: python -m src.clean
+    deps:
+    - path: data/raw.jsonl
+      hash: md5
+      md5: fab8656c5f62f4f5c0809c65e0707f38
+      size: 2885585
+    - path: src/clean.py
+      hash: md5
+      md5: 3599dbd0f714bc2e68fc833724aab3d7
+      size: 4389
+    - path: src/config.py
+      hash: md5
+      md5: d4ac2c081c2c92844fd58a330f6a82f5
+      size: 1327
+    - path: src/dedup.py
+      hash: md5
+      md5: 24f00db0eca8e5d9b02e635f2148d613
+      size: 2420
+    - path: src/pii.py
+      hash: md5
+      md5: 54de6f3690578d83cfc17094d2d2aa7a
+      size: 2397
+    - path: src/schema.py
+      hash: md5
+      md5: ad834fcb5caa483d3d5d5bfabb433cc0
+      size: 3054
+    - path: src/stats.py
+      hash: md5
+      md5: a54925032eff4769647b5775d72dd423
+      size: 2222
+    - path: src/textnorm.py
+      hash: md5
+      md5: 499eb6f532bbaa8f81951d5e47fb1545
+      size: 2277
+    params:
+      params.yaml:
+        clean:
+          min_user_chars: 30
+          max_user_chars: 4000
+          min_assistant_chars: 2
+          near_dup:
+            enabled: true
+            shingle_words: 4
+            num_perm: 128
+            threshold: 0.85
+          pii:
+            enabled: true
+        collect.version: v1
+        paths.clean: data/clean.jsonl
+        paths.metrics_clean: metrics/clean.json
+        paths.raw: data/raw.jsonl
+    outs:
+    - path: data/clean.jsonl
+      hash: md5
+      md5: 356c3fc8a4c2c9477ae4a6a9f4168977
+      size: 2875507
+    - path: metrics/clean.json
+      hash: md5
+      md5: 020c870d110beb84d9660dcc535aa9f1
+      size: 445
+  diversity:
+    cmd: python -m src.diversity
+    deps:
+    - path: data/clean.jsonl
+      hash: md5
+      md5: 356c3fc8a4c2c9477ae4a6a9f4168977
+      size: 2875507
+    - path: src/config.py
+      hash: md5
+      md5: d4ac2c081c2c92844fd58a330f6a82f5
+      size: 1327
+    - path: src/diversity.py
+      hash: md5
+      md5: 3685ef57cc63a410fc172cf15062e7e7
+      size: 6533
+    - path: src/schema.py
+      hash: md5
+      md5: ad834fcb5caa483d3d5d5bfabb433cc0
+      size: 3054
+    - path: src/stats.py
+      hash: md5
+      md5: a54925032eff4769647b5775d72dd423
+      size: 2222
+    - path: src/textnorm.py
+      hash: md5
+      md5: 499eb6f532bbaa8f81951d5e47fb1545
+      size: 2277
+    params:
+      params.yaml:
+        collect.version: v1
+        diversity:
+          min_examples: 1000
+          min_system_prompts: 3
+          min_groups: 50
+          max_group_share: 0.1
+          min_answer_len_ratio: 1.6
+          max_same_length_share: 0.25
+          max_duplicate_answer_share: 0.3
+        paths.clean: data/clean.jsonl
+        paths.metrics_diversity: metrics/diversity.json
+        split.group_key: topic
+    outs:
+    - path: metrics/diversity.json
+      hash: md5
+      md5: 73d7248b0a8ce8f1f24e271073d8eae5
+      size: 658
+  split:
+    cmd: python -m src.split
+    deps:
+    - path: data/clean.jsonl
+      hash: md5
+      md5: 356c3fc8a4c2c9477ae4a6a9f4168977
+      size: 2875507
+    - path: metrics/diversity.json
+      hash: md5
+      md5: 73d7248b0a8ce8f1f24e271073d8eae5
+      size: 658
+    - path: src/config.py
+      hash: md5
+      md5: d4ac2c081c2c92844fd58a330f6a82f5
+      size: 1327
+    - path: src/contamination.py
+      hash: md5
+      md5: 98915eb8c66ca47374fd3b5e84dfea02
+      size: 2243
+    - path: src/dedup.py
+      hash: md5
+      md5: 24f00db0eca8e5d9b02e635f2148d613
+      size: 2420
+    - path: src/schema.py
+      hash: md5
+      md5: ad834fcb5caa483d3d5d5bfabb433cc0
+      size: 3054
+    - path: src/split.py
+      hash: md5
+      md5: b83269eebc2f845d4434ff316bb135da
+      size: 4313
+    - path: src/textnorm.py
+      hash: md5
+      md5: 499eb6f532bbaa8f81951d5e47fb1545
+      size: 2277
+    params:
+      params.yaml:
+        clean.near_dup:
+          enabled: true
+          shingle_words: 4
+          num_perm: 128
+          threshold: 0.85
+        collect.version: v1
+        contamination:
+          threshold: 0.85
+        paths.clean: data/clean.jsonl
+        paths.metrics_split: metrics/split.json
+        paths.test: data/test.jsonl
+        paths.train: data/train.jsonl
+        paths.val: data/val.jsonl
+        split:
+          group_key: topic
+          ratios:
+            train: 0.8
+            val: 0.1
+            test: 0.1
+          seed: 42
+    outs:
+    - path: data/test.jsonl
+      hash: md5
+      md5: d319a27751606dd0c18560d84d026175
+      size: 285001
+    - path: data/train.jsonl
+      hash: md5
+      md5: 82c39daaddb528485bebd84028dd32f7
+      size: 2304903
+    - path: data/val.jsonl
+      hash: md5
+      md5: 5b804f170b7d3939f03f862cc4e1e689
+      size: 285603
+    - path: metrics/split.json
+      hash: md5
+      md5: ffd26a0b0f4bc87d5a5c20848f618ced
+      size: 520

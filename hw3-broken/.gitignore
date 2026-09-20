@@ -1,0 +1,10 @@
+data/
+.dvc-storage/
+.venv/
+__pycache__/
+*.py[cod]
+.DS_Store
+*.bak
+*.orig
+*.log
+~$*

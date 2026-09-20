@@ -1,0 +1,73 @@
+# HW3: Russian encyclopedic question-answer pairs (compact source has no context).
+source:
+  repository: "levos06/ru_wiki_qa"
+  revision: "23b9d3a"
+  filename: "final_qa_dataset.parquet"
+  sha256: "eda25935bf95b7da5bfc2dc4f8602d653fd19e6120e562aa812dd84beb26d235"
+  url: "https://huggingface.co/datasets/levos06/ru_wiki_qa/resolve/23b9d3a/final_qa_dataset.parquet"
+  output: "data/source/ru_wiki_qa.parquet"
+  retries: 3
+collect:
+  version: "v1"
+  sources:
+    v1: ["data/source/ru_wiki_qa.parquet"]
+    v2: ["data/source/ru_wiki_qa.parquet"]
+  rows:
+    v1: 2600
+    v2: 4200
+  # Compact parquet has question/answer/original_id only; text and quality_prob optional.
+  # Never fabricate context or claim quality_prob was used when it is absent.
+  min_quality_prob: 0.85
+  max_examples_per_article: 3
+  min_context_chars: 150
+  max_context_chars: 2700
+  min_question_chars: 25
+  min_answer_chars: 40
+  max_answer_chars: 1100
+  seed: 42
+  system_prompts:
+    - "Ответь на энциклопедический вопрос по-русски. Не придумывай факты, если не уверен в ответе."
+    - "Дай точный и содержательный ответ на следующий фактологический вопрос."
+    - "Сформулируй ясный ответ на вопрос, избегая неподтверждённых утверждений."
+    - "Ответь по существу на русскоязычный энциклопедический вопрос."
+    - "Объясни кратко и понятно, что известно по заданному вопросу."
+
+clean:
+  min_user_chars: 30
+  max_user_chars: 4000
+  min_assistant_chars: 2
+  near_dup:
+    enabled: true
+    shingle_words: 4
+    num_perm: 128
+    threshold: 0.85
+  pii:
+    enabled: true
+diversity:
+  min_examples: 1000
+  min_system_prompts: 3
+  min_groups: 50
+  max_group_share: 0.10
+  min_answer_len_ratio: 1.6
+  max_same_length_share: 0.25
+  max_duplicate_answer_share: 0.30
+split:
+  group_key: "topic"
+  ratios:
+    train: 0.8
+    val: 0.1
+    test: 0.1
+  seed: 42
+contamination:
+  threshold: 0.85
+paths:
+  raw: "data/raw.jsonl"
+  clean: "data/clean.jsonl"
+  train: "data/train.jsonl"
+  val: "data/val.jsonl"
+  test: "data/test.jsonl"
+  metrics_collect: "metrics/collect.json"
+  metrics_clean: "metrics/clean.json"
+  metrics_split: "metrics/split.json"
+  metrics_diversity: "metrics/diversity.json"
+  datasheet: "docs/datasheet.md"

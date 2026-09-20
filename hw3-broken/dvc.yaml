@@ -1,0 +1,100 @@
+stages:
+  source:
+    cmd: python -m scripts.download_source
+    deps:
+      - scripts/download_source.py
+      - src/config.py
+    params:
+      - source
+    outs:
+      - data/source/ru_wiki_qa.parquet
+  collect:
+    cmd: python -m src.collect
+    deps:
+      - data/source/ru_wiki_qa.parquet
+      - src/collect.py
+      - src/sampling.py
+      - src/stats.py
+      - src/config.py
+      - src/textnorm.py
+    params:
+      - collect
+      - diversity.min_answer_len_ratio
+      - source.repository
+      - source.revision
+      - source.sha256
+      - paths.raw
+      - paths.metrics_collect
+    outs:
+      - data/raw.jsonl
+    metrics:
+      - metrics/collect.json:
+          cache: false
+  clean:
+    cmd: python -m src.clean
+    deps:
+      - data/raw.jsonl
+      - src/clean.py
+      - src/dedup.py
+      - src/pii.py
+      - src/schema.py
+      - src/stats.py
+      - src/textnorm.py
+      - src/config.py
+    params:
+      - clean
+      - collect.version
+      - paths.raw
+      - paths.clean
+      - paths.metrics_clean
+    outs:
+      - data/clean.jsonl
+    metrics:
+      - metrics/clean.json:
+          cache: false
+  diversity:
+    cmd: python -m src.diversity
+    deps:
+      - data/clean.jsonl
+      - src/diversity.py
+      - src/stats.py
+      - src/schema.py
+      - src/textnorm.py
+      - src/config.py
+    params:
+      - diversity
+      - split.group_key
+      - collect.version
+      - paths.clean
+      - paths.metrics_diversity
+    metrics:
+      - metrics/diversity.json:
+          cache: false
+  split:
+    cmd: python -m src.split
+    deps:
+      - data/clean.jsonl
+      - metrics/diversity.json
+      - src/split.py
+      - src/contamination.py
+      - src/dedup.py
+      - src/schema.py
+      - src/textnorm.py
+      - src/config.py
+    params:
+      - split
+      - contamination
+      - clean.near_dup
+      - collect.version
+      - paths.clean
+      - paths.train
+      - paths.val
+      - paths.test
+      - paths.metrics_split
+    outs:
+      - data/train.jsonl
+      - data/val.jsonl
+      - data/test.jsonl
+    metrics:
+      - metrics/split.json:
+          cache: false
