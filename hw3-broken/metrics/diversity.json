@@ -1,20 +1,20 @@
 {
-  "version": "v1",
-  "examples": 2589,
+  "version": "v2",
+  "examples": 4181,
   "system_prompts": 5,
-  "groups": 2507,
-  "largest_group": "ru-2349223-143851819",
-  "largest_group_share": 0.0008,
+  "groups": 3974,
+  "largest_group": "ru-8209245-146726453",
+  "largest_group_share": 0.0007,
   "answer_len": {
-    "p10": 261,
+    "p10": 260,
     "p50": 344,
     "p90": 455,
-    "ratio_p90_p10": 1.74,
+    "ratio_p90_p10": 1.75,
     "cv": 0.21,
-    "min": 192,
+    "min": 180,
     "max": 603
   },
-  "same_length_share": 0.0112,
+  "same_length_share": 0.0103,
   "duplicate_answer_share": 0.0,
   "thresholds": {
     "min_examples": 1000,
@@ -27,5 +27,5 @@
   },
   "violations": [],
   "passed": true,
-  "seconds": 0.2
+  "seconds": 0.32
 }

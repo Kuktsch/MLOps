@@ -8,7 +8,7 @@ source:
   output: "data/source/ru_wiki_qa.parquet"
   retries: 3
 collect:
-  version: "v1"
+  version: "v2"
   sources:
     v1: ["data/source/ru_wiki_qa.parquet"]
     v2: ["data/source/ru_wiki_qa.parquet"]
