@@ -1,135 +1,163 @@
-"""Generate factual datasheet from measured pipeline metrics; no invented counts."""
+"""Generate a concise datasheet for both recorded DVC dataset versions."""
 import json
+import subprocess
 from pathlib import Path
 
 from src.config import load_params
 
+STAGES = ("collect", "clean", "diversity", "split")
 
-def main() -> None:
-    p = load_params()
-    paths = p["paths"]
-    metrics = {}
-    for name in ("collect", "clean", "diversity", "split"):
-        metrics[name] = json.loads(Path(paths[f"metrics_{name}"]).read_text(encoding="utf-8"))
-    c, d, div, s = (metrics[x] for x in ("collect", "clean", "diversity", "split"))
-    if len({x["version"] for x in (c, d, div, s)}) != 1:
-        raise SystemExit("Версии метрик не совпадают: datasheet нельзя обновлять")
-    clean = p["clean"]
-    context_description = (
-        "Контекст исходной статьи передаётся вместе с вопросом."
-        if c["context_included"] else
-        "Компактный источник **не содержит контекста**: модель получает только вопрос."
+
+def git(*args):
+    return subprocess.run(["git", *args], check=True, capture_output=True, text=True).stdout.strip()
+
+
+def read_current(paths):
+    return {stage: json.loads(Path(paths[f"metrics_{stage}"]).read_text(encoding="utf-8"))
+            for stage in STAGES}
+
+
+def read_history(paths):
+    try:
+        prefix = git("rev-parse", "--show-prefix")
+        commits = git("log", "--format=%H", "--", paths["metrics_clean"]).splitlines()
+    except (OSError, subprocess.CalledProcessError):
+        return {}
+
+    versions = {}
+    for commit in commits:
+        try:
+            metrics = {
+                stage: json.loads(git("show", f"{commit}:{prefix}{paths[f'metrics_{stage}']}"))
+                for stage in STAGES
+            }
+        except (OSError, subprocess.CalledProcessError, ValueError):
+            continue
+        names = {item.get("version") for item in metrics.values()}
+        if len(names) == 1:
+            name = names.pop()
+            if name in ("v1", "v2") and name not in versions:
+                versions[name] = metrics
+        if len(versions) == 2:
+            break
+    return versions
+
+
+def fmt(value):
+    if value is None:
+        return "—"
+    if isinstance(value, int):
+        return f"{value:,}".replace(",", " ")
+    return str(value).replace(".", ",")
+
+
+def get(metrics, stage, *keys):
+    if metrics is None:
+        return None
+    value = metrics[stage]
+    for key in keys:
+        value = value[key]
+    return value
+
+
+def main():
+    params = load_params()
+    paths = params["paths"]
+    current = read_current(paths)
+    current_versions = {item["version"] for item in current.values()}
+    if len(current_versions) != 1:
+        raise SystemExit("Версии метрик не совпадают")
+
+    versions = read_history(paths)
+    versions[current_versions.pop()] = current
+    v1, v2 = versions.get("v1"), versions.get("v2")
+
+    def table_row(label, stage, *keys):
+        return f"| {label} | {fmt(get(v1, stage, *keys))} | {fmt(get(v2, stage, *keys))} |"
+
+    def split_value(metrics):
+        if metrics is None:
+            return "—"
+        sizes = metrics["split"]["sizes"]
+        return " / ".join(fmt(sizes[key]) for key in ("train", "val", "test"))
+
+    def check_value(metrics):
+        if metrics is None:
+            return "—"
+        return "Пройдена" if metrics["diversity"]["passed"] else "Не пройдена"
+
+    table = "\n".join([
+        "| Показатель | v1 | v2 |",
+        "|---|---:|---:|",
+        table_row("Собрано записей", "collect", "rows_written"),
+        table_row("Удалено по длине при очистке", "clean", "dropped_length"),
+        table_row("Удалено точных дубликатов", "clean", "dropped_exact_dup"),
+        table_row("Удалено почти-дубликатов", "clean", "dropped_near_dup"),
+        table_row("Строк с замаскированными ПДн", "clean", "pii_rows_masked"),
+        table_row("**После очистки**", "clean", "rows_out"),
+        table_row("Групп по статьям", "diversity", "groups"),
+        table_row("Системных инструкций", "diversity", "system_prompts"),
+        table_row("Длина ответа, p10 (символов)", "diversity", "answer_len", "p10"),
+        table_row("Разброс длин ответа, p90/p10", "diversity", "answer_len", "ratio_p90_p10"),
+        f"| Train / val / test | {split_value(v1)} | {split_value(v2)} |",
+        table_row("Почти-дубликатов между train и test", "split", "contamination", "near_dup_pairs"),
+        f"| Проверка разнообразия | {check_value(v1)} | {check_value(v2)} |",
+    ])
+
+    delta = ""
+    if v1 and v2:
+        added = v2["clean"]["rows_out"] - v1["clean"]["rows_out"]
+        delta = f"**v2 расширяет v1 на {fmt(added)} записи после очистки.** "
+    baseline = v2 or v1
+    source_rows = baseline["collect"].get("eligible_candidates") if baseline else None
+    context = current["collect"].get("context_included", False)
+    task_note = (
+        "Контекст исходной статьи включён в вопрос."
+        if context else
+        "Текстов статей в использованном Parquet нет: задача — **ответ на вопрос без предоставленного контекста**."
     )
-    text = f"""# Datasheet: Russian Encyclopedia QA — {c['version']}
+    limitation = (
+        "Ответы не проверялись вручную на фактическую точность."
+        if context else
+        "Ответы не проверялись вручную на фактическую точность; без текстов статей их нельзя сверить с первоисточником."
+    )
+    path = params["source"]["filename"]
+    repository = params["source"]["repository"]
+    count = f" ({fmt(source_rows)} подходящих исходных записей)" if source_rows is not None else ""
 
-> Generated from actual pipeline metrics. Do not modify the numbers manually.
-> Тема для согласования с преподавателем: «Русскоязычные энциклопедические вопросы и ответы».
+    text = f"""# Datasheet — Russian Encyclopedia QA (v1 и v2)
 
-## Назначение
+## 1. Назначение и источник
 
-Instruction fine-tuning для содержательных ответов на русскоязычные
-фактологические вопросы. {context_description} Не предназначен
-для медицинских, юридических или иных решений с высоким риском. Ответы исходного
-набора сгенерированы автоматически и **не прошли ручную фактологическую проверку**.
+Русскоязычный датасет энциклопедических вопросов и ответов для дообучения языковой модели в формате chat. Источник — [levos06/ru_wiki_qa](https://huggingface.co/datasets/{repository}), файл `{path}`{count}. На карточке набора указана лицензия **MIT**; при распространении переработанных материалов Википедии необходимо отдельно учитывать их условия использования и атрибуцию.
 
-## Источник и условия использования
+Источник содержит `question`, `answer` и `original_id`. {task_note}
 
-- Репозиторий: https://huggingface.co/datasets/{p['source']['repository']}
-- Использованный файл: `{p['source']['filename']}`, revision `{p['source']['revision']}`.
-- Контрольная сумма SHA256: `{p['source']['sha256']}`.
-- На карточке исходного набора указана MIT; исходный материал основан на статьях
-  Википедии, для которых необходимо отдельно учитывать CC BY-SA и атрибуцию.
-  Исходные `original_id` сохранены в `topic`, для восстановления происхождения;
-  это **не** полный список авторов статей. Перед публичным распространением
-  проверьте условия атрибуции/совместимости лицензий.
-- Не включайте в Git исходный parquet, raw, clean или три split-файла.
+## 2. Как подготовлен датасет
 
-## Переработка готового источника
+Из готового источника сформированы две собственные выборки с воспроизводимым отбором коротких, средних и длинных ответов. Записи преобразованы в JSONL с полями `id`, `topic`, `messages` (роли `system → user → assistant`); используется пять вариантов системной инструкции. `original_id` сохранён как `topic` для группировки по исходной статье.
 
-1. Обязательны `question`, `answer`, `original_id`; `text` и `quality_prob`
-   используются только если присутствуют. Эмбеддинги и кластерные метки отброшены.
-   Реальные столбцы: `{', '.join(c['source_columns'])}`. Контекст есть: **{c['context_included']}**.
-2. Отсеиваются пропуски, короткие/длинные вопросы и ответы; контекст по длине
-   фильтруется только при наличии. `quality_prob ≥ {p['collect']['min_quality_prob']}`
-   только при наличии столбца: **{c['quality_filter_applied']}**.
-3. Источник детерминированно семплируется по SHA256(seed, article+question)
-   с выборкой реально коротких, средних и длинных ответов (20%/60%/20%).
-   Исходные ответы не меняются, пороги diversity не ослабляются.
-   Доля хвостов источника: {c['sampling']['source_tail_fraction']};
-   коэффициенты разброса сырых v1/v2: {c['sampling']['raw_answer_len_ratios']}.
-   Отбор не является случайной репрезентативной выборкой длин ответов: намеренно
-   сильнее представлены короткие и длинные ответы для разнообразия инструкций.
-   Стабильный порядок использует SHA256(seed, article+question),
-   максимум {p['collect']['max_examples_per_article']} вопроса на статью,\n   v1 — {p['collect']['rows']['v1']}, v2 — {p['collect']['rows']['v2']} входных строк.
-   v1 — префикс v2 в пределах этой версии кода/исходника.
-4. В компактном Parquet исходный вопрос составляет сообщение пользователя;
-   контекст добавляется только из реального поля `text`, если оно существует.
-   Ответ сохраняется; пять формулировок системной инструкции выбираются хешем id.
-5. Валидация chat-схемы; фильтры длины; маскирование телефона/email/даты
-   рождения; exact и MinHash/LSH near-duplicate дедупликация по *вопросу*, а
-   не контексту, если он присутствует.
-6. 80/10/10 group-disjoint split по `original_id` (статья Википедии);
-   проверка id/текста/LSH near-dup и отсутствия общих статей между train/test.
+Пайплайн `collect → clean → diversity → split` проверяет схему, фильтрует длины, маскирует телефоны, email и даты рождения, удаляет точные и почти одинаковые вопросы (MinHash). Гейт разнообразия останавливает обработку при нарушении порогов из `params.yaml`.
 
-## Измеренные показатели {c['version']}
+## 3. Результаты двух версий
 
-| Показатель | Значение |
-|---|---:|
-| Просмотрено строк источника | {c['rows_scanned']} |
-| Допущено к выборке после первичных фильтров | {c['eligible_candidates']} |
-| Собрано сырых примеров | {c['rows_written']} |
-| Отброшено за отсутствие полей | {c['dropped_missing']} |
-| Отброшено по длине | {c['dropped_lengths']} |
-| Отброшено по quality_prob (если применимо) | {c['dropped_quality']} |
-| Отброшено повторных article+question в источнике | {c['dropped_source_duplicate']} |
-| Дошло до clean | {d['rows_in']} |
-| Отброшено при clean по длине | {d['dropped_length']} |
-| Удалено точных дубликатов | {d['dropped_exact_dup']} |
-| Удалено почти-дубликатов | {d['dropped_near_dup']} |
-| Маскировано строк с ПДн | {d['pii_rows_masked']} |
-| **Примеров после очистки** | **{d['rows_out']}** |
-| **Статей / групп** | **{div['groups']}** |
-| Системных инструкций | {div['system_prompts']} |
-| Доля крупнейшей группы | {div['largest_group_share']:.2%} |
-| p10 / p50 / p90 длины ответа (символы) | {div['answer_len']['p10']} / {div['answer_len']['p50']} / {div['answer_len']['p90']} |
-| p90/p10 длины ответа | {div['answer_len']['ratio_p90_p10']} |
-| Доля наиболее частой длины | {div['same_length_share']:.2%} |
-| Доля повторов текста ответа | {div['duplicate_answer_share']:.2%} |
-| Длина запроса: p50 / p90 / p99 | {d['user_chars']['p50']} / {d['user_chars']['p90']} / {d['user_chars']['p99']} |
-| Длина ответа: p50 / p90 / p99 | {d['assistant_chars']['p50']} / {d['assistant_chars']['p90']} / {d['assistant_chars']['p99']} |
-| Diversity gate | {div['passed']} |
-| Train | {s['sizes']['train']} ({s['ratios_actual']['train']:.1%}) |
-| Validation | {s['sizes']['val']} ({s['ratios_actual']['val']:.1%}) |
-| Test | {s['sizes']['test']} ({s['ratios_actual']['test']:.1%}) |
-| Пересечений групп train/test | {s['contamination']['group_overlap']} |
-| Near-duplicate пар train/test | {s['contamination']['near_dup_pairs']} |
+{table}
 
-## Известные ограничения и риски
+{delta}Разделение выполнено примерно в пропорции 80/10/10 по исходным статьям, а не по отдельным строкам; вопросы из одной статьи не распределяются между выборками. Проверка контаминации использует тот же порог похожести, что и очистка.
 
-- QA-ответы могут галлюцинировать или перефразировать неточно; source `quality_prob`
-  отсутствует в компактном parquet и **не применялся**, если `quality_filter_applied=False`.
-- Компактный источник не позволяет автоматически проверить, следует ли ответ из
-  исходной статьи: полного контекста нет. Не проверяется фактологическая корректность.
-- Не проверяется семантическая корректность ответа относительно текста и не
-  выполняется ручная разметка. Near-dup MinHash/LSH приближённый, не обнаруживает
-  все возможные семантические парафразы и может оставлять небольшие лексически
-  непохожие переформулировки.
-- Random-split строк завышал бы качество; split по исходной статье строже.
-- Статьи и корпус отражают перекосы/неполноту Википедии; сведения могут устареть.
-- Маскирование ПДн регулярными выражениями не является полной анонимизацией.
-- В архив не включаются скачанные исходные материалы и результат реального DVC
-  запуска, если он ещё не запускался пользователем.
+Версии данных сохранены в DVC, код и метрики — в Git. Разница между v1 и v2 подтверждается командой `dvc metrics diff`.
 
-## Воспроизводимость
+## 4. Ограничения
 
-`uv sync && make repro && make check`; затем `make versions` для двух Git/DVC
-ревизий и `make diff` для их сравнения. Данные версионируются DVC; Git хранит код,
-конфиг, lock-файлы и метрики. Настройки в `params.yaml`; исходник зафиксирован SHA256.
+- {limitation} Сведения могут устаревать.
+- Отбор по длине специально увеличивает разнообразие, поэтому распределение длин не отражает исходный набор в точности.
+- Маскирование ПДн и MinHash не гарантируют обнаружения всех персональных данных и семантических парафразов.
+- Датасет ограничен русскоязычными энциклопедическими вопросами; его не следует считать универсальным набором для любых диалоговых задач.
 """
-    outfile = Path(paths["datasheet"])
-    outfile.parent.mkdir(parents=True, exist_ok=True)
-    outfile.write_text(text, encoding="utf-8")
-    print(f"datasheet: {outfile} ({c['version']}, {d['rows_out']} clean rows)")
+    dest = Path(paths["datasheet"])
+    dest.parent.mkdir(parents=True, exist_ok=True)
+    dest.write_text(text, encoding="utf-8")
+    print(f"datasheet: {dest} ({', '.join(v for v in ('v1', 'v2') if v in versions)})")
 
 
 if __name__ == "__main__":
