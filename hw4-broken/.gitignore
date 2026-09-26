@@ -1,0 +1,11 @@
+__pycache__/
+*.py[cod]
+.venv/
+# Исходные JSONL и подготовленные тензоры — не для Git
+data/
+# Генерируемые метрики и отчёты коммитятся после make check
+.check_*.log
+.DS_Store
+*:Zone.Identifier
+*.bak
+*.orig
