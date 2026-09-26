@@ -1,5 +1,3 @@
-"""Перенос собственных train/val JSONL из HW3; данные не кладём в архив/Git."""
-
 import argparse
 import json
 import shutil
@@ -37,7 +35,6 @@ def main() -> None:
             "Переключите HW3 на v2 и выполните make repro в hw3-broken"
         )
 
-    # Проверка наличия исходных сообщений до любого копирования.
     for src in sources:
         with src.open(encoding="utf-8") as fh:
             head = next((line for line in fh if line.strip()), None)

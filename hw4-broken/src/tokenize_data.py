@@ -43,8 +43,6 @@ def mask_prompt(input_ids: list[int], n_prompt: int) -> list[int]:
     """labels для лосса."""
     if n_prompt < 0:
         raise ValueError(f"отрицательная граница промпта: {n_prompt}")
-    # После truncation весь ответ может исчезнуть: маскируем ВСЁ,
-    # process_split посчитает такой пример и отбросит.
     prefix = min(n_prompt, len(input_ids))
     return [LABEL_PAD_ID] * prefix + list(input_ids[prefix:])
 
@@ -180,7 +178,7 @@ def process_split(
 
 
 def estimate_train_time(total_tokens: int, params: dict) -> dict:
-    """Прогноз из скорости генерации ДЗ 1 с честной поправкой на обучение."""
+    """Грубый прогноз времени обучения: токены x эпохи / пропускная способность."""
     cfg = params["train_estimate"]
     generation_tps = float(cfg["tokens_per_sec"])
     slowdown_min = float(cfg.get("training_slowdown_min", 2.0))
@@ -346,10 +344,6 @@ def render_report(metrics: dict) -> str:
 
 
 def render_defects(metrics: dict) -> str:
-    """Разбор исходных дефектов с численным подтверждением текущего запуска.
-
-    Значения берём из фактической токенизации, не переносим числа из лекции.
-    """
     train = metrics["splits"]["train"]
     val = metrics["splits"]["val"]
     total = train["total_tokens"]

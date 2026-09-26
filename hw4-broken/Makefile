@@ -3,20 +3,21 @@
 install:
 	uv sync --python 3.12
 
-# Взять настоящий split v2 из соседней HW3; не перезаписывает существующие JSONL.
 import-hw3:
 	uv run python -m scripts.import_hw3
 
-# Подобрать max_seq_len по реальному распределению токенов обоих сплитов.
 calibrate:
 	uv run python -m scripts.calibrate_max_seq_len
 
 prepare: import-hw3 calibrate
 
-# Только для преподавателя: его parquet -> JSONL. Студент использует import-hw3.
+# Стадия 0, только для преподавателя: parquet курса -> data/train.jsonl, data/val.jsonl.
+# У студента вход другой — его датасет из ДЗ 3, положенный в те же файлы.
 sample:
 	uv run python -m scripts.make_sample
 
+# Стадия tokenize: JSONL -> токенизированный датасет + метрики + отчёт.
+# Та же команда объявлена стадией в dvc.yaml — оттуда её и запускает dvc repro.
 tokenize:
 	uv run python -m src.tokenize_data
 
@@ -26,6 +27,5 @@ repro:
 check:
 	bash tests/check.sh
 
-# Не удаляет входные данные из HW3 или сохранённые отчёты.
 clean:
 	rm -rf data/tokenized

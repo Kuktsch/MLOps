@@ -1,9 +1,3 @@
-"""Измерить длины JSONL и выбрать первый подходящий размер из фиксированной сетки.
-
-Не подгоняет тест: доля обрезки остаётся отдельной проверяемой метрикой.
-Модель не загружается, скачивается только токенизатор.
-"""
-
 import re
 from pathlib import Path
 
@@ -37,7 +31,6 @@ def main() -> None:
               f"p90={int(np.percentile(lengths, 90))}, "
               f"p99={int(np.percentile(lengths, 99))}, max={int(lengths.max())}")
 
-    # Цель калибратора: <=1% обрезки на каждом сплите; порог задания остаётся 5%.
     budget = next((c for c in CANDIDATES if all(float(np.mean(a > c)) <= .01
                                                for a in all_lengths.values())), None)
     if budget is None:
