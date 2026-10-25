@@ -1,0 +1,14 @@
+.venv/
+__pycache__/
+data/*
+!data/*.dvc
+!data/.gitignore
+models/
+metrics/
+mlruns/
+mlartifacts/
+*.log
+.DS_Store
+.python-version
+.dvc-storage/
+/submission/

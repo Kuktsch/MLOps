@@ -1,0 +1,8 @@
+.venv
+.dvc
+.dvc-storage
+data
+models
+metrics
+submission
+__pycache__
