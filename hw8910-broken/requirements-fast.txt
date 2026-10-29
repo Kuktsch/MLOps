@@ -1,0 +1,3 @@
+# Only the HTTP test runtime; the 13 public unit tests use the standard library.
+fastapi==0.150.0
+uvicorn==0.54.0

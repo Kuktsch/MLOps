@@ -1,0 +1,9 @@
+{
+  "accepted_after_sha256": "8879d420cb104d981ff0a7d76df38adf5fc58149362ce498df8b23cf4e937c70",
+  "accepted_before_sha256": "8879d420cb104d981ff0a7d76df38adf5fc58149362ce498df8b23cf4e937c70",
+  "changed_input_sha256": "18468d0e8e3ddaf46345323d96b1cc1aaa7814e90e8d05005eb2404bbfcecc1d",
+  "exit_code": 1,
+  "old_input_sha256": "3778a8e6e0379309bb4c06afb5e26eefbd7aef870b89809fc082fd0bcff81acb",
+  "reason": "Prepared input differs from evaluated golden: a new evaluation is required",
+  "restored_input_sha256": "3778a8e6e0379309bb4c06afb5e26eefbd7aef870b89809fc082fd0bcff81acb"
+}

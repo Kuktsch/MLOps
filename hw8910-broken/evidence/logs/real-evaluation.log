@@ -1,0 +1,23 @@
+2026/10/29 12:19:03 INFO mlflow.tracking.fluent: Experiment with name 'hw8910-evaluation' does not exist. Creating a new experiment.
+LOAD_REAL baseline baseline-qwen3-c1899de289a04d12100db370d81485cdf75e47ca
+Loading weights:   0%|          | 0/311 [00:00<?, ?it/s]Loading weights:  62%|██████▏   | 193/311 [00:00<00:00, 1885.41it/s]Loading weights: 100%|██████████| 311/311 [00:00<00:00, 1949.98it/s]
+EVALUATED baseline 10 of 57
+EVALUATED baseline 20 of 57
+EVALUATED baseline 30 of 57
+EVALUATED baseline 40 of 57
+EVALUATED baseline 50 of 57
+METRICS baseline {'n': 54, 'correct': 4, 'valid': 8, 'errors': 0, 'accuracy': 0.07407407407407407, 'format_rate': 0.14814814814814814}
+LOAD_REAL candidate adapter-cce6597824384cab8697bc597d7500c9
+Loading weights:   0%|          | 0/311 [00:00<?, ?it/s]Loading weights:  74%|███████▍  | 231/311 [00:00<00:00, 2309.80it/s]Loading weights: 100%|██████████| 311/311 [00:00<00:00, 3033.09it/s]
+EVALUATED candidate 10 of 57
+EVALUATED candidate 20 of 57
+EVALUATED candidate 30 of 57
+EVALUATED candidate 40 of 57
+EVALUATED candidate 50 of 57
+METRICS candidate {'n': 54, 'correct': 0, 'valid': 0, 'errors': 0, 'accuracy': 0.0, 'format_rate': 0.0}
+ADMISSION baseline True Общая регрессия accuracy
+ADMISSION candidate False Общая регрессия accuracy
+PUBLISHED baseline-qwen3-c1899de289a04d12100db370d81485cdf75e47ca fe0f35d2bbe677a93bb31563b6cc0860ee4c23cc79b91f109911c8188c9aaea5
+🏃 View run same-backend-baseline-candidate-no-training at: http://127.0.0.1:5006/#/experiments/3/runs/68fd5b0c1f1c46e8bc0748983f327068
+🧪 View experiment at: http://127.0.0.1:5006/#/experiments/3
+REAL_WORKSPACE_READY /home/luserok/VSCodeWSL/MLOps/hw8910-broken/.real

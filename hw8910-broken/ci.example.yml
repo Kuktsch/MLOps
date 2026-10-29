@@ -1,0 +1,17 @@
+# Optional template, not evidence of a GitHub Actions run or protected merge.
+name: hw8910-fast-checks
+on: [push, pull_request]
+jobs:
+  checks:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: hw8910-broken
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v6
+        with:
+          version: '0.12.10'
+      - run: uv sync --frozen --python 3.12
+      - run: make check
+      - run: make check-negative

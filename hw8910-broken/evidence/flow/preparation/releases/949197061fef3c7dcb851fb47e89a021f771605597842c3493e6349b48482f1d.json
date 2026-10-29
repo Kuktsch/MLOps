@@ -1,0 +1,39 @@
+{
+  "manifest": {
+    "artifact_uri": "model-A.txt",
+    "file_hashes": {
+      "model-A.txt": "e27aceef06b905cf7c6747410a9a6a78b7d6335b289d05845538e864ea4e1740"
+    },
+    "golden_sha256": "eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee",
+    "model_id": "fixture-A",
+    "model_sha256": "c728ff4640be10c7207059c63d318a911074cc93601aff06a10ad9a2c048f950",
+    "protocol_sha256": "dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd",
+    "runtime": {
+      "base_revision": "fixture-only",
+      "dtype": "float32",
+      "generation": {
+        "do_sample": false,
+        "max_new_tokens": 32
+      },
+      "template_sha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+      "tokenizer_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+    },
+    "runtime_sha256": "bc7bd5a4806e2e0e3b8569666b251d6c59a8d8e01e37fc37bf95b534023ca547",
+    "schema_version": 1
+  },
+  "report": {
+    "evaluation_run_id": "fixture-eval-A",
+    "golden_sha256": "eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee",
+    "metrics": {
+      "accuracy": 0.8,
+      "format_rate": 1.0
+    },
+    "model_id": "fixture-A",
+    "model_sha256": "c728ff4640be10c7207059c63d318a911074cc93601aff06a10ad9a2c048f950",
+    "passed": true,
+    "protocol_sha256": "dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd",
+    "runtime_sha256": "bc7bd5a4806e2e0e3b8569666b251d6c59a8d8e01e37fc37bf95b534023ca547",
+    "status": "complete",
+    "synthetic": true
+  }
+}

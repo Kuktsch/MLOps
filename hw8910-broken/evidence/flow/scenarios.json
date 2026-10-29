@@ -1,0 +1,174 @@
+[
+  {
+    "command": [
+      "/home/luserok/VSCodeWSL/MLOps/hw8910-broken/.venv/bin/python",
+      "/home/luserok/VSCodeWSL/MLOps/hw8910-broken/lab.py",
+      "--workspace",
+      "/home/luserok/VSCodeWSL/MLOps/hw8910-broken/.lab-flow-9170ace4ca",
+      "init"
+    ],
+    "exit_code": 0,
+    "label": "flow-init",
+    "log": "evidence/logs/flow-init.log"
+  },
+  {
+    "command": [
+      "/home/luserok/VSCodeWSL/MLOps/hw8910-broken/.venv/bin/python",
+      "/home/luserok/VSCodeWSL/MLOps/hw8910-broken/flow.py",
+      "--workspace",
+      "/home/luserok/VSCodeWSL/MLOps/hw8910-broken/.lab-flow-9170ace4ca",
+      "--fail-after-prepare"
+    ],
+    "exit_code": 1,
+    "label": "flow-fail-prepare",
+    "log": "evidence/logs/flow-fail-prepare.log"
+  },
+  {
+    "command": [
+      "/home/luserok/VSCodeWSL/MLOps/hw8910-broken/.venv/bin/python",
+      "/home/luserok/VSCodeWSL/MLOps/hw8910-broken/flow.py",
+      "--workspace",
+      "/home/luserok/VSCodeWSL/MLOps/hw8910-broken/.lab-flow-9170ace4ca"
+    ],
+    "exit_code": 0,
+    "label": "flow-recovery",
+    "log": "evidence/logs/flow-recovery.log"
+  },
+  {
+    "command": [
+      "/home/luserok/VSCodeWSL/MLOps/hw8910-broken/.venv/bin/python",
+      "/home/luserok/VSCodeWSL/MLOps/hw8910-broken/flow.py",
+      "--workspace",
+      "/home/luserok/VSCodeWSL/MLOps/hw8910-broken/.lab-flow-9170ace4ca"
+    ],
+    "exit_code": 0,
+    "label": "flow-repeat",
+    "log": "evidence/logs/flow-repeat.log"
+  },
+  {
+    "command": [
+      "/home/luserok/VSCodeWSL/MLOps/hw8910-broken/.venv/bin/python",
+      "/home/luserok/VSCodeWSL/MLOps/hw8910-broken/flow.py",
+      "--workspace",
+      "/home/luserok/VSCodeWSL/MLOps/hw8910-broken/.lab-flow-9170ace4ca"
+    ],
+    "exit_code": 0,
+    "label": "flow-change-input",
+    "log": "evidence/logs/flow-change-input.log"
+  },
+  {
+    "command": [
+      "/home/luserok/VSCodeWSL/MLOps/hw8910-broken/.venv/bin/python",
+      "/home/luserok/VSCodeWSL/MLOps/hw8910-broken/flow.py",
+      "--workspace",
+      "/home/luserok/VSCodeWSL/MLOps/hw8910-broken/.lab-flow-9170ace4ca"
+    ],
+    "exit_code": 0,
+    "label": "flow-change-config",
+    "log": "evidence/logs/flow-change-config.log"
+  },
+  {
+    "after_sha256": "aabbb5ffa93b32971a2404bbcd44a510affb7fd52d81784ef92b6b72cfcea8f3",
+    "before_sha256": "aabbb5ffa93b32971a2404bbcd44a510affb7fd52d81784ef92b6b72cfcea8f3",
+    "command": [
+      "/home/luserok/VSCodeWSL/MLOps/hw8910-broken/.venv/bin/python",
+      "/home/luserok/VSCodeWSL/MLOps/hw8910-broken/flow.py",
+      "--workspace",
+      "/home/luserok/VSCodeWSL/MLOps/hw8910-broken/.lab-flow-9170ace4ca",
+      "--report",
+      "report-reject.json"
+    ],
+    "exit_code": 1,
+    "label": "flow-negative-report-reject",
+    "log": "evidence/logs/flow-negative-report-reject.log"
+  },
+  {
+    "after_sha256": "aabbb5ffa93b32971a2404bbcd44a510affb7fd52d81784ef92b6b72cfcea8f3",
+    "before_sha256": "aabbb5ffa93b32971a2404bbcd44a510affb7fd52d81784ef92b6b72cfcea8f3",
+    "command": [
+      "/home/luserok/VSCodeWSL/MLOps/hw8910-broken/.venv/bin/python",
+      "/home/luserok/VSCodeWSL/MLOps/hw8910-broken/flow.py",
+      "--workspace",
+      "/home/luserok/VSCodeWSL/MLOps/hw8910-broken/.lab-flow-9170ace4ca",
+      "--report",
+      "report-incomplete.json"
+    ],
+    "exit_code": 1,
+    "label": "flow-negative-report-incomplete",
+    "log": "evidence/logs/flow-negative-report-incomplete.log"
+  },
+  {
+    "after_sha256": "aabbb5ffa93b32971a2404bbcd44a510affb7fd52d81784ef92b6b72cfcea8f3",
+    "before_sha256": "aabbb5ffa93b32971a2404bbcd44a510affb7fd52d81784ef92b6b72cfcea8f3",
+    "command": [
+      "/home/luserok/VSCodeWSL/MLOps/hw8910-broken/.venv/bin/python",
+      "/home/luserok/VSCodeWSL/MLOps/hw8910-broken/flow.py",
+      "--workspace",
+      "/home/luserok/VSCodeWSL/MLOps/hw8910-broken/.lab-flow-9170ace4ca",
+      "--report",
+      "report-A.json"
+    ],
+    "exit_code": 1,
+    "label": "flow-negative-report-A",
+    "log": "evidence/logs/flow-negative-report-A.log"
+  },
+  {
+    "command": [
+      "/home/luserok/VSCodeWSL/MLOps/hw8910-broken/.venv/bin/python",
+      "/home/luserok/VSCodeWSL/MLOps/hw8910-broken/lab.py",
+      "--workspace",
+      "/home/luserok/VSCodeWSL/MLOps/hw8910-broken/.lab-crash-9170ace4ca",
+      "init"
+    ],
+    "exit_code": 0,
+    "label": "crash-init",
+    "log": "evidence/logs/crash-init.log"
+  },
+  {
+    "command": [
+      "/home/luserok/VSCodeWSL/MLOps/hw8910-broken/.venv/bin/python",
+      "/home/luserok/VSCodeWSL/MLOps/hw8910-broken/flow.py",
+      "--workspace",
+      "/home/luserok/VSCodeWSL/MLOps/hw8910-broken/.lab-crash-9170ace4ca",
+      "--fail-after-pointer"
+    ],
+    "exit_code": 1,
+    "label": "flow-crash-pointer",
+    "log": "evidence/logs/flow-crash-pointer.log"
+  },
+  {
+    "command": [
+      "/home/luserok/VSCodeWSL/MLOps/hw8910-broken/.venv/bin/python",
+      "/home/luserok/VSCodeWSL/MLOps/hw8910-broken/flow.py",
+      "--workspace",
+      "/home/luserok/VSCodeWSL/MLOps/hw8910-broken/.lab-crash-9170ace4ca"
+    ],
+    "exit_code": 0,
+    "label": "flow-crash-recovery",
+    "log": "evidence/logs/flow-crash-recovery.log"
+  },
+  {
+    "command": [
+      "/home/luserok/VSCodeWSL/MLOps/hw8910-broken/.venv/bin/python",
+      "/home/luserok/VSCodeWSL/MLOps/hw8910-broken/flow.py",
+      "--workspace",
+      "/home/luserok/VSCodeWSL/MLOps/hw8910-broken/.lab-crash-9170ace4ca"
+    ],
+    "exit_code": 0,
+    "label": "flow-crash-repeat",
+    "log": "evidence/logs/flow-crash-repeat.log"
+  },
+  {
+    "command": [
+      "/home/luserok/VSCodeWSL/MLOps/hw8910-broken/.venv/bin/python",
+      "/home/luserok/VSCodeWSL/MLOps/hw8910-broken/rollback.py",
+      "--workspace",
+      "/home/luserok/VSCodeWSL/MLOps/hw8910-broken/.lab-crash-9170ace4ca",
+      "--release-id",
+      "949197061fef3c7dcb851fb47e89a021f771605597842c3493e6349b48482f1d"
+    ],
+    "exit_code": 0,
+    "label": "flow-controlled-rollback",
+    "log": "evidence/logs/flow-controlled-rollback.log"
+  }
+]

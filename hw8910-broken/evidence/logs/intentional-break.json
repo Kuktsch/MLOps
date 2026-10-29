@@ -1,0 +1,7 @@
+{
+  "broken_exit_code": 1,
+  "mutation": "validation early return in disposable copy",
+  "original_code_unchanged": true,
+  "project_release_sha256": "5e5aee3a080ea0d10f12b2a530caabb8e9e25a62931d49ee4ddc4ba9c6da659c",
+  "restored_exit_code": 0
+}

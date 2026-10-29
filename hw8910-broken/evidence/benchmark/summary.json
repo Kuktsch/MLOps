@@ -1,0 +1,32 @@
+[
+  {
+    "concurrency": 1,
+    "n": 8,
+    "successes": 8,
+    "errors": 0,
+    "batch_seconds": 9.26559500899998,
+    "successful_requests_per_second": 0.863409202779674,
+    "mean_success_client_seconds": 1.1580189575000475,
+    "max_success_client_seconds": 2.0156341620001967,
+    "mean_error_client_seconds": null,
+    "max_error_client_seconds": null,
+    "mean_generation_seconds": 1.153977198125034,
+    "mean_queue_seconds": 0.0009510124999962954,
+    "actual_output_tokens": 134
+  },
+  {
+    "concurrency": 2,
+    "n": 8,
+    "successes": 8,
+    "errors": 0,
+    "batch_seconds": 5.194324671000004,
+    "successful_requests_per_second": 1.54014246446013,
+    "mean_success_client_seconds": 1.1481843492500161,
+    "max_success_client_seconds": 2.0766018869999243,
+    "mean_error_client_seconds": null,
+    "max_error_client_seconds": null,
+    "mean_generation_seconds": 0.6487153147500351,
+    "mean_queue_seconds": 0.4961226998749737,
+    "actual_output_tokens": 134
+  }
+]

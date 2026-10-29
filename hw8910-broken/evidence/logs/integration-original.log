@@ -1,0 +1,73 @@
+test_http_bad_request_never_calls_backend (test_integration.IntegrationTests.test_http_bad_request_never_calls_backend) ... FAIL
+test_http_loaded_version_restart_and_rollback (test_integration.IntegrationTests.test_http_loaded_version_restart_and_rollback) ... FAIL
+test_http_ready_waits_for_warmup (test_integration.IntegrationTests.test_http_ready_waits_for_warmup) ... FAIL
+test_process_atomic_disk_error_preserves_pointer (test_integration.IntegrationTests.test_process_atomic_disk_error_preserves_pointer) ... FAIL
+test_process_cache_recovery_and_input_change (test_integration.IntegrationTests.test_process_cache_recovery_and_input_change) ... FAIL
+test_process_rejection_incomplete_and_foreign_report (test_integration.IntegrationTests.test_process_rejection_incomplete_and_foreign_report) ... FAIL
+test_process_repeated_publication_is_one_event (test_integration.IntegrationTests.test_process_repeated_publication_is_one_event) ... FAIL
+
+======================================================================
+FAIL: test_http_bad_request_never_calls_backend (test_integration.IntegrationTests.test_http_bad_request_never_calls_backend)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/luserok/VSCodeWSL/MLOps/hw8910-broken/tests/test_integration.py", line 216, in test_http_bad_request_never_calls_backend
+    self.assertTrue(all(400 <= s < 500 for s in results), results)
+AssertionError: False is not true : [200, 200, 200, 200, 200, 200, 200, 400]
+
+======================================================================
+FAIL: test_http_loaded_version_restart_and_rollback (test_integration.IntegrationTests.test_http_loaded_version_restart_and_rollback)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/luserok/VSCodeWSL/MLOps/hw8910-broken/tests/test_integration.py", line 201, in test_http_loaded_version_restart_and_rollback
+    self.assertEqual(response['model_id'], expected)
+AssertionError: 'fixture-B' != 'fixture-A'
+- fixture-B
+?         ^
++ fixture-A
+?         ^
+
+
+======================================================================
+FAIL: test_http_ready_waits_for_warmup (test_integration.IntegrationTests.test_http_ready_waits_for_warmup)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/luserok/VSCodeWSL/MLOps/hw8910-broken/tests/test_integration.py", line 173, in test_http_ready_waits_for_warmup
+    self.assertEqual(status, 503)
+AssertionError: 200 != 503
+
+======================================================================
+FAIL: test_process_atomic_disk_error_preserves_pointer (test_integration.IntegrationTests.test_process_atomic_disk_error_preserves_pointer)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/luserok/VSCodeWSL/MLOps/hw8910-broken/tests/test_integration.py", line 155, in test_process_atomic_disk_error_preserves_pointer
+    self.assertNotEqual(p.returncode, 0, 'Replacement error must propagate')
+AssertionError: 0 == 0 : Replacement error must propagate
+
+======================================================================
+FAIL: test_process_cache_recovery_and_input_change (test_integration.IntegrationTests.test_process_cache_recovery_and_input_change)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/luserok/VSCodeWSL/MLOps/hw8910-broken/tests/test_integration.py", line 118, in test_process_cache_recovery_and_input_change
+    self.assertIn('PREPARED', changed.stdout)
+AssertionError: 'PREPARED' not found in 'CACHE_HIT 88bbd559a04a7a432693a1c611ef2704bb711ac17dd5e22203ee9e5020f59fd4\nPUBLISHED fixture-B\n'
+
+======================================================================
+FAIL: test_process_rejection_incomplete_and_foreign_report (test_integration.IntegrationTests.test_process_rejection_incomplete_and_foreign_report)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/luserok/VSCodeWSL/MLOps/hw8910-broken/tests/test_integration.py", line 137, in test_process_rejection_incomplete_and_foreign_report
+    self.assertTrue(all(rejected and unchanged for _, rejected, unchanged in outcomes), outcomes)
+AssertionError: False is not true : [('report-reject.json', True, True), ('report-incomplete.json', False, False), ('report-A.json', False, False)]
+
+======================================================================
+FAIL: test_process_repeated_publication_is_one_event (test_integration.IntegrationTests.test_process_repeated_publication_is_one_event)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/luserok/VSCodeWSL/MLOps/hw8910-broken/tests/test_integration.py", line 165, in test_process_repeated_publication_is_one_event
+    self.assertEqual(len([e for e in events if e['model_id'] == 'fixture-B']), 1)
+AssertionError: 3 != 1
+
+----------------------------------------------------------------------
+Ran 7 tests in 1.160s
+
+FAILED (failures=7)

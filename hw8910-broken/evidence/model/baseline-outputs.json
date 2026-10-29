@@ -1,0 +1,401 @@
+[
+  {
+    "error": null,
+    "id": "geography-01",
+    "latency_seconds": 0.5965157359999012,
+    "output_tokens": 15,
+    "raw": "{\n  \"answer\": \"A: Хельсинки\"\n}"
+  },
+  {
+    "error": null,
+    "id": "geography-02",
+    "latency_seconds": 0.42538268499993137,
+    "output_tokens": 10,
+    "raw": "{\n  \"answer\": \"C\"\n}"
+  },
+  {
+    "error": null,
+    "id": "geography-03",
+    "latency_seconds": 0.55619191400001,
+    "output_tokens": 13,
+    "raw": "{\n  \"answer\": \"A: Осло\"\n}"
+  },
+  {
+    "error": null,
+    "id": "geography-04",
+    "latency_seconds": 0.6746975349999502,
+    "output_tokens": 16,
+    "raw": "{\n  \"answer\": \"B: Стокгольм\"\n}"
+  },
+  {
+    "error": null,
+    "id": "geography-05",
+    "latency_seconds": 0.5721707350000997,
+    "output_tokens": 15,
+    "raw": "{\n  \"answer\": \"C: Хельсинки\"\n}"
+  },
+  {
+    "error": null,
+    "id": "geography-06",
+    "latency_seconds": 0.39734887099984917,
+    "output_tokens": 10,
+    "raw": "{\n  \"answer\": \"C\"\n}"
+  },
+  {
+    "error": null,
+    "id": "geography-07",
+    "latency_seconds": 0.9537505979999423,
+    "output_tokens": 23,
+    "raw": "{\n  \"answer\": \"C\",\n  \"choices\": [\"A\", \"B\", \"C\"]\n}"
+  },
+  {
+    "error": null,
+    "id": "geography-08",
+    "latency_seconds": 1.2613045010000405,
+    "output_tokens": 32,
+    "raw": "{\n  \"answer\": \"B\",\n  \"choices\": [\"A: Лиссабон\", \"B: Мадрид\", \"C: Б"
+  },
+  {
+    "error": null,
+    "id": "geography-09",
+    "latency_seconds": 0.9834689090000666,
+    "output_tokens": 23,
+    "raw": "{\n  \"answer\": \"C\",\n  \"choices\": [\"A\", \"B\", \"C\"]\n}"
+  },
+  {
+    "error": null,
+    "id": "geography-10",
+    "latency_seconds": 0.3908646980000867,
+    "output_tokens": 10,
+    "raw": "{\n  \"answer\": \"A\"\n}"
+  },
+  {
+    "error": null,
+    "id": "geography-11",
+    "latency_seconds": 1.3064348919999702,
+    "output_tokens": 32,
+    "raw": "{\n  \"answer\": \"A\",\n  \"choices\": [\"A: Берлин\", \"B: Вена\", \"C: Зальцбур"
+  },
+  {
+    "error": null,
+    "id": "geography-12",
+    "latency_seconds": 0.6732750159999341,
+    "output_tokens": 16,
+    "raw": "{\n  \"answer\": \"C: Варшава\"\n}"
+  },
+  {
+    "error": null,
+    "id": "geography-13",
+    "latency_seconds": 0.6466324719999648,
+    "output_tokens": 14,
+    "raw": "{\n  \"answer\": \"A: Прага\"\n}"
+  },
+  {
+    "error": null,
+    "id": "geography-14",
+    "latency_seconds": 0.42078448500001286,
+    "output_tokens": 10,
+    "raw": "{\n  \"answer\": \"C\"\n}"
+  },
+  {
+    "error": null,
+    "id": "geography-15",
+    "latency_seconds": 0.9805039200000465,
+    "output_tokens": 23,
+    "raw": "{\n  \"answer\": \"C\",\n  \"choices\": [\"A\", \"B\", \"C\"]\n}"
+  },
+  {
+    "error": null,
+    "id": "geography-16",
+    "latency_seconds": 0.584197654000036,
+    "output_tokens": 14,
+    "raw": "{\n  \"answer\": \"B: Рига\"\n}"
+  },
+  {
+    "error": null,
+    "id": "geography-17",
+    "latency_seconds": 0.5378527679999934,
+    "output_tokens": 14,
+    "raw": "{\n  \"answer\": \"B: Афины\"\n}"
+  },
+  {
+    "error": null,
+    "id": "geography-18",
+    "latency_seconds": 0.9043196049999551,
+    "output_tokens": 23,
+    "raw": "{\n  \"answer\": \"C\",\n  \"choices\": [\"A\", \"B\", \"C\"]\n}"
+  },
+  {
+    "error": null,
+    "id": "chemistry-01",
+    "latency_seconds": 0.47423338099997636,
+    "output_tokens": 12,
+    "raw": "{\n  \"answer\": \"A: H\"\n}"
+  },
+  {
+    "error": null,
+    "id": "chemistry-02",
+    "latency_seconds": 1.0485619629998837,
+    "output_tokens": 23,
+    "raw": "{\n  \"answer\": \"B\",\n  \"choices\": [\"Li\", \"He\", \"H\"]\n}"
+  },
+  {
+    "error": null,
+    "id": "chemistry-03",
+    "latency_seconds": 0.533655225000075,
+    "output_tokens": 12,
+    "raw": "{\n  \"answer\": \"C: Li\"\n}"
+  },
+  {
+    "error": null,
+    "id": "chemistry-04",
+    "latency_seconds": 1.1301919530001214,
+    "output_tokens": 29,
+    "raw": "{\n  \"answer\": \"A\",\n  \"choices\": [\"A: C\", \"B: Ca\", \"C: Co\"]\n}"
+  },
+  {
+    "error": null,
+    "id": "chemistry-05",
+    "latency_seconds": 0.46448129200007315,
+    "output_tokens": 12,
+    "raw": "{\n  \"answer\": \"B: N\"\n}"
+  },
+  {
+    "error": null,
+    "id": "chemistry-06",
+    "latency_seconds": 0.9838979900000595,
+    "output_tokens": 23,
+    "raw": "{\n  \"answer\": \"C\",\n  \"choices\": [\"A\", \"B\", \"C\"]\n}"
+  },
+  {
+    "error": null,
+    "id": "chemistry-07",
+    "latency_seconds": 1.430635946999928,
+    "output_tokens": 31,
+    "raw": "{\n  \"answer\": \"A: Na\",\n  \"choices\": [\"A: Na\", \"B: N\", \"C: Ni\"]\n}"
+  },
+  {
+    "error": null,
+    "id": "chemistry-08",
+    "latency_seconds": 1.0600920340000357,
+    "output_tokens": 12,
+    "raw": "{\n  \"answer\": \"B: Mg\"\n}"
+  },
+  {
+    "error": null,
+    "id": "chemistry-09",
+    "latency_seconds": 1.1584586720000516,
+    "output_tokens": 12,
+    "raw": "{\n  \"answer\": \"C: Al\"\n}"
+  },
+  {
+    "error": null,
+    "id": "chemistry-10",
+    "latency_seconds": 0.9464189029999943,
+    "output_tokens": 10,
+    "raw": "{\n  \"answer\": \"A\"\n}"
+  },
+  {
+    "error": null,
+    "id": "chemistry-11",
+    "latency_seconds": 1.5138214989999597,
+    "output_tokens": 29,
+    "raw": "{\n  \"answer\": \"B\",\n  \"choices\": [\"A: Po\", \"B: P\", \"C: F\"]\n}"
+  },
+  {
+    "error": null,
+    "id": "chemistry-12",
+    "latency_seconds": 0.953063358999998,
+    "output_tokens": 23,
+    "raw": "{\n  \"answer\": \"C\",\n  \"choices\": [\"Si\", \"Sr\", \"S\"]\n}"
+  },
+  {
+    "error": null,
+    "id": "chemistry-13",
+    "latency_seconds": 0.5222743609999725,
+    "output_tokens": 12,
+    "raw": "{\n  \"answer\": \"A: Cl;\"\n}"
+  },
+  {
+    "error": null,
+    "id": "chemistry-14",
+    "latency_seconds": 0.5104493779999757,
+    "output_tokens": 12,
+    "raw": "{\n  \"answer\": \"B: K\"\n}"
+  },
+  {
+    "error": null,
+    "id": "chemistry-15",
+    "latency_seconds": 1.1878079950001847,
+    "output_tokens": 29,
+    "raw": "{\n  \"answer\": \"C\",\n  \"choices\": [\"A: C\", \"B: Cl\", \"C: Ca\"]\n}"
+  },
+  {
+    "error": null,
+    "id": "chemistry-16",
+    "latency_seconds": 1.257251905999965,
+    "output_tokens": 31,
+    "raw": "{\n  \"answer\": \"A: Fe\",\n  \"choices\": [\"A: Fe\", \"B: F\", \"C: Fr.\"]\n}"
+  },
+  {
+    "error": null,
+    "id": "chemistry-17",
+    "latency_seconds": 0.9379093640000065,
+    "output_tokens": 23,
+    "raw": "{\n  \"answer\": \"B\",\n  \"choices\": [\"Ca\", \"Cu\", \"Co\"]\n}"
+  },
+  {
+    "error": null,
+    "id": "chemistry-18",
+    "latency_seconds": 0.48021183199989537,
+    "output_tokens": 12,
+    "raw": "{\n  \"answer\": \"C: Ag\"\n}"
+  },
+  {
+    "error": null,
+    "id": "astronomy-01",
+    "latency_seconds": 0.5645647040000767,
+    "output_tokens": 14,
+    "raw": "{\n  \"answer\": \"A: Юпитер\"\n}"
+  },
+  {
+    "error": null,
+    "id": "astronomy-02",
+    "latency_seconds": 0.611222398000109,
+    "output_tokens": 16,
+    "raw": "{\n  \"answer\": \"B: Меркурий\"\n}"
+  },
+  {
+    "error": null,
+    "id": "astronomy-03",
+    "latency_seconds": 0.5545743259999654,
+    "output_tokens": 14,
+    "raw": "{\n  \"answer\": \"B: Земля\"\n}"
+  },
+  {
+    "error": null,
+    "id": "astronomy-04",
+    "latency_seconds": 0.5509047210000517,
+    "output_tokens": 14,
+    "raw": "{\n  \"answer\": \"A: Сатурн\"\n}"
+  },
+  {
+    "error": null,
+    "id": "astronomy-05",
+    "latency_seconds": 0.6304782610000075,
+    "output_tokens": 14,
+    "raw": "{\n  \"answer\": \"A: Марс\"\n}"
+  },
+  {
+    "error": null,
+    "id": "astronomy-06",
+    "latency_seconds": 1.2770617510000193,
+    "output_tokens": 32,
+    "raw": "{\n  \"answer\": \"C\",\n  \"choices\": [\"A: Юпитер\", \"B: Венера\", \"C: Марс"
+  },
+  {
+    "error": null,
+    "id": "astronomy-07",
+    "latency_seconds": 1.3492498260000048,
+    "output_tokens": 32,
+    "raw": "{\n  \"answer\": \"C\",\n  \"choices\": [\"A: Юпитер\", \"B: Сатурн\", \"C: Марс"
+  },
+  {
+    "error": null,
+    "id": "astronomy-08",
+    "latency_seconds": 1.3129548270001123,
+    "output_tokens": 32,
+    "raw": "{\n  \"answer\": \"A: Уран\",\n  \"choices\": [\"A: Уран\", \"B: Сатурн\", \"C: Ю"
+  },
+  {
+    "error": null,
+    "id": "astronomy-09",
+    "latency_seconds": 0.6902813189999506,
+    "output_tokens": 15,
+    "raw": "{\n  \"answer\": \"A: Нептун\"\n}"
+  },
+  {
+    "error": null,
+    "id": "astronomy-10",
+    "latency_seconds": 0.6176324170000953,
+    "output_tokens": 15,
+    "raw": "{\n  \"answer\": \"A: Нептун\"\n}"
+  },
+  {
+    "error": null,
+    "id": "astronomy-11",
+    "latency_seconds": 0.5276546140000846,
+    "output_tokens": 10,
+    "raw": "{\n  \"answer\": \"A\"\n}"
+  },
+  {
+    "error": null,
+    "id": "astronomy-12",
+    "latency_seconds": 1.4027328189999935,
+    "output_tokens": 32,
+    "raw": "{\n  \"answer\": \"A\",\n  \"choices\": [\"A: Андромеда\", \"B: Треугольник\", \"C:"
+  },
+  {
+    "error": null,
+    "id": "astronomy-13",
+    "latency_seconds": 1.0111228130001564,
+    "output_tokens": 23,
+    "raw": "{\n  \"answer\": \"C\",\n  \"choices\": [\"A\", \"B\", \"C\"]\n}"
+  },
+  {
+    "error": null,
+    "id": "astronomy-14",
+    "latency_seconds": 1.2233714760000112,
+    "output_tokens": 27,
+    "raw": "```json\n{\n  \"answer\": \"B\",\n  \"choices\": [\"A\", \"B\", \"C\"]\n}\n```"
+  },
+  {
+    "error": null,
+    "id": "astronomy-15",
+    "latency_seconds": 0.4722755390000657,
+    "output_tokens": 10,
+    "raw": "{\n  \"answer\": \"A\"\n}"
+  },
+  {
+    "error": null,
+    "id": "astronomy-16",
+    "latency_seconds": 0.4956863990000784,
+    "output_tokens": 13,
+    "raw": "{\n  \"answer\": \"B: 9\"\n}"
+  },
+  {
+    "error": null,
+    "id": "astronomy-17",
+    "latency_seconds": 1.2783138680001684,
+    "output_tokens": 32,
+    "raw": "{\n  \"answer\": \"A\",\n  \"choices\": [\"A: Сатурна и Урана\", \"B: Марса и Юпит"
+  },
+  {
+    "error": null,
+    "id": "astronomy-18",
+    "latency_seconds": 0.3572571560000597,
+    "output_tokens": 10,
+    "raw": "{\n  \"answer\": \"C\"\n}"
+  },
+  {
+    "error": null,
+    "id": "behavior-format",
+    "latency_seconds": 0.6240336559999378,
+    "output_tokens": 15,
+    "raw": "{\n  \"answer\": \"A: Хельсинки\"\n}"
+  },
+  {
+    "error": null,
+    "id": "behavior-paraphrase",
+    "latency_seconds": 0.3518215409999357,
+    "output_tokens": 10,
+    "raw": "{\n  \"answer\": \"A\"\n}"
+  },
+  {
+    "error": null,
+    "id": "behavior-refusal",
+    "latency_seconds": 0.40958629600004315,
+    "output_tokens": 11,
+    "raw": "{\n  \"answer\": \"REFUSE\"\n}"
+  }
+]

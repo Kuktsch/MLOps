@@ -1,0 +1,7 @@
+REAL_READY first {'ready': True, 'model_id': 'baseline-qwen3-c1899de289a04d12100db370d81485cdf75e47ca', 'runtime_sha256': '23b1355a29a26128665fd6766b91ed6b9b5df16b29407670de66c11a1b9d974d'}
+BENCHMARK {"concurrency": 1, "n": 8, "successes": 8, "errors": 0, "batch_seconds": 5.398704684999757, "successful_requests_per_second": 1.4818369343720381, "mean_success_client_seconds": 0.6746897371251066, "max_success_client_seconds": 1.2930615280001803, "mean_error_client_seconds": null, "max_error_client_seconds": null, "mean_generation_seconds": 0.6722922943749836, "mean_queue_seconds": 0.0007264051250217562, "actual_output_tokens": 134}
+BENCHMARK {"concurrency": 2, "n": 8, "successes": 8, "errors": 0, "batch_seconds": 5.5140188159998615, "successful_requests_per_second": 1.4508474248921026, "mean_success_client_seconds": 1.2116414346250508, "max_success_client_seconds": 2.281545606000236, "mean_error_client_seconds": null, "max_error_client_seconds": null, "mean_generation_seconds": 0.6887408474999575, "mean_queue_seconds": 0.5195441677500412, "actual_output_tokens": 134}
+REAL_READY restart {'ready': True, 'model_id': 'baseline-qwen3-c1899de289a04d12100db370d81485cdf75e47ca', 'runtime_sha256': '23b1355a29a26128665fd6766b91ed6b9b5df16b29407670de66c11a1b9d974d'}
+REAL_API_VERIFIED {
+  "answer": "C"
+}

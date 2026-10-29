@@ -1,0 +1,717 @@
+{
+  "baseline_spec_sha256": "6b9dfaa73cefbb20aedae36cf6ccc37fff505ded27a108ea55ceddf9443ae5f3",
+  "behavioral": {
+    "overall": {
+      "accuracy": 0.0,
+      "correct": 0,
+      "errors": 0,
+      "format_rate": 0.0,
+      "n": 3,
+      "valid": 0
+    },
+    "per_item": [
+      {
+        "correct": false,
+        "error": null,
+        "id": "behavior-format",
+        "parsed": null,
+        "raw": "{\n  \"answer\": \"A: Хельсинки\",\n  \"choices\": [\"A\", \"B\", \"C\"]\n}",
+        "slices": [
+          "geography"
+        ],
+        "valid": false
+      },
+      {
+        "correct": false,
+        "error": null,
+        "id": "behavior-paraphrase",
+        "parsed": null,
+        "raw": "{\n  \"answer\": \"A\",\n  \"choices\": [\"A: Осло\", \"B: Стокгольм\", \"C: Хель",
+        "slices": [
+          "geography"
+        ],
+        "valid": false
+      },
+      {
+        "correct": false,
+        "error": null,
+        "id": "behavior-refusal",
+        "parsed": null,
+        "raw": "```json\n{\n  \"answer\": \"REFUSE\"\n}\n```",
+        "slices": [
+          "out_of_scope"
+        ],
+        "valid": false
+      }
+    ],
+    "slices": {
+      "geography": {
+        "accuracy": 0.0,
+        "correct": 0,
+        "errors": 0,
+        "format_rate": 0.0,
+        "n": 2,
+        "valid": 0
+      },
+      "out_of_scope": {
+        "accuracy": 0.0,
+        "correct": 0,
+        "errors": 0,
+        "format_rate": 0.0,
+        "n": 1,
+        "valid": 0
+      }
+    }
+  },
+  "evaluation_run_id": "68fd5b0c1f1c46e8bc0748983f327068",
+  "golden_sha256": "b698bc62db639ed5b7bb07b17ef2cd65e0a141d490af07594baf0f5462313041",
+  "leakage": {
+    "exact_or_group_intersections": 0,
+    "n_behavioral": 3,
+    "n_golden": 54,
+    "n_train_index": 3345
+  },
+  "model": {
+    "kind": "adapter",
+    "name": "my-qwen-adapter",
+    "run_id": "cce6597824384cab8697bc597d7500c9",
+    "uri": "models:/my-qwen-adapter/2",
+    "version": "2"
+  },
+  "model_id": "adapter-cce6597824384cab8697bc597d7500c9",
+  "model_sha256": "e3947d2322de11dad9c4c7f8e4f648b9536dc4da9ac0c1b2af88ef91eeaad027",
+  "outputs_sha256": "092ecf7e1c718cb8898c495237d45564c6d1943a91429c7c54825109623ad967",
+  "overall": {
+    "accuracy": 0.0,
+    "correct": 0,
+    "errors": 0,
+    "format_rate": 0.0,
+    "n": 54,
+    "valid": 0
+  },
+  "per_item": [
+    {
+      "correct": false,
+      "error": null,
+      "id": "geography-01",
+      "parsed": null,
+      "raw": "{\n  \"answer\": \"A: Хельсинки\",\n  \"choices\": [\"A\", \"B\", \"C\"]\n}",
+      "slices": [
+        "geography"
+      ],
+      "valid": false
+    },
+    {
+      "correct": false,
+      "error": null,
+      "id": "geography-02",
+      "parsed": null,
+      "raw": "{\n  \"answer\": \"C\",\n  \"choices\": [\"A: Копенгаген\", \"B: Осло\", \"C: Х",
+      "slices": [
+        "geography"
+      ],
+      "valid": false
+    },
+    {
+      "correct": false,
+      "error": null,
+      "id": "geography-03",
+      "parsed": null,
+      "raw": "{\n  \"answer\": \"A: Осло\",\n  \"choices\": [\"A: Осло\", \"B: Рейкьявик\", \"",
+      "slices": [
+        "geography"
+      ],
+      "valid": false
+    },
+    {
+      "correct": false,
+      "error": null,
+      "id": "geography-04",
+      "parsed": null,
+      "raw": "{\n  \"answer\": \"B: Стокгольм\",\n  \"choices\": [\"A: Рейкьявик\", \"B: С",
+      "slices": [
+        "geography"
+      ],
+      "valid": false
+    },
+    {
+      "correct": false,
+      "error": null,
+      "id": "geography-05",
+      "parsed": null,
+      "raw": "{\n  \"answer\": \"C: Хельсинки\",\n  \"choices\": [\"A: Осло\", \"B: Копенгаген",
+      "slices": [
+        "geography"
+      ],
+      "valid": false
+    },
+    {
+      "correct": false,
+      "error": null,
+      "id": "geography-06",
+      "parsed": null,
+      "raw": "{\n  \"answer\": \"C\",\n  \"choices\": [\"A: Лондон\", \"B: Эдинбург\", \"C: Дуб",
+      "slices": [
+        "geography"
+      ],
+      "valid": false
+    },
+    {
+      "correct": false,
+      "error": null,
+      "id": "geography-07",
+      "parsed": null,
+      "raw": "{\n  \"answer\": \"C\",\n  \"choices\": [\"A\", \"B\", \"C\"]\n}",
+      "slices": [
+        "geography"
+      ],
+      "valid": false
+    },
+    {
+      "correct": false,
+      "error": null,
+      "id": "geography-08",
+      "parsed": null,
+      "raw": "{\n  \"answer\": \"B\",\n  \"choices\": [\"A: Лиссабон\", \"B: Мадрид\", \"C: Б",
+      "slices": [
+        "geography"
+      ],
+      "valid": false
+    },
+    {
+      "correct": false,
+      "error": null,
+      "id": "geography-09",
+      "parsed": null,
+      "raw": "{\n  \"answer\": \"C\",\n  \"choices\": [\"A\", \"B\", \"C\"]\n}",
+      "slices": [
+        "geography"
+      ],
+      "valid": false
+    },
+    {
+      "correct": false,
+      "error": null,
+      "id": "geography-10",
+      "parsed": null,
+      "raw": "{\n  \"answer\": \"A\",\n  \"choices\": [\"A: Берлин\", \"B: Мюнхен\", \"C: Б",
+      "slices": [
+        "geography"
+      ],
+      "valid": false
+    },
+    {
+      "correct": false,
+      "error": null,
+      "id": "geography-11",
+      "parsed": null,
+      "raw": "{\n  \"answer\": \"A\",\n  \"choices\": [\"A: Берлин\", \"B: Вена\", \"C: Зальцбур",
+      "slices": [
+        "geography"
+      ],
+      "valid": false
+    },
+    {
+      "correct": false,
+      "error": null,
+      "id": "geography-12",
+      "parsed": null,
+      "raw": "{\n  \"answer\": \"C\",\n  \"choices\": [\"A\", \"B\", \"C\"]\n}",
+      "slices": [
+        "geography"
+      ],
+      "valid": false
+    },
+    {
+      "correct": false,
+      "error": null,
+      "id": "geography-13",
+      "parsed": null,
+      "raw": "{\n  \"answer\": \"A\",\n  \"choices\": [\"A: Прага\", \"B: Брно\", \"C: Братислав",
+      "slices": [
+        "geography"
+      ],
+      "valid": false
+    },
+    {
+      "correct": false,
+      "error": null,
+      "id": "geography-14",
+      "parsed": null,
+      "raw": "{\n  \"answer\": \"C\",\n  \"choices\": [\"A\", \"B\", \"C\"]\n}",
+      "slices": [
+        "geography"
+      ],
+      "valid": false
+    },
+    {
+      "correct": false,
+      "error": null,
+      "id": "geography-15",
+      "parsed": null,
+      "raw": "{\n  \"answer\": \"C\",\n  \"choices\": [\"A\", \"B\", \"C\"]\n}",
+      "slices": [
+        "geography"
+      ],
+      "valid": false
+    },
+    {
+      "correct": false,
+      "error": null,
+      "id": "geography-16",
+      "parsed": null,
+      "raw": "{\n  \"answer\": \"B\",\n  \"choices\": [\"A: Вильнюс\", \"B: Рига\", \"C: Кау",
+      "slices": [
+        "geography"
+      ],
+      "valid": false
+    },
+    {
+      "correct": false,
+      "error": null,
+      "id": "geography-17",
+      "parsed": null,
+      "raw": "{\n  \"answer\": \"B: Афины\",\n  \"choices\": [\"A: Рим\", \"B: Афины\", \"C:",
+      "slices": [
+        "geography"
+      ],
+      "valid": false
+    },
+    {
+      "correct": false,
+      "error": null,
+      "id": "geography-18",
+      "parsed": null,
+      "raw": "{\n  \"answer\": \"A: Стамбул\",\n  \"choices\": [\"A\", \"B\", \"C\"]\n}",
+      "slices": [
+        "geography"
+      ],
+      "valid": false
+    },
+    {
+      "correct": false,
+      "error": null,
+      "id": "chemistry-01",
+      "parsed": null,
+      "raw": "{\n  \"answer\": \"A\",\n  \"choices\": [\"A: H\", \"B: He\", \"C: O\"]\n}",
+      "slices": [
+        "chemistry"
+      ],
+      "valid": false
+    },
+    {
+      "correct": false,
+      "error": null,
+      "id": "chemistry-02",
+      "parsed": null,
+      "raw": "{\n  \"answer\": \"B\",\n  \"choices\": [\"Li\", \"He\", \"H\"]\n}",
+      "slices": [
+        "chemistry"
+      ],
+      "valid": false
+    },
+    {
+      "correct": false,
+      "error": null,
+      "id": "chemistry-03",
+      "parsed": null,
+      "raw": "{\n  \"answer\": \"C: Li\",\n  \"choices\": [\"A: L\", \"B: Na\", \"C: Li\"]\n}",
+      "slices": [
+        "chemistry"
+      ],
+      "valid": false
+    },
+    {
+      "correct": false,
+      "error": null,
+      "id": "chemistry-04",
+      "parsed": null,
+      "raw": "{\n  \"answer\": \"A\",\n  \"choices\": [\"A: C\", \"B: Ca\", \"C: Co\"]\n}",
+      "slices": [
+        "chemistry"
+      ],
+      "valid": false
+    },
+    {
+      "correct": false,
+      "error": null,
+      "id": "chemistry-05",
+      "parsed": null,
+      "raw": "{\n  \"answer\": \"B\",\n  \"choices\": [\"A: Ne\", \"B: N\", \"C: Na\"]\n}",
+      "slices": [
+        "chemistry"
+      ],
+      "valid": false
+    },
+    {
+      "correct": false,
+      "error": null,
+      "id": "chemistry-06",
+      "parsed": null,
+      "raw": "{\n  \"answer\": \"C\",\n  \"choices\": [\"A: Os\", \"B: Og\", \"C: O\"]\n}",
+      "slices": [
+        "chemistry"
+      ],
+      "valid": false
+    },
+    {
+      "correct": false,
+      "error": null,
+      "id": "chemistry-07",
+      "parsed": null,
+      "raw": "{\n  \"answer\": \"A: Na\",\n  \"choices\": [\"A: Na\", \"B: N\", \"C: Ni\"]\n}",
+      "slices": [
+        "chemistry"
+      ],
+      "valid": false
+    },
+    {
+      "correct": false,
+      "error": null,
+      "id": "chemistry-08",
+      "parsed": null,
+      "raw": "{\n  \"answer\": \"B: Mg\",\n  \"choices\": [\"A: Mo\", \"B: Mg\", \"C: Mn\"]\n}",
+      "slices": [
+        "chemistry"
+      ],
+      "valid": false
+    },
+    {
+      "correct": false,
+      "error": null,
+      "id": "chemistry-09",
+      "parsed": null,
+      "raw": "{\n  \"answer\": \"C\",\n  \"choices\": [\"A\", \"B\", \"C\"]\n}",
+      "slices": [
+        "chemistry"
+      ],
+      "valid": false
+    },
+    {
+      "correct": false,
+      "error": null,
+      "id": "chemistry-10",
+      "parsed": null,
+      "raw": "{\n  \"answer\": \"A\",\n  \"choices\": [\"A: Si\", \"B: S\", \"C: Sc\"]\n}",
+      "slices": [
+        "chemistry"
+      ],
+      "valid": false
+    },
+    {
+      "correct": false,
+      "error": null,
+      "id": "chemistry-11",
+      "parsed": null,
+      "raw": "{\n  \"answer\": \"B\",\n  \"choices\": [\"A: Po\", \"B: P\", \"C: F\"]\n}",
+      "slices": [
+        "chemistry"
+      ],
+      "valid": false
+    },
+    {
+      "correct": false,
+      "error": null,
+      "id": "chemistry-12",
+      "parsed": null,
+      "raw": "{\n  \"answer\": \"C\",\n  \"choices\": [\"Si\", \"Sr\", \"S\"]\n}",
+      "slices": [
+        "chemistry"
+      ],
+      "valid": false
+    },
+    {
+      "correct": false,
+      "error": null,
+      "id": "chemistry-13",
+      "parsed": null,
+      "raw": "{\n  \"answer\": \"A: Cl\",\n  \"choices\": [\"A: Cl\", \"B: C\", \"C: Cr\"]\n}",
+      "slices": [
+        "chemistry"
+      ],
+      "valid": false
+    },
+    {
+      "correct": false,
+      "error": null,
+      "id": "chemistry-14",
+      "parsed": null,
+      "raw": "{\n  \"answer\": \"B: K\",\n  \"choices\": [\"A: Kr\", \"B: K\", \"C: Ca\"]\n}",
+      "slices": [
+        "chemistry"
+      ],
+      "valid": false
+    },
+    {
+      "correct": false,
+      "error": null,
+      "id": "chemistry-15",
+      "parsed": null,
+      "raw": "{\n  \"answer\": \"C\",\n  \"choices\": [\"A: C\", \"B: Cl\", \"C: Ca\"]\n}",
+      "slices": [
+        "chemistry"
+      ],
+      "valid": false
+    },
+    {
+      "correct": false,
+      "error": null,
+      "id": "chemistry-16",
+      "parsed": null,
+      "raw": "{\n  \"answer\": \"A\",\n  \"choices\": [\"A: Fe\", \"B: F\", \"C: Fr\"]\n}",
+      "slices": [
+        "chemistry"
+      ],
+      "valid": false
+    },
+    {
+      "correct": false,
+      "error": null,
+      "id": "chemistry-17",
+      "parsed": null,
+      "raw": "{\n  \"answer\": \"C\",\n  \"choices\": [\"A: Ca\", \"B: Cu\", \"C: Co\"]\n}",
+      "slices": [
+        "chemistry"
+      ],
+      "valid": false
+    },
+    {
+      "correct": false,
+      "error": null,
+      "id": "chemistry-18",
+      "parsed": null,
+      "raw": "{\n  \"answer\": \"C: Ag\",\n  \"choices\": [\"A: Au\", \"B: Al\", \"C: Ag\"]\n}",
+      "slices": [
+        "chemistry"
+      ],
+      "valid": false
+    },
+    {
+      "correct": false,
+      "error": null,
+      "id": "astronomy-01",
+      "parsed": null,
+      "raw": "{\n  \"answer\": \"A\",\n  \"choices\": [\"A: Юпитер\", \"B: Сатурн\", \"C: Непт",
+      "slices": [
+        "astronomy"
+      ],
+      "valid": false
+    },
+    {
+      "correct": false,
+      "error": null,
+      "id": "astronomy-02",
+      "parsed": null,
+      "raw": "{\n  \"answer\": \"B: Меркурий\",\n  \"choices\": [\"A: Венера\", \"B: Меркури",
+      "slices": [
+        "astronomy"
+      ],
+      "valid": false
+    },
+    {
+      "correct": false,
+      "error": null,
+      "id": "astronomy-03",
+      "parsed": null,
+      "raw": "{\n  \"answer\": \"B: Земля\",\n  \"choices\": [\"A: Венера\", \"B: Земля\", \"C",
+      "slices": [
+        "astronomy"
+      ],
+      "valid": false
+    },
+    {
+      "correct": false,
+      "error": null,
+      "id": "astronomy-04",
+      "parsed": null,
+      "raw": "{\n  \"answer\": \"A: Сатурн\",\n  \"choices\": [\"A: Сатурн\", \"B: Юпитер\", \"C",
+      "slices": [
+        "astronomy"
+      ],
+      "valid": false
+    },
+    {
+      "correct": false,
+      "error": null,
+      "id": "astronomy-05",
+      "parsed": null,
+      "raw": "{\n  \"answer\": \"A\",\n  \"choices\": [\"A: Марс\", \"B: Земля\", \"C: Венера",
+      "slices": [
+        "astronomy"
+      ],
+      "valid": false
+    },
+    {
+      "correct": false,
+      "error": null,
+      "id": "astronomy-06",
+      "parsed": null,
+      "raw": "{\n  \"answer\": \"C\",\n  \"choices\": [\"A: Юпитер\", \"B: Венера\", \"C: Марс",
+      "slices": [
+        "astronomy"
+      ],
+      "valid": false
+    },
+    {
+      "correct": false,
+      "error": null,
+      "id": "astronomy-07",
+      "parsed": null,
+      "raw": "{\n  \"answer\": \"B: Сатурн\",\n  \"choices\": [\"A: Юпитер\", \"B: Сатурн\", \"C",
+      "slices": [
+        "astronomy"
+      ],
+      "valid": false
+    },
+    {
+      "correct": false,
+      "error": null,
+      "id": "astronomy-08",
+      "parsed": null,
+      "raw": "{\n  \"answer\": \"A: Уран\",\n  \"choices\": [\"A: Уран\", \"B: Сатурн\", \"C: Ю",
+      "slices": [
+        "astronomy"
+      ],
+      "valid": false
+    },
+    {
+      "correct": false,
+      "error": null,
+      "id": "astronomy-09",
+      "parsed": null,
+      "raw": "{\n  \"answer\": \"A: Нептун\",\n  \"choices\": [\"A: Нептун\", \"B: Сатурн\",",
+      "slices": [
+        "astronomy"
+      ],
+      "valid": false
+    },
+    {
+      "correct": false,
+      "error": null,
+      "id": "astronomy-10",
+      "parsed": null,
+      "raw": "{\n  \"answer\": \"A: Нептун\",\n  \"choices\": [\"A: Нептун\", \"B: Уран\", \"",
+      "slices": [
+        "astronomy"
+      ],
+      "valid": false
+    },
+    {
+      "correct": false,
+      "error": null,
+      "id": "astronomy-11",
+      "parsed": null,
+      "raw": "{\n  \"answer\": \"A\",\n  \"choices\": [\"A: Вега\", \"B: Солнце\", \"C: Сири",
+      "slices": [
+        "astronomy"
+      ],
+      "valid": false
+    },
+    {
+      "correct": false,
+      "error": null,
+      "id": "astronomy-12",
+      "parsed": null,
+      "raw": "{\n  \"answer\": \"A\",\n  \"choices\": [\"A: Андромеда\", \"B: Треугольник\", \"C:",
+      "slices": [
+        "astronomy"
+      ],
+      "valid": false
+    },
+    {
+      "correct": false,
+      "error": null,
+      "id": "astronomy-13",
+      "parsed": null,
+      "raw": "{\n  \"answer\": \"C\",\n  \"choices\": [\"A\", \"B\", \"C\"]\n}",
+      "slices": [
+        "astronomy"
+      ],
+      "valid": false
+    },
+    {
+      "correct": false,
+      "error": null,
+      "id": "astronomy-14",
+      "parsed": null,
+      "raw": "```json\n{\n  \"answer\": \"B\",\n  \"choices\": [\"A\", \"B\", \"C\"]\n}\n```",
+      "slices": [
+        "astronomy"
+      ],
+      "valid": false
+    },
+    {
+      "correct": false,
+      "error": null,
+      "id": "astronomy-15",
+      "parsed": null,
+      "raw": "```json\n{\n  \"answer\": \"REFUSE\"\n}\n```",
+      "slices": [
+        "astronomy"
+      ],
+      "valid": false
+    },
+    {
+      "correct": false,
+      "error": null,
+      "id": "astronomy-16",
+      "parsed": null,
+      "raw": "{\n  \"answer\": \"B: 9\",\n  \"choices\": [\"A: 8\", \"B: 9\", \"C: 7",
+      "slices": [
+        "astronomy"
+      ],
+      "valid": false
+    },
+    {
+      "correct": false,
+      "error": null,
+      "id": "astronomy-17",
+      "parsed": null,
+      "raw": "{\n  \"answer\": \"A\",\n  \"choices\": [\"A: Сатурна и Урана\", \"B: Марса и Юпит",
+      "slices": [
+        "astronomy"
+      ],
+      "valid": false
+    },
+    {
+      "correct": false,
+      "error": null,
+      "id": "astronomy-18",
+      "parsed": null,
+      "raw": "{\n  \"answer\": \"C: Карликовая планета\"\n}",
+      "slices": [
+        "astronomy"
+      ],
+      "valid": false
+    }
+  ],
+  "protocol_sha256": "7fffd67baab3ff6a65249d63a53a6235663fb913f1bc80e2a21ad5aedd9b0f09",
+  "runtime_sha256": "3c147e96fba2b13e4abd72123da67eab3f34ef9b61995994e7536062f900f6e7",
+  "slices": {
+    "astronomy": {
+      "accuracy": 0.0,
+      "correct": 0,
+      "errors": 0,
+      "format_rate": 0.0,
+      "n": 18,
+      "valid": 0
+    },
+    "chemistry": {
+      "accuracy": 0.0,
+      "correct": 0,
+      "errors": 0,
+      "format_rate": 0.0,
+      "n": 18,
+      "valid": 0
+    },
+    "geography": {
+      "accuracy": 0.0,
+      "correct": 0,
+      "errors": 0,
+      "format_rate": 0.0,
+      "n": 18,
+      "valid": 0
+    }
+  },
+  "status": "complete"
+}

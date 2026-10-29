@@ -1,0 +1,13 @@
+13:01:21.974 | INFO    | prefect - Starting temporary server on http://127.0.0.1:8330
+See https://docs.prefect.io/v3/concepts/server#how-to-guides for more information on running a dedicated Prefect server.
+13:01:25.592 | INFO    | Flow run 'aquatic-asp' - Beginning flow run 'aquatic-asp' for flow 'model-release'
+13:01:25.656 | INFO    | Task run 'prepare-input-93f' - Finished in state Cached(type=COMPLETED)
+13:01:25.659 | INFO    | Flow run 'aquatic-asp' - PREPARATION_STATE=Cached CONTENT_KEY=51056cf10c5589460ef64f9881420bded78bebbfb5580a62619242666d88639e
+13:01:25.666 | INFO    | Task run 'obtain-existing-training-artifact-231' - ARTIFACT_VERIFIED fixture-B existing run; no training
+13:01:25.668 | INFO    | Task run 'obtain-existing-training-artifact-231' - Finished in state Completed()
+13:01:25.675 | INFO    | Task run 'evaluate-release-admission-cf3' - Finished in state Completed()
+13:01:25.680 | INFO    | Task run 'publish-accepted-pointer-3c5' - ARTIFACT_VERIFIED fixture-B existing run; no training
+13:01:25.695 | INFO    | Task run 'publish-accepted-pointer-3c5' - PUBLISHED fixture-B cdfa2da746093e2a2c185d1166718c0d01747ac18884945b0faa68c9ad9c3082
+13:01:25.698 | INFO    | Task run 'publish-accepted-pointer-3c5' - Finished in state Completed()
+13:01:26.605 | INFO    | Flow run 'aquatic-asp' - Finished in state Completed()
+13:01:26.641 | INFO    | prefect - Stopping temporary server on http://127.0.0.1:8330

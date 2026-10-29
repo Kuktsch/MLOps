@@ -1,0 +1,3 @@
+concurrency,n,successes,errors,batch_seconds,successful_requests_per_second,mean_success_client_seconds,max_success_client_seconds,mean_error_client_seconds,max_error_client_seconds,mean_generation_seconds,mean_queue_seconds,actual_output_tokens
+1,8,8,0,9.26559500899998,0.863409202779674,1.1580189575000475,2.0156341620001967,,,1.153977198125034,0.0009510124999962954,134
+2,8,8,0,5.194324671000004,1.54014246446013,1.1481843492500161,2.0766018869999243,,,0.6487153147500351,0.4961226998749737,134
