@@ -1,0 +1,28 @@
+uv sync --frozen --extra model
+Checked 176 packages in 17ms
+.venv/bin/python scripts/prepare_real.py --hw67 ../mlops26-hw6-7/hw67-broken --workspace .real-synced --evidence evidence/model-synced
+IMPORTED_HW67_EVALUATION f8dd502249724e8d8d05ec3ac0eb4afe {'baseline': {'n': 54, 'correct': 34, 'valid': 54, 'errors': 0, 'accuracy': 0.6296296296296297, 'format_rate': 1.0}, 'candidate': {'n': 54, 'correct': 32, 'valid': 54, 'errors': 0, 'accuracy': 0.5925925925925926, 'format_rate': 1.0}}
+LOAD_REAL baseline baseline-qwen3-c1899de289a04d12100db370d81485cdf75e47ca
+Loading weights:   0%|          | 0/311 [00:00<?, ?it/s]Loading weights:  60%|██████    | 188/311 [00:00<00:00, 1871.77it/s]Loading weights: 100%|██████████| 311/311 [00:00<00:00, 2286.93it/s]
+EVALUATED baseline 10 of 57
+EVALUATED baseline 20 of 57
+EVALUATED baseline 30 of 57
+EVALUATED baseline 40 of 57
+EVALUATED baseline 50 of 57
+HW67_ANSWERS_MATCH baseline 57
+METRICS baseline {'n': 54, 'correct': 34, 'valid': 54, 'errors': 0, 'accuracy': 0.6296296296296297, 'format_rate': 1.0}
+LOAD_REAL candidate adapter-cce6597824384cab8697bc597d7500c9
+Loading weights:   0%|          | 0/311 [00:00<?, ?it/s]Loading weights:  35%|███▌      | 109/311 [00:00<00:00, 1081.49it/s]Loading weights: 100%|██████████| 311/311 [00:00<00:00, 2334.76it/s]
+EVALUATED candidate 10 of 57
+EVALUATED candidate 20 of 57
+EVALUATED candidate 30 of 57
+EVALUATED candidate 40 of 57
+EVALUATED candidate 50 of 57
+HW67_ANSWERS_MATCH candidate 57
+METRICS candidate {'n': 54, 'correct': 32, 'valid': 54, 'errors': 0, 'accuracy': 0.5925925925925926, 'format_rate': 1.0}
+ADMISSION baseline True Общая регрессия accuracy
+ADMISSION candidate False Общая регрессия accuracy
+PUBLISHED baseline-qwen3-c1899de289a04d12100db370d81485cdf75e47ca 73391d2407d20012d333bc7c1728fcabd0843c9127821a467bac83550432c2a3
+🏃 View run same-backend-baseline-candidate-no-training at: http://127.0.0.1:5006/#/experiments/3/runs/5e83ce18ce53470192adadef7a0afe71
+🧪 View experiment at: http://127.0.0.1:5006/#/experiments/3
+REAL_WORKSPACE_READY /home/luserok/VSCodeWSL/MLOps/hw8910-broken/.real-synced

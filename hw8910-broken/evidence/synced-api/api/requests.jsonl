@@ -1,0 +1,296 @@
+{"path": "/health", "payload": null, "status": 200, "body": {"alive": true, "backend": "Transformers + PEFT (real weights)"}, "client_seconds": 0.013015199998335447}
+{"path": "/ready", "payload": null, "status": 503, "body": {"ready": false}, "client_seconds": 0.0016815419985505287}
+{"path": "/ready", "payload": null, "status": 503, "body": {"ready": false}, "client_seconds": 0.0010980929982906673}
+{"path": "/debug", "payload": null, "status": 200, "body": {"loaded_id": null, "calls": 0, "warmup_calls": 0, "warmup_finished": false, "load_error": null}, "client_seconds": 0.001126695002312772}
+{"path": "/ready", "payload": null, "status": 503, "body": {"ready": false}, "client_seconds": 0.0015447300029336475}
+{"path": "/debug", "payload": null, "status": 200, "body": {"loaded_id": null, "calls": 0, "warmup_calls": 0, "warmup_finished": false, "load_error": null}, "client_seconds": 0.001218402998347301}
+{"path": "/ready", "payload": null, "status": 503, "body": {"ready": false}, "client_seconds": 0.001407219002430793}
+{"path": "/debug", "payload": null, "status": 200, "body": {"loaded_id": null, "calls": 0, "warmup_calls": 0, "warmup_finished": false, "load_error": null}, "client_seconds": 0.0009886839980026707}
+{"path": "/ready", "payload": null, "status": 503, "body": {"ready": false}, "client_seconds": 0.0013642150006489828}
+{"path": "/debug", "payload": null, "status": 200, "body": {"loaded_id": null, "calls": 0, "warmup_calls": 0, "warmup_finished": false, "load_error": null}, "client_seconds": 0.000979782998911105}
+{"path": "/ready", "payload": null, "status": 503, "body": {"ready": false}, "client_seconds": 0.001497625999036245}
+{"path": "/debug", "payload": null, "status": 200, "body": {"loaded_id": null, "calls": 0, "warmup_calls": 0, "warmup_finished": false, "load_error": null}, "client_seconds": 0.0014552229986293241}
+{"path": "/ready", "payload": null, "status": 503, "body": {"ready": false}, "client_seconds": 0.0016369380027754232}
+{"path": "/debug", "payload": null, "status": 200, "body": {"loaded_id": null, "calls": 0, "warmup_calls": 0, "warmup_finished": false, "load_error": null}, "client_seconds": 0.0009773830024641939}
+{"path": "/ready", "payload": null, "status": 503, "body": {"ready": false}, "client_seconds": 0.0016318380003212951}
+{"path": "/debug", "payload": null, "status": 200, "body": {"loaded_id": null, "calls": 0, "warmup_calls": 0, "warmup_finished": false, "load_error": null}, "client_seconds": 0.001140196000051219}
+{"path": "/ready", "payload": null, "status": 503, "body": {"ready": false}, "client_seconds": 0.0013756170010310598}
+{"path": "/debug", "payload": null, "status": 200, "body": {"loaded_id": null, "calls": 0, "warmup_calls": 0, "warmup_finished": false, "load_error": null}, "client_seconds": 0.0010140859994862694}
+{"path": "/ready", "payload": null, "status": 503, "body": {"ready": false}, "client_seconds": 0.0014767249995202292}
+{"path": "/debug", "payload": null, "status": 200, "body": {"loaded_id": null, "calls": 0, "warmup_calls": 0, "warmup_finished": false, "load_error": null}, "client_seconds": 0.0009534800010442268}
+{"path": "/ready", "payload": null, "status": 503, "body": {"ready": false}, "client_seconds": 0.001716945000225678}
+{"path": "/debug", "payload": null, "status": 200, "body": {"loaded_id": null, "calls": 0, "warmup_calls": 0, "warmup_finished": false, "load_error": null}, "client_seconds": 0.001026685997203458}
+{"path": "/ready", "payload": null, "status": 503, "body": {"ready": false}, "client_seconds": 0.001369816000078572}
+{"path": "/debug", "payload": null, "status": 200, "body": {"loaded_id": null, "calls": 0, "warmup_calls": 0, "warmup_finished": false, "load_error": null}, "client_seconds": 0.001065690001269104}
+{"path": "/ready", "payload": null, "status": 503, "body": {"ready": false}, "client_seconds": 0.0015032269984658342}
+{"path": "/debug", "payload": null, "status": 200, "body": {"loaded_id": null, "calls": 0, "warmup_calls": 0, "warmup_finished": false, "load_error": null}, "client_seconds": 0.0012439049969543703}
+{"path": "/ready", "payload": null, "status": 503, "body": {"ready": false}, "client_seconds": 0.0014631240010203328}
+{"path": "/debug", "payload": null, "status": 200, "body": {"loaded_id": null, "calls": 0, "warmup_calls": 0, "warmup_finished": false, "load_error": null}, "client_seconds": 0.0011190939985681325}
+{"path": "/ready", "payload": null, "status": 503, "body": {"ready": false}, "client_seconds": 0.0017035439996107016}
+{"path": "/debug", "payload": null, "status": 200, "body": {"loaded_id": null, "calls": 0, "warmup_calls": 0, "warmup_finished": false, "load_error": null}, "client_seconds": 0.0011909009990631603}
+{"path": "/ready", "payload": null, "status": 503, "body": {"ready": false}, "client_seconds": 0.001466624002205208}
+{"path": "/debug", "payload": null, "status": 200, "body": {"loaded_id": null, "calls": 0, "warmup_calls": 0, "warmup_finished": false, "load_error": null}, "client_seconds": 0.0010961929983750451}
+{"path": "/ready", "payload": null, "status": 503, "body": {"ready": false}, "client_seconds": 0.0014060190005693585}
+{"path": "/debug", "payload": null, "status": 200, "body": {"loaded_id": null, "calls": 0, "warmup_calls": 0, "warmup_finished": false, "load_error": null}, "client_seconds": 0.00098108299789601}
+{"path": "/ready", "payload": null, "status": 503, "body": {"ready": false}, "client_seconds": 0.0015985350000846665}
+{"path": "/debug", "payload": null, "status": 200, "body": {"loaded_id": null, "calls": 0, "warmup_calls": 0, "warmup_finished": false, "load_error": null}, "client_seconds": 0.001277807998121716}
+{"path": "/ready", "payload": null, "status": 503, "body": {"ready": false}, "client_seconds": 0.0015488309982174542}
+{"path": "/debug", "payload": null, "status": 200, "body": {"loaded_id": null, "calls": 0, "warmup_calls": 0, "warmup_finished": false, "load_error": null}, "client_seconds": 0.0010018850007327273}
+{"path": "/ready", "payload": null, "status": 503, "body": {"ready": false}, "client_seconds": 0.001414119000401115}
+{"path": "/debug", "payload": null, "status": 200, "body": {"loaded_id": null, "calls": 0, "warmup_calls": 0, "warmup_finished": false, "load_error": null}, "client_seconds": 0.0012543060001917183}
+{"path": "/ready", "payload": null, "status": 503, "body": {"ready": false}, "client_seconds": 0.0017526480005471967}
+{"path": "/debug", "payload": null, "status": 200, "body": {"loaded_id": null, "calls": 0, "warmup_calls": 0, "warmup_finished": false, "load_error": null}, "client_seconds": 0.001214701998833334}
+{"path": "/ready", "payload": null, "status": 503, "body": {"ready": false}, "client_seconds": 0.0013442140007100534}
+{"path": "/debug", "payload": null, "status": 200, "body": {"loaded_id": null, "calls": 0, "warmup_calls": 0, "warmup_finished": false, "load_error": null}, "client_seconds": 0.0010771920024126302}
+{"path": "/ready", "payload": null, "status": 503, "body": {"ready": false}, "client_seconds": 0.0016554399990127422}
+{"path": "/debug", "payload": null, "status": 200, "body": {"loaded_id": null, "calls": 0, "warmup_calls": 0, "warmup_finished": false, "load_error": null}, "client_seconds": 0.0010744909995992202}
+{"path": "/ready", "payload": null, "status": 503, "body": {"ready": false}, "client_seconds": 0.0014995269993960392}
+{"path": "/debug", "payload": null, "status": 200, "body": {"loaded_id": null, "calls": 0, "warmup_calls": 0, "warmup_finished": false, "load_error": null}, "client_seconds": 0.001097792999644298}
+{"path": "/ready", "payload": null, "status": 503, "body": {"ready": false}, "client_seconds": 0.0017862509994301945}
+{"path": "/debug", "payload": null, "status": 200, "body": {"loaded_id": null, "calls": 0, "warmup_calls": 0, "warmup_finished": false, "load_error": null}, "client_seconds": 0.0010858919995371252}
+{"path": "/ready", "payload": null, "status": 503, "body": {"ready": false}, "client_seconds": 0.0014327210010378622}
+{"path": "/debug", "payload": null, "status": 200, "body": {"loaded_id": null, "calls": 0, "warmup_calls": 0, "warmup_finished": false, "load_error": null}, "client_seconds": 0.0010328870012017433}
+{"path": "/ready", "payload": null, "status": 503, "body": {"ready": false}, "client_seconds": 0.0015914340001472738}
+{"path": "/debug", "payload": null, "status": 200, "body": {"loaded_id": null, "calls": 0, "warmup_calls": 0, "warmup_finished": false, "load_error": null}, "client_seconds": 0.0013599149970104918}
+{"path": "/ready", "payload": null, "status": 503, "body": {"ready": false}, "client_seconds": 0.001538429998618085}
+{"path": "/debug", "payload": null, "status": 200, "body": {"loaded_id": null, "calls": 0, "warmup_calls": 0, "warmup_finished": false, "load_error": null}, "client_seconds": 0.0010071850010717753}
+{"path": "/ready", "payload": null, "status": 503, "body": {"ready": false}, "client_seconds": 0.0015556380021735094}
+{"path": "/debug", "payload": null, "status": 200, "body": {"loaded_id": null, "calls": 0, "warmup_calls": 0, "warmup_finished": false, "load_error": null}, "client_seconds": 0.0011037980002583936}
+{"path": "/ready", "payload": null, "status": 503, "body": {"ready": false}, "client_seconds": 0.0015930410008877516}
+{"path": "/debug", "payload": null, "status": 200, "body": {"loaded_id": null, "calls": 0, "warmup_calls": 0, "warmup_finished": false, "load_error": null}, "client_seconds": 0.0009256820012524258}
+{"path": "/ready", "payload": null, "status": 503, "body": {"ready": false}, "client_seconds": 0.001478329999372363}
+{"path": "/debug", "payload": null, "status": 200, "body": {"loaded_id": null, "calls": 0, "warmup_calls": 0, "warmup_finished": false, "load_error": null}, "client_seconds": 0.0010394919991085771}
+{"path": "/ready", "payload": null, "status": 503, "body": {"ready": false}, "client_seconds": 0.010170700999879045}
+{"path": "/debug", "payload": null, "status": 200, "body": {"loaded_id": null, "calls": 0, "warmup_calls": 0, "warmup_finished": false, "load_error": null}, "client_seconds": 0.0024951209998107515}
+{"path": "/ready", "payload": null, "status": 503, "body": {"ready": false}, "client_seconds": 0.10088163600084954}
+{"path": "/debug", "payload": null, "status": 200, "body": {"loaded_id": null, "calls": 0, "warmup_calls": 0, "warmup_finished": false, "load_error": null}, "client_seconds": 0.007412856997689232}
+{"path": "/ready", "payload": null, "status": 503, "body": {"ready": false}, "client_seconds": 0.003672626000479795}
+{"path": "/debug", "payload": null, "status": 200, "body": {"loaded_id": null, "calls": 0, "warmup_calls": 0, "warmup_finished": false, "load_error": null}, "client_seconds": 0.004083362000528723}
+{"path": "/ready", "payload": null, "status": 503, "body": {"ready": false}, "client_seconds": 0.008622163997642929}
+{"path": "/debug", "payload": null, "status": 200, "body": {"loaded_id": null, "calls": 0, "warmup_calls": 0, "warmup_finished": false, "load_error": null}, "client_seconds": 0.001781458002369618}
+{"path": "/ready", "payload": null, "status": 503, "body": {"ready": false}, "client_seconds": 0.04145837199757807}
+{"path": "/debug", "payload": null, "status": 200, "body": {"loaded_id": null, "calls": 0, "warmup_calls": 0, "warmup_finished": false, "load_error": null}, "client_seconds": 0.09466048499962199}
+{"path": "/ready", "payload": null, "status": 503, "body": {"ready": false}, "client_seconds": 0.004291180001018802}
+{"path": "/debug", "payload": null, "status": 200, "body": {"loaded_id": null, "calls": 0, "warmup_calls": 0, "warmup_finished": false, "load_error": null}, "client_seconds": 0.003060270999412751}
+{"path": "/ready", "payload": null, "status": 503, "body": {"ready": false}, "client_seconds": 0.025394049000169616}
+{"path": "/debug", "payload": null, "status": 200, "body": {"loaded_id": null, "calls": 0, "warmup_calls": 0, "warmup_finished": false, "load_error": null}, "client_seconds": 0.007091727999068098}
+{"path": "/ready", "payload": null, "status": 503, "body": {"ready": false}, "client_seconds": 0.002333807002287358}
+{"path": "/debug", "payload": null, "status": 200, "body": {"loaded_id": null, "calls": 0, "warmup_calls": 0, "warmup_finished": false, "load_error": null}, "client_seconds": 0.0016779479992692359}
+{"path": "/ready", "payload": null, "status": 503, "body": {"ready": false}, "client_seconds": 0.011052579000534024}
+{"path": "/debug", "payload": null, "status": 200, "body": {"loaded_id": null, "calls": 0, "warmup_calls": 0, "warmup_finished": false, "load_error": null}, "client_seconds": 0.010251507999782916}
+{"path": "/ready", "payload": null, "status": 503, "body": {"ready": false}, "client_seconds": 0.0027934480021940544}
+{"path": "/debug", "payload": null, "status": 200, "body": {"loaded_id": null, "calls": 0, "warmup_calls": 0, "warmup_finished": false, "load_error": null}, "client_seconds": 0.002432414999930188}
+{"path": "/ready", "payload": null, "status": 503, "body": {"ready": false}, "client_seconds": 0.0027854459985974245}
+{"path": "/debug", "payload": null, "status": 200, "body": {"loaded_id": null, "calls": 0, "warmup_calls": 0, "warmup_finished": false, "load_error": null}, "client_seconds": 0.0030171670005074702}
+{"path": "/ready", "payload": null, "status": 503, "body": {"ready": false}, "client_seconds": 0.0056525010004406795}
+{"path": "/debug", "payload": null, "status": 200, "body": {"loaded_id": null, "calls": 0, "warmup_calls": 0, "warmup_finished": false, "load_error": null}, "client_seconds": 0.0017659570003161207}
+{"path": "/ready", "payload": null, "status": 503, "body": {"ready": false}, "client_seconds": 0.003424203001486603}
+{"path": "/debug", "payload": null, "status": 200, "body": {"loaded_id": null, "calls": 0, "warmup_calls": 0, "warmup_finished": false, "load_error": null}, "client_seconds": 0.00655208099851734}
+{"path": "/ready", "payload": null, "status": 503, "body": {"ready": false}, "client_seconds": 0.022524295000039274}
+{"path": "/debug", "payload": null, "status": 200, "body": {"loaded_id": null, "calls": 0, "warmup_calls": 0, "warmup_finished": false, "load_error": null}, "client_seconds": 0.02275341600034153}
+{"path": "/ready", "payload": null, "status": 503, "body": {"ready": false}, "client_seconds": 0.003574215999833541}
+{"path": "/debug", "payload": null, "status": 200, "body": {"loaded_id": null, "calls": 0, "warmup_calls": 0, "warmup_finished": false, "load_error": null}, "client_seconds": 0.0038533420010935515}
+{"path": "/ready", "payload": null, "status": 503, "body": {"ready": false}, "client_seconds": 0.004762122000101954}
+{"path": "/debug", "payload": null, "status": 200, "body": {"loaded_id": null, "calls": 0, "warmup_calls": 0, "warmup_finished": false, "load_error": null}, "client_seconds": 0.014130552001006436}
+{"path": "/ready", "payload": null, "status": 503, "body": {"ready": false}, "client_seconds": 0.012724527001410024}
+{"path": "/debug", "payload": null, "status": 200, "body": {"loaded_id": null, "calls": 0, "warmup_calls": 0, "warmup_finished": false, "load_error": null}, "client_seconds": 0.0021402889979071915}
+{"path": "/ready", "payload": null, "status": 503, "body": {"ready": false}, "client_seconds": 0.008255131000623805}
+{"path": "/debug", "payload": null, "status": 200, "body": {"loaded_id": null, "calls": 0, "warmup_calls": 0, "warmup_finished": false, "load_error": null}, "client_seconds": 0.005816516000777483}
+{"path": "/ready", "payload": null, "status": 503, "body": {"ready": false}, "client_seconds": 0.0036831260003964417}
+{"path": "/debug", "payload": null, "status": 200, "body": {"loaded_id": null, "calls": 0, "warmup_calls": 0, "warmup_finished": false, "load_error": null}, "client_seconds": 0.0014552290012943558}
+{"path": "/ready", "payload": null, "status": 503, "body": {"ready": false}, "client_seconds": 0.00723794100122177}
+{"path": "/debug", "payload": null, "status": 200, "body": {"loaded_id": null, "calls": 0, "warmup_calls": 0, "warmup_finished": false, "load_error": null}, "client_seconds": 0.0019228700002713595}
+{"path": "/ready", "payload": null, "status": 503, "body": {"ready": false}, "client_seconds": 0.0053385730025183875}
+{"path": "/debug", "payload": null, "status": 200, "body": {"loaded_id": null, "calls": 0, "warmup_calls": 0, "warmup_finished": false, "load_error": null}, "client_seconds": 0.002469017999828793}
+{"path": "/ready", "payload": null, "status": 503, "body": {"ready": false}, "client_seconds": 0.004276979001588188}
+{"path": "/debug", "payload": null, "status": 200, "body": {"loaded_id": null, "calls": 0, "warmup_calls": 0, "warmup_finished": false, "load_error": null}, "client_seconds": 0.0018297620008524973}
+{"path": "/ready", "payload": null, "status": 503, "body": {"ready": false}, "client_seconds": 0.2717620729999908}
+{"path": "/debug", "payload": null, "status": 200, "body": {"loaded_id": null, "calls": 0, "warmup_calls": 0, "warmup_finished": false, "load_error": null}, "client_seconds": 0.002662335999048082}
+{"path": "/ready", "payload": null, "status": 503, "body": {"ready": false}, "client_seconds": 0.00663078799698269}
+{"path": "/debug", "payload": null, "status": 200, "body": {"loaded_id": null, "calls": 0, "warmup_calls": 0, "warmup_finished": false, "load_error": null}, "client_seconds": 0.009266920998925343}
+{"path": "/ready", "payload": null, "status": 503, "body": {"ready": false}, "client_seconds": 0.06073177999860491}
+{"path": "/debug", "payload": null, "status": 200, "body": {"loaded_id": null, "calls": 0, "warmup_calls": 0, "warmup_finished": false, "load_error": null}, "client_seconds": 0.0012175070005469024}
+{"path": "/ready", "payload": null, "status": 503, "body": {"ready": false}, "client_seconds": 0.0014406280024559237}
+{"path": "/debug", "payload": null, "status": 200, "body": {"loaded_id": null, "calls": 0, "warmup_calls": 0, "warmup_finished": false, "load_error": null}, "client_seconds": 0.0011928059975616634}
+{"path": "/ready", "payload": null, "status": 503, "body": {"ready": false}, "client_seconds": 0.002273801997944247}
+{"path": "/debug", "payload": null, "status": 200, "body": {"loaded_id": null, "calls": 0, "warmup_calls": 0, "warmup_finished": false, "load_error": null}, "client_seconds": 0.0012648119991354179}
+{"path": "/ready", "payload": null, "status": 503, "body": {"ready": false}, "client_seconds": 0.0013646209990838543}
+{"path": "/debug", "payload": null, "status": 200, "body": {"loaded_id": null, "calls": 0, "warmup_calls": 0, "warmup_finished": false, "load_error": null}, "client_seconds": 0.0009912880013871472}
+{"path": "/ready", "payload": null, "status": 503, "body": {"ready": false}, "client_seconds": 0.0036879270010103937}
+{"path": "/debug", "payload": null, "status": 200, "body": {"loaded_id": null, "calls": 0, "warmup_calls": 0, "warmup_finished": false, "load_error": null}, "client_seconds": 0.0030121670024527702}
+{"path": "/ready", "payload": null, "status": 503, "body": {"ready": false}, "client_seconds": 0.001834463000705}
+{"path": "/debug", "payload": null, "status": 200, "body": {"loaded_id": null, "calls": 0, "warmup_calls": 0, "warmup_finished": false, "load_error": null}, "client_seconds": 0.0013012149975111242}
+{"path": "/ready", "payload": null, "status": 503, "body": {"ready": false}, "client_seconds": 0.0015489369980059564}
+{"path": "/debug", "payload": null, "status": 200, "body": {"loaded_id": null, "calls": 0, "warmup_calls": 0, "warmup_finished": false, "load_error": null}, "client_seconds": 0.0011544020017026924}
+{"path": "/ready", "payload": null, "status": 503, "body": {"ready": false}, "client_seconds": 0.0014623289971495979}
+{"path": "/debug", "payload": null, "status": 200, "body": {"loaded_id": null, "calls": 0, "warmup_calls": 0, "warmup_finished": false, "load_error": null}, "client_seconds": 0.0009765860013430938}
+{"path": "/ready", "payload": null, "status": 503, "body": {"ready": false}, "client_seconds": 0.0014562260003003757}
+{"path": "/debug", "payload": null, "status": 200, "body": {"loaded_id": null, "calls": 0, "warmup_calls": 0, "warmup_finished": false, "load_error": null}, "client_seconds": 0.0010513899978832342}
+{"path": "/ready", "payload": null, "status": 503, "body": {"ready": false}, "client_seconds": 0.0015757370019855443}
+{"path": "/debug", "payload": null, "status": 200, "body": {"loaded_id": null, "calls": 0, "warmup_calls": 0, "warmup_finished": false, "load_error": null}, "client_seconds": 0.001077893997717183}
+{"path": "/ready", "payload": null, "status": 503, "body": {"ready": false}, "client_seconds": 0.001497629000368761}
+{"path": "/debug", "payload": null, "status": 200, "body": {"loaded_id": null, "calls": 0, "warmup_calls": 0, "warmup_finished": false, "load_error": null}, "client_seconds": 0.0011832019990833942}
+{"path": "/ready", "payload": null, "status": 503, "body": {"ready": false}, "client_seconds": 0.0014750270020158496}
+{"path": "/debug", "payload": null, "status": 200, "body": {"loaded_id": null, "calls": 0, "warmup_calls": 0, "warmup_finished": false, "load_error": null}, "client_seconds": 0.0011778019979828969}
+{"path": "/ready", "payload": null, "status": 503, "body": {"ready": false}, "client_seconds": 0.0014611259975936264}
+{"path": "/debug", "payload": null, "status": 200, "body": {"loaded_id": null, "calls": 0, "warmup_calls": 0, "warmup_finished": false, "load_error": null}, "client_seconds": 0.0010322889975213911}
+{"path": "/ready", "payload": null, "status": 503, "body": {"ready": false}, "client_seconds": 0.0016571429987379815}
+{"path": "/debug", "payload": null, "status": 200, "body": {"loaded_id": null, "calls": 0, "warmup_calls": 0, "warmup_finished": false, "load_error": null}, "client_seconds": 0.0010784930018417072}
+{"path": "/ready", "payload": null, "status": 503, "body": {"ready": false}, "client_seconds": 0.001523331997304922}
+{"path": "/debug", "payload": null, "status": 200, "body": {"loaded_id": null, "calls": 0, "warmup_calls": 0, "warmup_finished": false, "load_error": null}, "client_seconds": 0.0012262060008652043}
+{"path": "/ready", "payload": null, "status": 503, "body": {"ready": false}, "client_seconds": 0.0019301659995107912}
+{"path": "/debug", "payload": null, "status": 200, "body": {"loaded_id": null, "calls": 0, "warmup_calls": 0, "warmup_finished": false, "load_error": null}, "client_seconds": 0.0016503420010849368}
+{"path": "/ready", "payload": null, "status": 503, "body": {"ready": false}, "client_seconds": 0.00220909100244171}
+{"path": "/debug", "payload": null, "status": 200, "body": {"loaded_id": null, "calls": 0, "warmup_calls": 0, "warmup_finished": false, "load_error": null}, "client_seconds": 0.003013860998180462}
+{"path": "/ready", "payload": null, "status": 200, "body": {"ready": true, "model_id": "baseline-qwen3-c1899de289a04d12100db370d81485cdf75e47ca", "runtime_sha256": "5ae12f9b60e56faa2075ed81ef4eb77f1994fa5a63dafafdf11f5c475f0e388e"}, "client_seconds": 0.0014134230004856363}
+{"path": "/debug", "payload": null, "status": 200, "body": {"loaded_id": "baseline-qwen3-c1899de289a04d12100db370d81485cdf75e47ca", "calls": 0, "warmup_calls": 1, "warmup_finished": true, "load_error": null}, "client_seconds": 0.0010584910014586058}
+{"path": "/generate", "payload": {"prompt": "test", "max_new_tokens": 100000}, "status": 422, "body": {"detail": "Only evaluated max_new_tokens=32 is supported"}, "client_seconds": 0.0013710179991903715}
+{"path": "/debug", "payload": null, "status": 200, "body": {"loaded_id": "baseline-qwen3-c1899de289a04d12100db370d81485cdf75e47ca", "calls": 0, "warmup_calls": 1, "warmup_finished": true, "load_error": null}, "client_seconds": 0.0013498160005838145}
+{"path": "/generate", "payload": {"prompt": "Какой город является столицей Финляндии?\nA: Хельсинки; B: Осло; C: Стокгольм. Допустимые метки choices: A, B, C.", "max_new_tokens": 32}, "status": 200, "body": {"answer": "{\"answer\":\"A\"}", "output_tokens": 6, "text": "{\"answer\":\"A\"}", "model_id": "baseline-qwen3-c1899de289a04d12100db370d81485cdf75e47ca", "runtime_sha256": "5ae12f9b60e56faa2075ed81ef4eb77f1994fa5a63dafafdf11f5c475f0e388e", "request_id": "31917e7d-57b1-4759-b241-cefa8ffc8bd9", "queue_seconds": 0.0010686929999792483, "generation_seconds": 0.23408882700096, "total_seconds": 0.23515752000093926}, "client_seconds": 0.23647843400249258}
+{"path": "/debug", "payload": null, "status": 200, "body": {"loaded_id": "baseline-qwen3-c1899de289a04d12100db370d81485cdf75e47ca", "calls": 17, "warmup_calls": 1, "warmup_finished": true, "load_error": null}, "client_seconds": 0.0011219959997106344}
+{"path": "/health", "payload": null, "status": 200, "body": {"alive": true, "backend": "Transformers + PEFT (real weights)"}, "client_seconds": 0.012393771001370624}
+{"path": "/ready", "payload": null, "status": 503, "body": {"ready": false}, "client_seconds": 0.0013508170013665222}
+{"path": "/ready", "payload": null, "status": 503, "body": {"ready": false}, "client_seconds": 0.0010528909988352098}
+{"path": "/debug", "payload": null, "status": 200, "body": {"loaded_id": null, "calls": 0, "warmup_calls": 0, "warmup_finished": false, "load_error": null}, "client_seconds": 0.0010703929983719718}
+{"path": "/ready", "payload": null, "status": 503, "body": {"ready": false}, "client_seconds": 0.0014814280002610758}
+{"path": "/debug", "payload": null, "status": 200, "body": {"loaded_id": null, "calls": 0, "warmup_calls": 0, "warmup_finished": false, "load_error": null}, "client_seconds": 0.0013444159994833171}
+{"path": "/ready", "payload": null, "status": 503, "body": {"ready": false}, "client_seconds": 0.0015308319998439401}
+{"path": "/debug", "payload": null, "status": 200, "body": {"loaded_id": null, "calls": 0, "warmup_calls": 0, "warmup_finished": false, "load_error": null}, "client_seconds": 0.0009603830003470648}
+{"path": "/ready", "payload": null, "status": 503, "body": {"ready": false}, "client_seconds": 0.0017759430011210497}
+{"path": "/debug", "payload": null, "status": 200, "body": {"loaded_id": null, "calls": 0, "warmup_calls": 0, "warmup_finished": false, "load_error": null}, "client_seconds": 0.0014255140013119671}
+{"path": "/ready", "payload": null, "status": 503, "body": {"ready": false}, "client_seconds": 0.0017359400007990189}
+{"path": "/debug", "payload": null, "status": 200, "body": {"loaded_id": null, "calls": 0, "warmup_calls": 0, "warmup_finished": false, "load_error": null}, "client_seconds": 0.0014431160016101785}
+{"path": "/ready", "payload": null, "status": 503, "body": {"ready": false}, "client_seconds": 0.001453316999686649}
+{"path": "/debug", "payload": null, "status": 200, "body": {"loaded_id": null, "calls": 0, "warmup_calls": 0, "warmup_finished": false, "load_error": null}, "client_seconds": 0.0010619849999784492}
+{"path": "/ready", "payload": null, "status": 503, "body": {"ready": false}, "client_seconds": 0.0018636499989952426}
+{"path": "/debug", "payload": null, "status": 200, "body": {"loaded_id": null, "calls": 0, "warmup_calls": 0, "warmup_finished": false, "load_error": null}, "client_seconds": 0.0015751270002510864}
+{"path": "/ready", "payload": null, "status": 503, "body": {"ready": false}, "client_seconds": 0.0018171459996665362}
+{"path": "/debug", "payload": null, "status": 200, "body": {"loaded_id": null, "calls": 0, "warmup_calls": 0, "warmup_finished": false, "load_error": null}, "client_seconds": 0.0013339069992071018}
+{"path": "/ready", "payload": null, "status": 503, "body": {"ready": false}, "client_seconds": 0.0021057690028101206}
+{"path": "/debug", "payload": null, "status": 200, "body": {"loaded_id": null, "calls": 0, "warmup_calls": 0, "warmup_finished": false, "load_error": null}, "client_seconds": 0.002135771999746794}
+{"path": "/ready", "payload": null, "status": 503, "body": {"ready": false}, "client_seconds": 0.001667833999817958}
+{"path": "/debug", "payload": null, "status": 200, "body": {"loaded_id": null, "calls": 0, "warmup_calls": 0, "warmup_finished": false, "load_error": null}, "client_seconds": 0.0017401400000380818}
+{"path": "/ready", "payload": null, "status": 503, "body": {"ready": false}, "client_seconds": 0.001959458000783343}
+{"path": "/debug", "payload": null, "status": 200, "body": {"loaded_id": null, "calls": 0, "warmup_calls": 0, "warmup_finished": false, "load_error": null}, "client_seconds": 0.0015174219988693949}
+{"path": "/ready", "payload": null, "status": 503, "body": {"ready": false}, "client_seconds": 0.0016308319973177277}
+{"path": "/debug", "payload": null, "status": 200, "body": {"loaded_id": null, "calls": 0, "warmup_calls": 0, "warmup_finished": false, "load_error": null}, "client_seconds": 0.0010679860024538357}
+{"path": "/ready", "payload": null, "status": 503, "body": {"ready": false}, "client_seconds": 0.0016767350025475025}
+{"path": "/debug", "payload": null, "status": 200, "body": {"loaded_id": null, "calls": 0, "warmup_calls": 0, "warmup_finished": false, "load_error": null}, "client_seconds": 0.0013500089989975095}
+{"path": "/ready", "payload": null, "status": 503, "body": {"ready": false}, "client_seconds": 0.0016109290008898824}
+{"path": "/debug", "payload": null, "status": 200, "body": {"loaded_id": null, "calls": 0, "warmup_calls": 0, "warmup_finished": false, "load_error": null}, "client_seconds": 0.0011248899972997606}
+{"path": "/ready", "payload": null, "status": 503, "body": {"ready": false}, "client_seconds": 0.0016125290021591354}
+{"path": "/debug", "payload": null, "status": 200, "body": {"loaded_id": null, "calls": 0, "warmup_calls": 0, "warmup_finished": false, "load_error": null}, "client_seconds": 0.0011591930015129037}
+{"path": "/ready", "payload": null, "status": 503, "body": {"ready": false}, "client_seconds": 0.0014804189995629713}
+{"path": "/debug", "payload": null, "status": 200, "body": {"loaded_id": null, "calls": 0, "warmup_calls": 0, "warmup_finished": false, "load_error": null}, "client_seconds": 0.0011196900013601407}
+{"path": "/ready", "payload": null, "status": 503, "body": {"ready": false}, "client_seconds": 0.0015077209973242134}
+{"path": "/debug", "payload": null, "status": 200, "body": {"loaded_id": null, "calls": 0, "warmup_calls": 0, "warmup_finished": false, "load_error": null}, "client_seconds": 0.0012269990002096165}
+{"path": "/ready", "payload": null, "status": 503, "body": {"ready": false}, "client_seconds": 0.00156652599980589}
+{"path": "/debug", "payload": null, "status": 200, "body": {"loaded_id": null, "calls": 0, "warmup_calls": 0, "warmup_finished": false, "load_error": null}, "client_seconds": 0.0009521769970888272}
+{"path": "/ready", "payload": null, "status": 503, "body": {"ready": false}, "client_seconds": 0.0018392479978501797}
+{"path": "/debug", "payload": null, "status": 200, "body": {"loaded_id": null, "calls": 0, "warmup_calls": 0, "warmup_finished": false, "load_error": null}, "client_seconds": 0.0015507249991060235}
+{"path": "/ready", "payload": null, "status": 503, "body": {"ready": false}, "client_seconds": 0.0015441239993378986}
+{"path": "/debug", "payload": null, "status": 200, "body": {"loaded_id": null, "calls": 0, "warmup_calls": 0, "warmup_finished": false, "load_error": null}, "client_seconds": 0.001409013999364106}
+{"path": "/ready", "payload": null, "status": 503, "body": {"ready": false}, "client_seconds": 0.0015114220004761592}
+{"path": "/debug", "payload": null, "status": 200, "body": {"loaded_id": null, "calls": 0, "warmup_calls": 0, "warmup_finished": false, "load_error": null}, "client_seconds": 0.0011233900004299358}
+{"path": "/ready", "payload": null, "status": 503, "body": {"ready": false}, "client_seconds": 0.0016136300000653137}
+{"path": "/debug", "payload": null, "status": 200, "body": {"loaded_id": null, "calls": 0, "warmup_calls": 0, "warmup_finished": false, "load_error": null}, "client_seconds": 0.0009960800016415305}
+{"path": "/ready", "payload": null, "status": 503, "body": {"ready": false}, "client_seconds": 0.0014666179995401762}
+{"path": "/debug", "payload": null, "status": 200, "body": {"loaded_id": null, "calls": 0, "warmup_calls": 0, "warmup_finished": false, "load_error": null}, "client_seconds": 0.000902873001905391}
+{"path": "/ready", "payload": null, "status": 503, "body": {"ready": false}, "client_seconds": 0.001895852001325693}
+{"path": "/debug", "payload": null, "status": 200, "body": {"loaded_id": null, "calls": 0, "warmup_calls": 0, "warmup_finished": false, "load_error": null}, "client_seconds": 0.0012365000002318993}
+{"path": "/ready", "payload": null, "status": 503, "body": {"ready": false}, "client_seconds": 0.0016119299980346113}
+{"path": "/debug", "payload": null, "status": 200, "body": {"loaded_id": null, "calls": 0, "warmup_calls": 0, "warmup_finished": false, "load_error": null}, "client_seconds": 0.001129290998505894}
+{"path": "/ready", "payload": null, "status": 503, "body": {"ready": false}, "client_seconds": 0.0016752339979575481}
+{"path": "/debug", "payload": null, "status": 200, "body": {"loaded_id": null, "calls": 0, "warmup_calls": 0, "warmup_finished": false, "load_error": null}, "client_seconds": 0.0010110809998877812}
+{"path": "/ready", "payload": null, "status": 503, "body": {"ready": false}, "client_seconds": 0.0019842589972540736}
+{"path": "/debug", "payload": null, "status": 200, "body": {"loaded_id": null, "calls": 0, "warmup_calls": 0, "warmup_finished": false, "load_error": null}, "client_seconds": 0.0009493760007899255}
+{"path": "/ready", "payload": null, "status": 503, "body": {"ready": false}, "client_seconds": 0.001525723000668222}
+{"path": "/debug", "payload": null, "status": 200, "body": {"loaded_id": null, "calls": 0, "warmup_calls": 0, "warmup_finished": false, "load_error": null}, "client_seconds": 0.001283603000047151}
+{"path": "/ready", "payload": null, "status": 503, "body": {"ready": false}, "client_seconds": 0.0016538329982722644}
+{"path": "/debug", "payload": null, "status": 200, "body": {"loaded_id": null, "calls": 0, "warmup_calls": 0, "warmup_finished": false, "load_error": null}, "client_seconds": 0.0012055970000801608}
+{"path": "/ready", "payload": null, "status": 503, "body": {"ready": false}, "client_seconds": 0.0015738270012661815}
+{"path": "/debug", "payload": null, "status": 200, "body": {"loaded_id": null, "calls": 0, "warmup_calls": 0, "warmup_finished": false, "load_error": null}, "client_seconds": 0.0009211739998136181}
+{"path": "/ready", "payload": null, "status": 503, "body": {"ready": false}, "client_seconds": 0.004415254999912577}
+{"path": "/debug", "payload": null, "status": 200, "body": {"loaded_id": null, "calls": 0, "warmup_calls": 0, "warmup_finished": false, "load_error": null}, "client_seconds": 0.006186396996781696}
+{"path": "/ready", "payload": null, "status": 503, "body": {"ready": false}, "client_seconds": 0.08915196799716796}
+{"path": "/debug", "payload": null, "status": 200, "body": {"loaded_id": null, "calls": 0, "warmup_calls": 0, "warmup_finished": false, "load_error": null}, "client_seconds": 0.0016204300009121653}
+{"path": "/ready", "payload": null, "status": 503, "body": {"ready": false}, "client_seconds": 0.002156773000024259}
+{"path": "/debug", "payload": null, "status": 200, "body": {"loaded_id": null, "calls": 0, "warmup_calls": 0, "warmup_finished": false, "load_error": null}, "client_seconds": 0.008099350998236332}
+{"path": "/ready", "payload": null, "status": 503, "body": {"ready": false}, "client_seconds": 0.01537483599895495}
+{"path": "/debug", "payload": null, "status": 200, "body": {"loaded_id": null, "calls": 0, "warmup_calls": 0, "warmup_finished": false, "load_error": null}, "client_seconds": 0.0028347270017548}
+{"path": "/ready", "payload": null, "status": 503, "body": {"ready": false}, "client_seconds": 0.05268143599823816}
+{"path": "/debug", "payload": null, "status": 200, "body": {"loaded_id": null, "calls": 0, "warmup_calls": 0, "warmup_finished": false, "load_error": null}, "client_seconds": 0.0018359479981882032}
+{"path": "/ready", "payload": null, "status": 503, "body": {"ready": false}, "client_seconds": 0.0021634740005538333}
+{"path": "/debug", "payload": null, "status": 200, "body": {"loaded_id": null, "calls": 0, "warmup_calls": 0, "warmup_finished": false, "load_error": null}, "client_seconds": 0.005037805000029039}
+{"path": "/ready", "payload": null, "status": 503, "body": {"ready": false}, "client_seconds": 0.002432495999528328}
+{"path": "/debug", "payload": null, "status": 200, "body": {"loaded_id": null, "calls": 0, "warmup_calls": 0, "warmup_finished": false, "load_error": null}, "client_seconds": 0.003464179000729928}
+{"path": "/ready", "payload": null, "status": 503, "body": {"ready": false}, "client_seconds": 0.00352128300073673}
+{"path": "/debug", "payload": null, "status": 200, "body": {"loaded_id": null, "calls": 0, "warmup_calls": 0, "warmup_finished": false, "load_error": null}, "client_seconds": 0.003271962999860989}
+{"path": "/ready", "payload": null, "status": 503, "body": {"ready": false}, "client_seconds": 0.0027928250019613188}
+{"path": "/debug", "payload": null, "status": 200, "body": {"loaded_id": null, "calls": 0, "warmup_calls": 0, "warmup_finished": false, "load_error": null}, "client_seconds": 0.0035804879989882465}
+{"path": "/ready", "payload": null, "status": 503, "body": {"ready": false}, "client_seconds": 0.0019105530009255745}
+{"path": "/debug", "payload": null, "status": 200, "body": {"loaded_id": null, "calls": 0, "warmup_calls": 0, "warmup_finished": false, "load_error": null}, "client_seconds": 0.001533123002445791}
+{"path": "/ready", "payload": null, "status": 503, "body": {"ready": false}, "client_seconds": 0.001875950998510234}
+{"path": "/debug", "payload": null, "status": 200, "body": {"loaded_id": null, "calls": 0, "warmup_calls": 0, "warmup_finished": false, "load_error": null}, "client_seconds": 0.0016358310022042133}
+{"path": "/ready", "payload": null, "status": 503, "body": {"ready": false}, "client_seconds": 0.0033130490010080393}
+{"path": "/debug", "payload": null, "status": 200, "body": {"loaded_id": null, "calls": 0, "warmup_calls": 0, "warmup_finished": false, "load_error": null}, "client_seconds": 0.0069492229995375965}
+{"path": "/ready", "payload": null, "status": 503, "body": {"ready": false}, "client_seconds": 0.0034426589991198853}
+{"path": "/debug", "payload": null, "status": 200, "body": {"loaded_id": null, "calls": 0, "warmup_calls": 0, "warmup_finished": false, "load_error": null}, "client_seconds": 0.005920244999288116}
+{"path": "/ready", "payload": null, "status": 503, "body": {"ready": false}, "client_seconds": 0.02252439400035655}
+{"path": "/debug", "payload": null, "status": 200, "body": {"loaded_id": null, "calls": 0, "warmup_calls": 0, "warmup_finished": false, "load_error": null}, "client_seconds": 0.01842688599936082}
+{"path": "/ready", "payload": null, "status": 503, "body": {"ready": false}, "client_seconds": 0.002232467999419896}
+{"path": "/debug", "payload": null, "status": 200, "body": {"loaded_id": null, "calls": 0, "warmup_calls": 0, "warmup_finished": false, "load_error": null}, "client_seconds": 0.004256021002220223}
+{"path": "/ready", "payload": null, "status": 503, "body": {"ready": false}, "client_seconds": 0.0018063360002997797}
+{"path": "/debug", "payload": null, "status": 200, "body": {"loaded_id": null, "calls": 0, "warmup_calls": 0, "warmup_finished": false, "load_error": null}, "client_seconds": 0.0014377080005942844}
+{"path": "/ready", "payload": null, "status": 503, "body": {"ready": false}, "client_seconds": 0.0017029279988491908}
+{"path": "/debug", "payload": null, "status": 200, "body": {"loaded_id": null, "calls": 0, "warmup_calls": 0, "warmup_finished": false, "load_error": null}, "client_seconds": 0.0013643019992741756}
+{"path": "/ready", "payload": null, "status": 503, "body": {"ready": false}, "client_seconds": 0.012260022002010373}
+{"path": "/debug", "payload": null, "status": 200, "body": {"loaded_id": null, "calls": 0, "warmup_calls": 0, "warmup_finished": false, "load_error": null}, "client_seconds": 0.008225819001381751}
+{"path": "/ready", "payload": null, "status": 503, "body": {"ready": false}, "client_seconds": 0.002588294999441132}
+{"path": "/debug", "payload": null, "status": 200, "body": {"loaded_id": null, "calls": 0, "warmup_calls": 0, "warmup_finished": false, "load_error": null}, "client_seconds": 0.0028111110004829243}
+{"path": "/ready", "payload": null, "status": 503, "body": {"ready": false}, "client_seconds": 0.01040958299927297}
+{"path": "/debug", "payload": null, "status": 200, "body": {"loaded_id": null, "calls": 0, "warmup_calls": 0, "warmup_finished": false, "load_error": null}, "client_seconds": 0.001347501001873752}
+{"path": "/ready", "payload": null, "status": 503, "body": {"ready": false}, "client_seconds": 0.008433234001131495}
+{"path": "/debug", "payload": null, "status": 200, "body": {"loaded_id": null, "calls": 0, "warmup_calls": 0, "warmup_finished": false, "load_error": null}, "client_seconds": 0.01705558200046653}
+{"path": "/ready", "payload": null, "status": 503, "body": {"ready": false}, "client_seconds": 0.013061883000773378}
+{"path": "/debug", "payload": null, "status": 200, "body": {"loaded_id": null, "calls": 0, "warmup_calls": 0, "warmup_finished": false, "load_error": null}, "client_seconds": 0.008249320002505556}
+{"path": "/ready", "payload": null, "status": 503, "body": {"ready": false}, "client_seconds": 0.2989316810017044}
+{"path": "/debug", "payload": null, "status": 200, "body": {"loaded_id": null, "calls": 0, "warmup_calls": 0, "warmup_finished": false, "load_error": null}, "client_seconds": 0.1489069989984273}
+{"path": "/ready", "payload": null, "status": 503, "body": {"ready": false}, "client_seconds": 0.0045279400001163594}
+{"path": "/debug", "payload": null, "status": 200, "body": {"loaded_id": null, "calls": 0, "warmup_calls": 0, "warmup_finished": false, "load_error": null}, "client_seconds": 0.004855065002629999}
+{"path": "/ready", "payload": null, "status": 503, "body": {"ready": false}, "client_seconds": 0.07142257200030144}
+{"path": "/debug", "payload": null, "status": 200, "body": {"loaded_id": null, "calls": 0, "warmup_calls": 0, "warmup_finished": false, "load_error": null}, "client_seconds": 0.0013515020000340883}
+{"path": "/ready", "payload": null, "status": 503, "body": {"ready": false}, "client_seconds": 0.0020526539992715698}
+{"path": "/debug", "payload": null, "status": 200, "body": {"loaded_id": null, "calls": 0, "warmup_calls": 0, "warmup_finished": false, "load_error": null}, "client_seconds": 0.0015138139970076736}
+{"path": "/ready", "payload": null, "status": 503, "body": {"ready": false}, "client_seconds": 0.0016528240012121387}
+{"path": "/debug", "payload": null, "status": 200, "body": {"loaded_id": null, "calls": 0, "warmup_calls": 0, "warmup_finished": false, "load_error": null}, "client_seconds": 0.0013931040011812001}
+{"path": "/ready", "payload": null, "status": 503, "body": {"ready": false}, "client_seconds": 0.0019158439972670749}
+{"path": "/debug", "payload": null, "status": 200, "body": {"loaded_id": null, "calls": 0, "warmup_calls": 0, "warmup_finished": false, "load_error": null}, "client_seconds": 0.001267395000468241}
+{"path": "/ready", "payload": null, "status": 503, "body": {"ready": false}, "client_seconds": 0.0017814339989854489}
+{"path": "/debug", "payload": null, "status": 200, "body": {"loaded_id": null, "calls": 0, "warmup_calls": 0, "warmup_finished": false, "load_error": null}, "client_seconds": 0.000979174001258798}
+{"path": "/ready", "payload": null, "status": 503, "body": {"ready": false}, "client_seconds": 0.001630622999073239}
+{"path": "/debug", "payload": null, "status": 200, "body": {"loaded_id": null, "calls": 0, "warmup_calls": 0, "warmup_finished": false, "load_error": null}, "client_seconds": 0.00122279199786135}
+{"path": "/ready", "payload": null, "status": 503, "body": {"ready": false}, "client_seconds": 0.0013601020000351127}
+{"path": "/debug", "payload": null, "status": 200, "body": {"loaded_id": null, "calls": 0, "warmup_calls": 0, "warmup_finished": false, "load_error": null}, "client_seconds": 0.0010136769997188821}
+{"path": "/ready", "payload": null, "status": 503, "body": {"ready": false}, "client_seconds": 0.0015994200002751313}
+{"path": "/debug", "payload": null, "status": 200, "body": {"loaded_id": null, "calls": 0, "warmup_calls": 0, "warmup_finished": false, "load_error": null}, "client_seconds": 0.0009289699992223177}
+{"path": "/ready", "payload": null, "status": 503, "body": {"ready": false}, "client_seconds": 0.0016430239993496798}
+{"path": "/debug", "payload": null, "status": 200, "body": {"loaded_id": null, "calls": 0, "warmup_calls": 0, "warmup_finished": false, "load_error": null}, "client_seconds": 0.0010838820016942918}
+{"path": "/ready", "payload": null, "status": 503, "body": {"ready": false}, "client_seconds": 0.0015077129974088166}
+{"path": "/debug", "payload": null, "status": 200, "body": {"loaded_id": null, "calls": 0, "warmup_calls": 0, "warmup_finished": false, "load_error": null}, "client_seconds": 0.0009282699975301512}
+{"path": "/ready", "payload": null, "status": 503, "body": {"ready": false}, "client_seconds": 0.0014777110009163152}
+{"path": "/debug", "payload": null, "status": 200, "body": {"loaded_id": null, "calls": 0, "warmup_calls": 0, "warmup_finished": false, "load_error": null}, "client_seconds": 0.000997474999167025}
+{"path": "/ready", "payload": null, "status": 503, "body": {"ready": false}, "client_seconds": 0.0015205150011752266}
+{"path": "/debug", "payload": null, "status": 200, "body": {"loaded_id": null, "calls": 0, "warmup_calls": 0, "warmup_finished": false, "load_error": null}, "client_seconds": 0.001023676999466261}
+{"path": "/ready", "payload": null, "status": 503, "body": {"ready": false}, "client_seconds": 0.0017535320002934895}
+{"path": "/debug", "payload": null, "status": 200, "body": {"loaded_id": null, "calls": 0, "warmup_calls": 0, "warmup_finished": false, "load_error": null}, "client_seconds": 0.0012241919976077043}
+{"path": "/ready", "payload": null, "status": 503, "body": {"ready": false}, "client_seconds": 0.0013529019997804426}
+{"path": "/debug", "payload": null, "status": 200, "body": {"loaded_id": null, "calls": 0, "warmup_calls": 0, "warmup_finished": false, "load_error": null}, "client_seconds": 0.000927969998883782}
+{"path": "/ready", "payload": null, "status": 503, "body": {"ready": false}, "client_seconds": 0.001468610000301851}
+{"path": "/debug", "payload": null, "status": 200, "body": {"loaded_id": null, "calls": 0, "warmup_calls": 0, "warmup_finished": false, "load_error": null}, "client_seconds": 0.0011939889991481323}
+{"path": "/ready", "payload": null, "status": 503, "body": {"ready": false}, "client_seconds": 0.001730029998725513}
+{"path": "/debug", "payload": null, "status": 200, "body": {"loaded_id": null, "calls": 0, "warmup_calls": 0, "warmup_finished": false, "load_error": null}, "client_seconds": 0.0015351160000136588}
+{"path": "/ready", "payload": null, "status": 503, "body": {"ready": false}, "client_seconds": 0.002115258997946512}
+{"path": "/debug", "payload": null, "status": 200, "body": {"loaded_id": null, "calls": 0, "warmup_calls": 0, "warmup_finished": false, "load_error": null}, "client_seconds": 0.0017346309978165664}
+{"path": "/ready", "payload": null, "status": 200, "body": {"ready": true, "model_id": "baseline-qwen3-c1899de289a04d12100db370d81485cdf75e47ca", "runtime_sha256": "5ae12f9b60e56faa2075ed81ef4eb77f1994fa5a63dafafdf11f5c475f0e388e"}, "client_seconds": 0.0036505749994830694}
+{"path": "/generate", "payload": {"prompt": "Какой город является столицей Финляндии?\nA: Хельсинки; B: Осло; C: Стокгольм. Допустимые метки choices: A, B, C.", "max_new_tokens": 32}, "status": 200, "body": {"answer": "{\"answer\":\"A\"}", "output_tokens": 6, "text": "{\"answer\":\"A\"}", "model_id": "baseline-qwen3-c1899de289a04d12100db370d81485cdf75e47ca", "runtime_sha256": "5ae12f9b60e56faa2075ed81ef4eb77f1994fa5a63dafafdf11f5c475f0e388e", "request_id": "f09d7c0e-4462-4258-aaa2-f2fc5dc8381e", "queue_seconds": 0.003554966999217868, "generation_seconds": 0.22127624199856655, "total_seconds": 0.22483120899778442}, "client_seconds": 0.22848838399659144}

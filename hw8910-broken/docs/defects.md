@@ -20,7 +20,7 @@
 
 Для настоящей модели [gate.py](../gate.py) дополнительно проверяет SHA исходных отчётов и ответов, заново вычисляет score и вызывает сохранённое правило качества ДЗ 6–7. У кандидата подтверждена регрессия accuracy, поэтому отказ сохранён, а API обслуживает закреплённую baseline.
 
-**Подтверждение:** `test_process_rejection_incomplete_and_foreign_report`; [решение кандидата](../evidence/model/release-report.json) и [SHA accepted.json до и после отказа](../evidence/model/refusal-pointer.json).
+**Подтверждение:** `test_process_rejection_incomplete_and_foreign_report`; [решение кандидата](../evidence/model-synced/release-report.json) и [SHA accepted.json до и после отказа](../evidence/model-synced/refusal-pointer.json).
 
 ## D3. Указатель принятой модели записывался напрямую
 
@@ -58,7 +58,7 @@
 
 HTTP-опыт подтверждает последовательность: A до публикации, A после публикации B без перезапуска, B после перезапуска, A после возврата принятой A и нового запуска. Это две явно помеченные STUB-версии. У настоящей модели отдельно подтверждены загрузка и перезапуск текущей baseline; второй реально допущенной версии нет.
 
-**Подтверждение:** `test_http_loaded_version_restart_and_rollback`; [HTTP/process trace](../evidence/logs/integration-fixed.jsonl), [управляемый откат](../evidence/logs/flow-controlled-rollback.log) и [перезапуск реальной модели](../evidence/api/restart.json).
+**Подтверждение:** `test_http_loaded_version_restart_and_rollback`; [HTTP/process trace](../evidence/logs/final-integration-fixed.jsonl), [управляемый откат](../evidence/logs/flow-controlled-rollback.log) и [перезапуск реальной модели](../evidence/synced-api/api/restart.json).
 
 ## D7. Неверный запрос запускал вычисление
 
@@ -68,11 +68,11 @@ HTTP-опыт подтверждает последовательность: A �
 
 Допускается только оценённый `max_new_tokens=32`; bool и строка не считаются целым числом. Неверный запрос получает 4xx без вызова генерации. Ввод ограничен 8192 символами, 1024 токенами с шаблоном и телом запроса 65536 байт.
 
-**Подтверждение:** `test_http_bad_request_never_calls_backend` проверяет неизменность `/debug.calls` для неверных запросов и увеличение на один после валидного. В [реальном smoke](../evidence/api/real-response.json) чрезмерный лимит получает 422 при счётчике 0 → 0.
+**Подтверждение:** `test_http_bad_request_never_calls_backend` проверяет неизменность `/debug.calls` для неверных запросов и увеличение на один после валидного. В [реальном smoke](../evidence/synced-api/api/real-response.json) чрезмерный лимит получает 422 при счётчике 0 → 0.
 
 ## Результаты проверок
 
-Семь интеграционных регрессий на исходном прототипе завершаются assertion failures: [красный журнал](../evidence/logs/integration-original.log). На исправленном проекте они входят в общий успешный прогон **29/29**: [зелёный журнал](../evidence/logs/fast-fixed.log).
+Семь интеграционных регрессий на исходном прототипе завершаются assertion failures: [красный журнал](../evidence/logs/final-integration-original.log). На исправленном проекте они входят в общий успешный прогон **35/35**: [зелёный журнал](../evidence/logs/final-check-all.log).
 
 Команды запуска из корня ДЗ:
 

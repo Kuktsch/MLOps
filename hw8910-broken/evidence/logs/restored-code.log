@@ -13,6 +13,6 @@ test_report_binding_mismatch_rejected (test_release.ReleaseContractTests.test_re
 test_runtime_change_with_stale_hash_rejected (test_release.ReleaseContractTests.test_runtime_change_with_stale_hash_rejected) ... ok
 
 ----------------------------------------------------------------------
-Ran 13 tests in 0.071s
+Ran 13 tests in 0.017s
 
 OK

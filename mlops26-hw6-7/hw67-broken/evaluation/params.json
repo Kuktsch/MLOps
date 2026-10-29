@@ -2,9 +2,12 @@
   "golden": "data/eval/golden.jsonl",
   "training_index": "data/eval/training-index.jsonl",
   "behavioral": "data/eval/behavioral.jsonl",
-  "critical_slices": ["chemistry", "astronomy"],
+  "critical_slices": [
+    "chemistry",
+    "astronomy"
+  ],
   "seed": 42,
-  "system": "Ты отвечаешь только на энциклопедические вопросы с вариантами по географии, химии и астрономии. Верни только JSON с единственным полем answer и строковой меткой из choices, указанных в вопросе. Не добавляй пояснения и Markdown. На запрос вне этих тем (включая написание программ) верни только {\"answer\":\"REFUSE\"}.",
+  "system": "Решай тесты только по географии, химии и астрономии. Выбери правильный вариант и верни только JSON с единственным ключом answer. Значение answer — только метка выбранного варианта, например {\"answer\":\"B\"}. Не пиши название ответа, список choices, пояснения или Markdown. Для запросов вне этих трёх тем верни только {\"answer\":\"REFUSE\"}.",
   "max_new_tokens": 32,
   "enable_thinking": false
 }

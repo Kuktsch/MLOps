@@ -1,0 +1,38 @@
+{
+  "created_at": "2026-10-29T14:57:10.803096+00:00",
+  "protocol_sha256": "4ddf9cc34f8eacbad20e3bf7c90ac74c456c9c962f83ff6249ab769a70c3b3d6",
+  "baseline": {
+    "kind": "base",
+    "name": "Qwen/Qwen3-0.6B",
+    "revision": "c1899de289a04d12100db370d81485cdf75e47ca"
+  },
+  "candidate": {
+    "kind": "adapter",
+    "name": "my-qwen-adapter",
+    "version": "2",
+    "run_id": "cce6597824384cab8697bc597d7500c9",
+    "uri": "models:/my-qwen-adapter/2"
+  },
+  "config": {
+    "golden": "data/eval/golden.jsonl",
+    "training_index": "data/eval/training-index.jsonl",
+    "behavioral": "data/eval/behavioral.jsonl",
+    "critical_slices": [
+      "chemistry",
+      "astronomy"
+    ],
+    "seed": 42,
+    "system": "Решай тесты только по географии, химии и астрономии. Выбери правильный вариант и верни только JSON с единственным ключом answer. Значение answer — только метка выбранного варианта, например {\"answer\":\"B\"}. Не пиши название ответа, список choices, пояснения или Markdown. Для запросов вне этих трёх тем верни только {\"answer\":\"REFUSE\"}.",
+    "max_new_tokens": 32,
+    "enable_thinking": false
+  },
+  "leakage": {
+    "exact_or_group_intersections": 0,
+    "n_train_index": 3345,
+    "n_golden": 54,
+    "n_behavioral": 3
+  },
+  "previous_evaluation_run_id": "cf4fea2cb0ef40e4841c52076d436880",
+  "previous_results": "metrics/history/cf4fea2cb0ef40e4841c52076d436880",
+  "note": "Повторная оценка после переноса инструкции из ДЗ 8–10. Готовые веса; без обучения. Новые ответы генерируются нативным evaluation.cli; прежние результаты и сданные архивы сохранены."
+}

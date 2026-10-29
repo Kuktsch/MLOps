@@ -1,0 +1,145 @@
+INFO:     Started server process [413771]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://127.0.0.1:60375 (Press CTRL+C to quit)
+INFO:     127.0.0.1:34148 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:34154 - "GET /ready HTTP/1.1" 503 Service Unavailable
+INFO:     127.0.0.1:34162 - "GET /ready HTTP/1.1" 503 Service Unavailable
+INFO:     127.0.0.1:34174 - "GET /debug HTTP/1.1" 200 OK
+INFO:     127.0.0.1:34176 - "GET /ready HTTP/1.1" 503 Service Unavailable
+INFO:     127.0.0.1:34192 - "GET /debug HTTP/1.1" 200 OK
+INFO:     127.0.0.1:34206 - "GET /ready HTTP/1.1" 503 Service Unavailable
+INFO:     127.0.0.1:34210 - "GET /debug HTTP/1.1" 200 OK
+INFO:     127.0.0.1:34216 - "GET /ready HTTP/1.1" 503 Service Unavailable
+INFO:     127.0.0.1:34232 - "GET /debug HTTP/1.1" 200 OK
+INFO:     127.0.0.1:34248 - "GET /ready HTTP/1.1" 503 Service Unavailable
+INFO:     127.0.0.1:34256 - "GET /debug HTTP/1.1" 200 OK
+INFO:     127.0.0.1:34270 - "GET /ready HTTP/1.1" 503 Service Unavailable
+INFO:     127.0.0.1:34282 - "GET /debug HTTP/1.1" 200 OK
+INFO:     127.0.0.1:34292 - "GET /ready HTTP/1.1" 503 Service Unavailable
+INFO:     127.0.0.1:34294 - "GET /debug HTTP/1.1" 200 OK
+INFO:     127.0.0.1:34302 - "GET /ready HTTP/1.1" 503 Service Unavailable
+INFO:     127.0.0.1:34310 - "GET /debug HTTP/1.1" 200 OK
+INFO:     127.0.0.1:34326 - "GET /ready HTTP/1.1" 503 Service Unavailable
+INFO:     127.0.0.1:34332 - "GET /debug HTTP/1.1" 200 OK
+INFO:     127.0.0.1:34346 - "GET /ready HTTP/1.1" 503 Service Unavailable
+INFO:     127.0.0.1:34362 - "GET /debug HTTP/1.1" 200 OK
+INFO:     127.0.0.1:34378 - "GET /ready HTTP/1.1" 503 Service Unavailable
+INFO:     127.0.0.1:34394 - "GET /debug HTTP/1.1" 200 OK
+INFO:     127.0.0.1:34406 - "GET /ready HTTP/1.1" 503 Service Unavailable
+INFO:     127.0.0.1:34408 - "GET /debug HTTP/1.1" 200 OK
+INFO:     127.0.0.1:34410 - "GET /ready HTTP/1.1" 503 Service Unavailable
+INFO:     127.0.0.1:34422 - "GET /debug HTTP/1.1" 200 OK
+INFO:     127.0.0.1:34430 - "GET /ready HTTP/1.1" 503 Service Unavailable
+INFO:     127.0.0.1:34436 - "GET /debug HTTP/1.1" 200 OK
+INFO:     127.0.0.1:34450 - "GET /ready HTTP/1.1" 503 Service Unavailable
+INFO:     127.0.0.1:34464 - "GET /debug HTTP/1.1" 200 OK
+INFO:     127.0.0.1:34466 - "GET /ready HTTP/1.1" 503 Service Unavailable
+INFO:     127.0.0.1:34470 - "GET /debug HTTP/1.1" 200 OK
+INFO:     127.0.0.1:34480 - "GET /ready HTTP/1.1" 503 Service Unavailable
+INFO:     127.0.0.1:34484 - "GET /debug HTTP/1.1" 200 OK
+INFO:     127.0.0.1:34486 - "GET /ready HTTP/1.1" 503 Service Unavailable
+INFO:     127.0.0.1:34488 - "GET /debug HTTP/1.1" 200 OK
+INFO:     127.0.0.1:34494 - "GET /ready HTTP/1.1" 503 Service Unavailable
+INFO:     127.0.0.1:34496 - "GET /debug HTTP/1.1" 200 OK
+INFO:     127.0.0.1:34504 - "GET /ready HTTP/1.1" 503 Service Unavailable
+INFO:     127.0.0.1:34508 - "GET /debug HTTP/1.1" 200 OK
+INFO:     127.0.0.1:34518 - "GET /ready HTTP/1.1" 503 Service Unavailable
+INFO:     127.0.0.1:34520 - "GET /debug HTTP/1.1" 200 OK
+INFO:     127.0.0.1:34534 - "GET /ready HTTP/1.1" 503 Service Unavailable
+INFO:     127.0.0.1:34550 - "GET /debug HTTP/1.1" 200 OK
+INFO:     127.0.0.1:34566 - "GET /ready HTTP/1.1" 503 Service Unavailable
+INFO:     127.0.0.1:34582 - "GET /debug HTTP/1.1" 200 OK
+INFO:     127.0.0.1:34596 - "GET /ready HTTP/1.1" 503 Service Unavailable
+INFO:     127.0.0.1:34612 - "GET /debug HTTP/1.1" 200 OK
+INFO:     127.0.0.1:34620 - "GET /ready HTTP/1.1" 503 Service Unavailable
+INFO:     127.0.0.1:34628 - "GET /debug HTTP/1.1" 200 OK
+INFO:     127.0.0.1:34636 - "GET /ready HTTP/1.1" 503 Service Unavailable
+INFO:     127.0.0.1:34648 - "GET /debug HTTP/1.1" 200 OK
+INFO:     127.0.0.1:34662 - "GET /ready HTTP/1.1" 503 Service Unavailable
+INFO:     127.0.0.1:34674 - "GET /debug HTTP/1.1" 200 OK
+INFO:     127.0.0.1:34688 - "GET /ready HTTP/1.1" 503 Service Unavailable
+INFO:     127.0.0.1:34696 - "GET /debug HTTP/1.1" 200 OK
+INFO:     127.0.0.1:34702 - "GET /ready HTTP/1.1" 503 Service Unavailable
+INFO:     127.0.0.1:34714 - "GET /debug HTTP/1.1" 200 OK
+INFO:     127.0.0.1:34726 - "GET /ready HTTP/1.1" 503 Service Unavailable
+INFO:     127.0.0.1:34736 - "GET /debug HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53262 - "GET /ready HTTP/1.1" 503 Service Unavailable
+INFO:     127.0.0.1:53276 - "GET /debug HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53286 - "GET /ready HTTP/1.1" 503 Service Unavailable
+INFO:     127.0.0.1:53298 - "GET /debug HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53304 - "GET /ready HTTP/1.1" 503 Service Unavailable
+INFO:     127.0.0.1:53314 - "GET /debug HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53318 - "GET /ready HTTP/1.1" 503 Service Unavailable
+INFO:     127.0.0.1:53328 - "GET /debug HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53342 - "GET /ready HTTP/1.1" 503 Service Unavailable
+INFO:     127.0.0.1:53352 - "GET /debug HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53366 - "GET /ready HTTP/1.1" 503 Service Unavailable
+INFO:     127.0.0.1:53380 - "GET /debug HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53394 - "GET /ready HTTP/1.1" 503 Service Unavailable
+INFO:     127.0.0.1:53410 - "GET /debug HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53418 - "GET /ready HTTP/1.1" 503 Service Unavailable
+INFO:     127.0.0.1:53420 - "GET /debug HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53434 - "GET /ready HTTP/1.1" 503 Service Unavailable
+INFO:     127.0.0.1:53438 - "GET /debug HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53450 - "GET /ready HTTP/1.1" 503 Service Unavailable
+INFO:     127.0.0.1:53466 - "GET /debug HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53478 - "GET /ready HTTP/1.1" 503 Service Unavailable
+INFO:     127.0.0.1:53490 - "GET /debug HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53504 - "GET /ready HTTP/1.1" 503 Service Unavailable
+INFO:     127.0.0.1:53510 - "GET /debug HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53526 - "GET /ready HTTP/1.1" 503 Service Unavailable
+INFO:     127.0.0.1:53542 - "GET /debug HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53554 - "GET /ready HTTP/1.1" 503 Service Unavailable
+INFO:     127.0.0.1:53564 - "GET /debug HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53566 - "GET /ready HTTP/1.1" 503 Service Unavailable
+INFO:     127.0.0.1:53568 - "GET /debug HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53578 - "GET /ready HTTP/1.1" 503 Service Unavailable
+INFO:     127.0.0.1:53588 - "GET /debug HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53598 - "GET /ready HTTP/1.1" 503 Service Unavailable
+INFO:     127.0.0.1:53600 - "GET /debug HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53602 - "GET /ready HTTP/1.1" 503 Service Unavailable
+INFO:     127.0.0.1:53610 - "GET /debug HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53620 - "GET /ready HTTP/1.1" 503 Service Unavailable
+INFO:     127.0.0.1:53624 - "GET /debug HTTP/1.1" 200 OK
+Loading weights:   0%|          | 0/311 [00:00<?, ?it/s]INFO:     127.0.0.1:53632 - "GET /ready HTTP/1.1" 503 Service Unavailable
+INFO:     127.0.0.1:53636 - "GET /debug HTTP/1.1" 200 OK
+Loading weights:  36%|███▌      | 112/311 [00:00<00:00, 1117.38it/s]Loading weights: 100%|██████████| 311/311 [00:00<00:00, 2738.42it/s]
+INFO:     127.0.0.1:53642 - "GET /ready HTTP/1.1" 503 Service Unavailable
+INFO:     127.0.0.1:53650 - "GET /debug HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53658 - "GET /ready HTTP/1.1" 503 Service Unavailable
+INFO:     127.0.0.1:53664 - "GET /debug HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53670 - "GET /ready HTTP/1.1" 503 Service Unavailable
+INFO:     127.0.0.1:53674 - "GET /debug HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53682 - "GET /ready HTTP/1.1" 503 Service Unavailable
+INFO:     127.0.0.1:53688 - "GET /debug HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53704 - "GET /ready HTTP/1.1" 503 Service Unavailable
+INFO:     127.0.0.1:53716 - "GET /debug HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53726 - "GET /ready HTTP/1.1" 503 Service Unavailable
+INFO:     127.0.0.1:53730 - "GET /debug HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53744 - "GET /ready HTTP/1.1" 503 Service Unavailable
+INFO:     127.0.0.1:53750 - "GET /debug HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53766 - "GET /ready HTTP/1.1" 503 Service Unavailable
+INFO:     127.0.0.1:53770 - "GET /debug HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53772 - "GET /ready HTTP/1.1" 503 Service Unavailable
+INFO:     127.0.0.1:53774 - "GET /debug HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53778 - "GET /ready HTTP/1.1" 503 Service Unavailable
+INFO:     127.0.0.1:53784 - "GET /debug HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53800 - "GET /ready HTTP/1.1" 503 Service Unavailable
+INFO:     127.0.0.1:53814 - "GET /debug HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53822 - "GET /ready HTTP/1.1" 503 Service Unavailable
+INFO:     127.0.0.1:53824 - "GET /debug HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53840 - "GET /ready HTTP/1.1" 503 Service Unavailable
+INFO:     127.0.0.1:53854 - "GET /debug HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53868 - "GET /ready HTTP/1.1" 503 Service Unavailable
+INFO:     127.0.0.1:53870 - "GET /debug HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53880 - "GET /ready HTTP/1.1" 503 Service Unavailable
+INFO:     127.0.0.1:53888 - "GET /debug HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53904 - "GET /ready HTTP/1.1" 503 Service Unavailable
+INFO:     127.0.0.1:53906 - "GET /debug HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53920 - "GET /ready HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53922 - "POST /generate HTTP/1.1" 200 OK
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [413771]

@@ -1,0 +1,19 @@
+{
+  "candidate_admitted": false,
+  "device": "cuda",
+  "evaluation_run_id": "cc35f825e5744024ac6d6f80a3f64af7",
+  "libraries": {
+    "accelerate": "1.15.0",
+    "huggingface-hub": "1.33.0",
+    "numpy": "2.2.6",
+    "peft": "0.21.0",
+    "safetensors": "0.8.0",
+    "tokenizers": "0.23.3",
+    "torch": "2.14.0",
+    "transformers": "5.17.0"
+  },
+  "n_behavioral": 3,
+  "n_golden": 54,
+  "training_run_id": "cce6597824384cab8697bc597d7500c9",
+  "uri": "http://127.0.0.1:5006"
+}

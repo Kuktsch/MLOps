@@ -1,0 +1,717 @@
+{
+  "baseline_spec_sha256": "6b9dfaa73cefbb20aedae36cf6ccc37fff505ded27a108ea55ceddf9443ae5f3",
+  "behavioral": {
+    "overall": {
+      "accuracy": 1.0,
+      "correct": 3,
+      "errors": 0,
+      "format_rate": 1.0,
+      "n": 3,
+      "valid": 3
+    },
+    "per_item": [
+      {
+        "correct": true,
+        "error": null,
+        "id": "behavior-format",
+        "parsed": "A",
+        "raw": "{\"answer\":\"A\"}",
+        "slices": [
+          "geography"
+        ],
+        "valid": true
+      },
+      {
+        "correct": true,
+        "error": null,
+        "id": "behavior-paraphrase",
+        "parsed": "C",
+        "raw": "{\"answer\":\"C\"}",
+        "slices": [
+          "geography"
+        ],
+        "valid": true
+      },
+      {
+        "correct": true,
+        "error": null,
+        "id": "behavior-refusal",
+        "parsed": "REFUSE",
+        "raw": "{\"answer\":\"REFUSE\"}",
+        "slices": [
+          "out_of_scope"
+        ],
+        "valid": true
+      }
+    ],
+    "slices": {
+      "geography": {
+        "accuracy": 1.0,
+        "correct": 2,
+        "errors": 0,
+        "format_rate": 1.0,
+        "n": 2,
+        "valid": 2
+      },
+      "out_of_scope": {
+        "accuracy": 1.0,
+        "correct": 1,
+        "errors": 0,
+        "format_rate": 1.0,
+        "n": 1,
+        "valid": 1
+      }
+    }
+  },
+  "evaluation_run_id": "5e83ce18ce53470192adadef7a0afe71",
+  "golden_sha256": "b698bc62db639ed5b7bb07b17ef2cd65e0a141d490af07594baf0f5462313041",
+  "leakage": {
+    "exact_or_group_intersections": 0,
+    "n_behavioral": 3,
+    "n_golden": 54,
+    "n_train_index": 3345
+  },
+  "model": {
+    "kind": "adapter",
+    "name": "my-qwen-adapter",
+    "run_id": "cce6597824384cab8697bc597d7500c9",
+    "uri": "models:/my-qwen-adapter/2",
+    "version": "2"
+  },
+  "model_id": "adapter-cce6597824384cab8697bc597d7500c9",
+  "model_sha256": "e3947d2322de11dad9c4c7f8e4f648b9536dc4da9ac0c1b2af88ef91eeaad027",
+  "outputs_sha256": "74d401a86ac8978a03b3a7594662df6e2e16c36c8bb0a1d46bcb7024685c1d3d",
+  "overall": {
+    "accuracy": 0.5925925925925926,
+    "correct": 32,
+    "errors": 0,
+    "format_rate": 1.0,
+    "n": 54,
+    "valid": 54
+  },
+  "per_item": [
+    {
+      "correct": true,
+      "error": null,
+      "id": "geography-01",
+      "parsed": "A",
+      "raw": "{\"answer\":\"A\"}",
+      "slices": [
+        "geography"
+      ],
+      "valid": true
+    },
+    {
+      "correct": false,
+      "error": null,
+      "id": "geography-02",
+      "parsed": "C",
+      "raw": "{\"answer\":\"C\"}",
+      "slices": [
+        "geography"
+      ],
+      "valid": true
+    },
+    {
+      "correct": false,
+      "error": null,
+      "id": "geography-03",
+      "parsed": "A",
+      "raw": "{\"answer\":\"A\"}",
+      "slices": [
+        "geography"
+      ],
+      "valid": true
+    },
+    {
+      "correct": false,
+      "error": null,
+      "id": "geography-04",
+      "parsed": "B",
+      "raw": "{\"answer\":\"B\"}",
+      "slices": [
+        "geography"
+      ],
+      "valid": true
+    },
+    {
+      "correct": false,
+      "error": null,
+      "id": "geography-05",
+      "parsed": "C",
+      "raw": "{\"answer\":\"C\"}",
+      "slices": [
+        "geography"
+      ],
+      "valid": true
+    },
+    {
+      "correct": true,
+      "error": null,
+      "id": "geography-06",
+      "parsed": "C",
+      "raw": "{\"answer\":\"C\"}",
+      "slices": [
+        "geography"
+      ],
+      "valid": true
+    },
+    {
+      "correct": false,
+      "error": null,
+      "id": "geography-07",
+      "parsed": "C",
+      "raw": "{\"answer\":\"C\"}",
+      "slices": [
+        "geography"
+      ],
+      "valid": true
+    },
+    {
+      "correct": true,
+      "error": null,
+      "id": "geography-08",
+      "parsed": "B",
+      "raw": "{\"answer\":\"B\"}",
+      "slices": [
+        "geography"
+      ],
+      "valid": true
+    },
+    {
+      "correct": true,
+      "error": null,
+      "id": "geography-09",
+      "parsed": "C",
+      "raw": "{\"answer\":\"C\"}",
+      "slices": [
+        "geography"
+      ],
+      "valid": true
+    },
+    {
+      "correct": true,
+      "error": null,
+      "id": "geography-10",
+      "parsed": "A",
+      "raw": "{\"answer\":\"A\"}",
+      "slices": [
+        "geography"
+      ],
+      "valid": true
+    },
+    {
+      "correct": false,
+      "error": null,
+      "id": "geography-11",
+      "parsed": "A",
+      "raw": "{\"answer\":\"A\"}",
+      "slices": [
+        "geography"
+      ],
+      "valid": true
+    },
+    {
+      "correct": true,
+      "error": null,
+      "id": "geography-12",
+      "parsed": "C",
+      "raw": "{\"answer\":\"C\"}",
+      "slices": [
+        "geography"
+      ],
+      "valid": true
+    },
+    {
+      "correct": false,
+      "error": null,
+      "id": "geography-13",
+      "parsed": "C",
+      "raw": "{\"answer\":\"C\"}",
+      "slices": [
+        "geography"
+      ],
+      "valid": true
+    },
+    {
+      "correct": false,
+      "error": null,
+      "id": "geography-14",
+      "parsed": "C",
+      "raw": "{\"answer\":\"C\"}",
+      "slices": [
+        "geography"
+      ],
+      "valid": true
+    },
+    {
+      "correct": true,
+      "error": null,
+      "id": "geography-15",
+      "parsed": "C",
+      "raw": "{\"answer\":\"C\"}",
+      "slices": [
+        "geography"
+      ],
+      "valid": true
+    },
+    {
+      "correct": false,
+      "error": null,
+      "id": "geography-16",
+      "parsed": "B",
+      "raw": "{\"answer\":\"B\"}",
+      "slices": [
+        "geography"
+      ],
+      "valid": true
+    },
+    {
+      "correct": true,
+      "error": null,
+      "id": "geography-17",
+      "parsed": "B",
+      "raw": "{\"answer\":\"B\"}",
+      "slices": [
+        "geography"
+      ],
+      "valid": true
+    },
+    {
+      "correct": true,
+      "error": null,
+      "id": "geography-18",
+      "parsed": "C",
+      "raw": "{\"answer\":\"C\"}",
+      "slices": [
+        "geography"
+      ],
+      "valid": true
+    },
+    {
+      "correct": true,
+      "error": null,
+      "id": "chemistry-01",
+      "parsed": "A",
+      "raw": "{\"answer\":\"A\"}",
+      "slices": [
+        "chemistry"
+      ],
+      "valid": true
+    },
+    {
+      "correct": true,
+      "error": null,
+      "id": "chemistry-02",
+      "parsed": "B",
+      "raw": "{\"answer\":\"B\"}",
+      "slices": [
+        "chemistry"
+      ],
+      "valid": true
+    },
+    {
+      "correct": true,
+      "error": null,
+      "id": "chemistry-03",
+      "parsed": "C",
+      "raw": "{\"answer\":\"C\"}",
+      "slices": [
+        "chemistry"
+      ],
+      "valid": true
+    },
+    {
+      "correct": true,
+      "error": null,
+      "id": "chemistry-04",
+      "parsed": "A",
+      "raw": "{\"answer\":\"A\"}",
+      "slices": [
+        "chemistry"
+      ],
+      "valid": true
+    },
+    {
+      "correct": true,
+      "error": null,
+      "id": "chemistry-05",
+      "parsed": "B",
+      "raw": "{\"answer\":\"B\"}",
+      "slices": [
+        "chemistry"
+      ],
+      "valid": true
+    },
+    {
+      "correct": true,
+      "error": null,
+      "id": "chemistry-06",
+      "parsed": "C",
+      "raw": "{\"answer\":\"C\"}",
+      "slices": [
+        "chemistry"
+      ],
+      "valid": true
+    },
+    {
+      "correct": true,
+      "error": null,
+      "id": "chemistry-07",
+      "parsed": "A",
+      "raw": "{\"answer\":\"A\"}",
+      "slices": [
+        "chemistry"
+      ],
+      "valid": true
+    },
+    {
+      "correct": true,
+      "error": null,
+      "id": "chemistry-08",
+      "parsed": "B",
+      "raw": "{\"answer\":\"B\"}",
+      "slices": [
+        "chemistry"
+      ],
+      "valid": true
+    },
+    {
+      "correct": true,
+      "error": null,
+      "id": "chemistry-09",
+      "parsed": "C",
+      "raw": "{\"answer\":\"C\"}",
+      "slices": [
+        "chemistry"
+      ],
+      "valid": true
+    },
+    {
+      "correct": true,
+      "error": null,
+      "id": "chemistry-10",
+      "parsed": "A",
+      "raw": "{\"answer\":\"A\"}",
+      "slices": [
+        "chemistry"
+      ],
+      "valid": true
+    },
+    {
+      "correct": true,
+      "error": null,
+      "id": "chemistry-11",
+      "parsed": "B",
+      "raw": "{\"answer\":\"B\"}",
+      "slices": [
+        "chemistry"
+      ],
+      "valid": true
+    },
+    {
+      "correct": true,
+      "error": null,
+      "id": "chemistry-12",
+      "parsed": "C",
+      "raw": "{\"answer\":\"C\"}",
+      "slices": [
+        "chemistry"
+      ],
+      "valid": true
+    },
+    {
+      "correct": true,
+      "error": null,
+      "id": "chemistry-13",
+      "parsed": "A",
+      "raw": "{\"answer\":\"A\"}",
+      "slices": [
+        "chemistry"
+      ],
+      "valid": true
+    },
+    {
+      "correct": true,
+      "error": null,
+      "id": "chemistry-14",
+      "parsed": "B",
+      "raw": "{\"answer\":\"B\"}",
+      "slices": [
+        "chemistry"
+      ],
+      "valid": true
+    },
+    {
+      "correct": true,
+      "error": null,
+      "id": "chemistry-15",
+      "parsed": "C",
+      "raw": "{\"answer\":\"C\"}",
+      "slices": [
+        "chemistry"
+      ],
+      "valid": true
+    },
+    {
+      "correct": true,
+      "error": null,
+      "id": "chemistry-16",
+      "parsed": "A",
+      "raw": "{\"answer\":\"A\"}",
+      "slices": [
+        "chemistry"
+      ],
+      "valid": true
+    },
+    {
+      "correct": false,
+      "error": null,
+      "id": "chemistry-17",
+      "parsed": "C",
+      "raw": "{\"answer\":\"C\"}",
+      "slices": [
+        "chemistry"
+      ],
+      "valid": true
+    },
+    {
+      "correct": true,
+      "error": null,
+      "id": "chemistry-18",
+      "parsed": "C",
+      "raw": "{\"answer\":\"C\"}",
+      "slices": [
+        "chemistry"
+      ],
+      "valid": true
+    },
+    {
+      "correct": false,
+      "error": null,
+      "id": "astronomy-01",
+      "parsed": "B",
+      "raw": "{\"answer\":\"B\"}",
+      "slices": [
+        "astronomy"
+      ],
+      "valid": true
+    },
+    {
+      "correct": true,
+      "error": null,
+      "id": "astronomy-02",
+      "parsed": "B",
+      "raw": "{\"answer\":\"B\"}",
+      "slices": [
+        "astronomy"
+      ],
+      "valid": true
+    },
+    {
+      "correct": false,
+      "error": null,
+      "id": "astronomy-03",
+      "parsed": "B",
+      "raw": "{\"answer\":\"B\"}",
+      "slices": [
+        "astronomy"
+      ],
+      "valid": true
+    },
+    {
+      "correct": true,
+      "error": null,
+      "id": "astronomy-04",
+      "parsed": "A",
+      "raw": "{\"answer\":\"A\"}",
+      "slices": [
+        "astronomy"
+      ],
+      "valid": true
+    },
+    {
+      "correct": false,
+      "error": null,
+      "id": "astronomy-05",
+      "parsed": "C",
+      "raw": "{\"answer\":\"C\"}",
+      "slices": [
+        "astronomy"
+      ],
+      "valid": true
+    },
+    {
+      "correct": true,
+      "error": null,
+      "id": "astronomy-06",
+      "parsed": "C",
+      "raw": "{\"answer\":\"C\"}",
+      "slices": [
+        "astronomy"
+      ],
+      "valid": true
+    },
+    {
+      "correct": false,
+      "error": null,
+      "id": "astronomy-07",
+      "parsed": "C",
+      "raw": "{\"answer\":\"C\"}",
+      "slices": [
+        "astronomy"
+      ],
+      "valid": true
+    },
+    {
+      "correct": false,
+      "error": null,
+      "id": "astronomy-08",
+      "parsed": "A",
+      "raw": "{\"answer\":\"A\"}",
+      "slices": [
+        "astronomy"
+      ],
+      "valid": true
+    },
+    {
+      "correct": false,
+      "error": null,
+      "id": "astronomy-09",
+      "parsed": "A",
+      "raw": "{\"answer\":\"A\"}",
+      "slices": [
+        "astronomy"
+      ],
+      "valid": true
+    },
+    {
+      "correct": true,
+      "error": null,
+      "id": "astronomy-10",
+      "parsed": "A",
+      "raw": "{\"answer\":\"A\"}",
+      "slices": [
+        "astronomy"
+      ],
+      "valid": true
+    },
+    {
+      "correct": false,
+      "error": null,
+      "id": "astronomy-11",
+      "parsed": "A",
+      "raw": "{\"answer\":\"A\"}",
+      "slices": [
+        "astronomy"
+      ],
+      "valid": true
+    },
+    {
+      "correct": true,
+      "error": null,
+      "id": "astronomy-12",
+      "parsed": "C",
+      "raw": "{\"answer\":\"C\"}",
+      "slices": [
+        "astronomy"
+      ],
+      "valid": true
+    },
+    {
+      "correct": false,
+      "error": null,
+      "id": "astronomy-13",
+      "parsed": "C",
+      "raw": "{\"answer\":\"C\"}",
+      "slices": [
+        "astronomy"
+      ],
+      "valid": true
+    },
+    {
+      "correct": true,
+      "error": null,
+      "id": "astronomy-14",
+      "parsed": "B",
+      "raw": "{\"answer\":\"B\"}",
+      "slices": [
+        "astronomy"
+      ],
+      "valid": true
+    },
+    {
+      "correct": false,
+      "error": null,
+      "id": "astronomy-15",
+      "parsed": "A",
+      "raw": "{\"answer\":\"A\"}",
+      "slices": [
+        "astronomy"
+      ],
+      "valid": true
+    },
+    {
+      "correct": false,
+      "error": null,
+      "id": "astronomy-16",
+      "parsed": "B",
+      "raw": "{\"answer\":\"B\"}",
+      "slices": [
+        "astronomy"
+      ],
+      "valid": true
+    },
+    {
+      "correct": false,
+      "error": null,
+      "id": "astronomy-17",
+      "parsed": "A",
+      "raw": "{\"answer\":\"A\"}",
+      "slices": [
+        "astronomy"
+      ],
+      "valid": true
+    },
+    {
+      "correct": false,
+      "error": null,
+      "id": "astronomy-18",
+      "parsed": "B",
+      "raw": "{\"answer\":\"B\"}",
+      "slices": [
+        "astronomy"
+      ],
+      "valid": true
+    }
+  ],
+  "protocol_sha256": "e6b69bed1af5d1bf7806cdc3c1accd44fc4558464f564ffd7da8a0003428344c",
+  "runtime_sha256": "bdefdde6ff57f97abac04aca3a1200c219f9735416960319345088554d577f4e",
+  "slices": {
+    "astronomy": {
+      "accuracy": 0.3333333333333333,
+      "correct": 6,
+      "errors": 0,
+      "format_rate": 1.0,
+      "n": 18,
+      "valid": 18
+    },
+    "chemistry": {
+      "accuracy": 0.9444444444444444,
+      "correct": 17,
+      "errors": 0,
+      "format_rate": 1.0,
+      "n": 18,
+      "valid": 18
+    },
+    "geography": {
+      "accuracy": 0.5,
+      "correct": 9,
+      "errors": 0,
+      "format_rate": 1.0,
+      "n": 18,
+      "valid": 18
+    }
+  },
+  "status": "complete"
+}

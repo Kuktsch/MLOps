@@ -6,17 +6,23 @@
 
 Текстовый разбор семи исправленных ошибок: [docs/defects.md](docs/defects.md).
 
+Текущая инструкция [evaluation/params.json ДЗ 6–7](../mlops26-hw6-7/hw67-broken/evaluation/params.json) улучшила реальные ответы:
+база — с 4/54 до 34/54, адаптер — с 0/54 до 32/54; формат JSON корректен в 54/54
+случаях у обеих моделей. Веса, эталоны и scorer не менялись. Полная новая оценка —
+[evidence/model-synced/](evidence/model-synced/); прежняя сохранена в `evidence/model/`.
+Кандидат уступает новой базе и по-прежнему отклонён неизменённым gate.
+
 ## Проверки
 
 Команды выполняются из `hw8910-broken`, Python 3.12. Зависимости закреплены в `pyproject.toml` и `uv.lock`.
 
 ```bash
 uv sync --frozen
-make check
+make check-all
 make check-negative
 ```
 
-Ожидается 29/29 тестов и успешная проверка намеренной поломки/восстановления. Только приложенные 13 тестов работают без сторонних пакетов:
+Ожидается 35/35 тестов ДЗ 8–10 и 24/24 сохранённых теста ДЗ 6–7 и успешная проверка намеренной поломки/восстановления. Только приложенные 13 тестов работают без сторонних пакетов:
 
 ```bash
 make unit
@@ -42,24 +48,54 @@ make real-api
 ```bash
 curl http://127.0.0.1:8091/health
 curl http://127.0.0.1:8091/ready
-curl -H 'Content-Type: application/json' -d '{"prompt":"Какой химический символ у кислорода? choices: O, H, N.","max_new_tokens":32}' http://127.0.0.1:8091/generate
-make benchmark
+curl -H 'Content-Type: application/json' -d '{"prompt":"Какой город является столицей Финляндии?\nA: Хельсинки; B: Осло; C: Стокгольм. Допустимые метки choices: A, B, C.","max_new_tokens":32}' http://127.0.0.1:8091/generate
+make benchmark BENCHMARK_OUTPUT=evidence/synced-api-recheck/benchmark
 ```
 
-Кандидат честно отклонён по quality gate, обслуживается frozen baseline. `make real-baseline` сохраняет её, `make real-candidate` ожидаемо завершается отказом.
+`make real-api` использует `.real-synced` с новой оценённой инструкцией.
+Обслуживается baseline: 34/54. `make real-baseline` сохраняет её,
+`make real-candidate` ожидаемо завершается отказом; указатель не меняется.
+Benchmark запускается во втором терминале, пока API работает. Для повторов
+выбирайте новый `BENCHMARK_OUTPUT`, чтобы сохранить прежние измерения.
+
+Реальный smoke, неверный запрос до генерации, 16 benchmark-запросов и restart
+уже проверены: [evidence/synced-api/](evidence/synced-api/).
+Повтор в новый каталог:
+
+```bash
+HF_HUB_OFFLINE=1 TRANSFORMERS_OFFLINE=1 .venv/bin/python scripts/demo_api.py --workspace .real-synced --evaluation-evidence evidence/model-synced --output-root evidence/synced-api-recheck
+```
 
 ## Повтор полной оценки без обучения
 
 ```bash
 docker compose -f ../mlops26-hw6-7/hw67-broken/compose.yaml -p mlops-hw6 up -d
-make real-prepare REAL_WORKSPACE=.real-recheck EVALUATION_EVIDENCE=evidence/model-recheck
-make real-baseline REAL_WORKSPACE=.real-recheck
-make real-candidate REAL_WORKSPACE=.real-recheck
-make real-api REAL_WORKSPACE=.real-recheck
+make real-prepare REAL_WORKSPACE=.real-synced-repeat EVALUATION_EVIDENCE=evidence/model-synced-repeat
+make real-baseline REAL_WORKSPACE=.real-synced-repeat
+make real-candidate REAL_WORKSPACE=.real-synced-repeat
+make real-api REAL_WORKSPACE=.real-synced-repeat
 ```
 
-Выбирайте новые workspace/evidence: источники принятого решения не перезаписываются. Доступ к артефактам и таблица «код / данные / адаптер» описаны в `docs/REPORT.md`.
+`make real-prepare` читает актуальный проект `HW67_PROJECT` (по умолчанию
+`../mlops26-hw6-7/hw67-broken`): его `evaluation/params.json`, пути данных из
+этого конфига, baseline, candidate, отчёты, raw и код scorer/gate. Отдельной
+копии инструкции в ДЗ 8–10 больше нет. Если настройки/данные ДЗ 6–7 меняются,
+сначала выполните там `make evaluate` и `make eval`; затем импортируйте в новые
+workspace/evidence. Ожидаемый отказ кандидата не препятствует импорту базы.
 
+Перед генерацией проверяются актуальность обоих отчётов и решение прежнего gate;
+при выпуске проверка повторяется по сохранённому снимку. Все 114 ответов serving
+backend должны совпасть с raw ДЗ 6–7. Обучение и sweep не запускаются.
+Оценка использует те же готовые веса и полный набор 54 golden + 3 behavioral
+для каждой модели. Выбирайте новые workspace/evidence: источники принятого решения не перезаписываются. Доступ к артефактам и таблица «код / данные / адаптер» описаны в `docs/REPORT.md`.
+
+Текущий источник — evaluation run `f8dd502249724e8d8d05ec3ac0eb4afe` ДЗ 6–7;
+связанный serving evaluation run — `5e83ce18ce53470192adadef7a0afe71`. Связи, хеши и исходные
+отчёты сохранены в `evidence/model-synced/protocol.json` и `hw67-original/`.
+Предыдущий отдельный эксперимент остаётся в `evidence/model-quality/`.
+
+`make check` запускает 35 тестов текущего проекта; `make check-hw67` —
+сохранённые 24 теста ДЗ 6–7; `make check-all` объединяет оба набора.
 Тесты ДЗ 6–7 сохранены в исходном проекте:
 
 ```bash
@@ -70,9 +106,13 @@ cd ../mlops26-hw6-7/hw67-broken
 ## Форматы файлов
 
 - `assignment/REPORT.txt` — исходный план преподавателя; `docs/REPORT.md` — заполненный отчёт; `README.md` — команды запуска.
-- `docs/defects.csv`, `evidence/model/*.json`, `*.jsonl` и журналы — результаты и доказательства из задания.
+- `docs/defects.csv`, `evidence/model-synced/*.json`, `*.jsonl` и журналы — результаты и доказательства из задания.
 - `assignment/` — оригиналы задания: HTML, `REPORT.txt`, `CONTRACTS.txt`, `INCIDENTS.txt`.
 - `requirements-fast.txt`, `requirements-flow.txt` — списки зависимостей для установки, не отчёты.
 - `input.txt`, `model-A.txt`, `model-B.txt` в STUB-опытах — вход и синтетические артефакты; имена используются исходным прототипом и тестами.
 
-Веса, окружения, кеши и видео исключены из Git. Текущий результат сохраняется локальным коммитом `homework 8 9 10`; отправка на GitHub не выполняется. Видео предоставляется отдельно. Удалённый CI и защита merge не заявляются.
+Веса, окружения, кеши и видео исключены из Git. Контрольная версия до улучшения
+сохранена локальным коммитом `3154384` (`homework 8 9 10`). Последующий эксперимент
+выполнен в той же ветке `main`, без нового коммита и отправки на GitHub.
+Видео `hw8910-report.mp4` показывает текущие результаты: 34/54 у базы и
+32/54 у кандидата, проверки и работу реального API. Удалённый CI и защита merge не заявляются.

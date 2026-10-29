@@ -1,0 +1,12 @@
+test_http_bad_request_never_calls_backend (test_integration.IntegrationTests.test_http_bad_request_never_calls_backend) ... ok
+test_http_loaded_version_restart_and_rollback (test_integration.IntegrationTests.test_http_loaded_version_restart_and_rollback) ... ok
+test_http_ready_waits_for_warmup (test_integration.IntegrationTests.test_http_ready_waits_for_warmup) ... ok
+test_process_atomic_disk_error_preserves_pointer (test_integration.IntegrationTests.test_process_atomic_disk_error_preserves_pointer) ... ok
+test_process_cache_recovery_and_input_change (test_integration.IntegrationTests.test_process_cache_recovery_and_input_change) ... ok
+test_process_rejection_incomplete_and_foreign_report (test_integration.IntegrationTests.test_process_rejection_incomplete_and_foreign_report) ... ok
+test_process_repeated_publication_is_one_event (test_integration.IntegrationTests.test_process_repeated_publication_is_one_event) ... ok
+
+----------------------------------------------------------------------
+Ran 7 tests in 8.099s
+
+OK

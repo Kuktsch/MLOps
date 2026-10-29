@@ -1,14 +1,14 @@
-13:01:46.250 | INFO    | prefect - Starting temporary server on http://127.0.0.1:8640
+18:35:53.757 | INFO    | prefect - Starting temporary server on http://127.0.0.1:8213
 See https://docs.prefect.io/v3/concepts/server#how-to-guides for more information on running a dedicated Prefect server.
-13:01:49.775 | INFO    | Flow run 'tough-ant' - Beginning flow run 'tough-ant' for flow 'model-release'
-13:01:49.795 | INFO    | Task run 'prepare-input-792' - PREPARED d18546842ff18885a685a9d6f315b9adcfa2e65d7872ebf3726603ace925e5e3
-13:01:49.799 | INFO    | Task run 'prepare-input-792' - Finished in state Completed()
-13:01:49.813 | INFO    | Flow run 'tough-ant' - PREPARATION_STATE=Completed CONTENT_KEY=42ab8a953eee7ac1a3729c84d4b0fba9a6464617ef4b013a32651bd29b0c65de
-13:01:49.821 | INFO    | Task run 'obtain-existing-training-artifact-fad' - ARTIFACT_VERIFIED fixture-B existing run; no training
-13:01:49.824 | INFO    | Task run 'obtain-existing-training-artifact-fad' - Finished in state Completed()
-13:01:49.832 | INFO    | Task run 'evaluate-release-admission-326' - Finished in state Completed()
-13:01:49.839 | INFO    | Task run 'publish-accepted-pointer-2ad' - ARTIFACT_VERIFIED fixture-B existing run; no training
-13:01:49.847 | INFO    | Task run 'publish-accepted-pointer-2ad' - ALREADY_PUBLISHED cdfa2da746093e2a2c185d1166718c0d01747ac18884945b0faa68c9ad9c3082
-13:01:49.850 | INFO    | Task run 'publish-accepted-pointer-2ad' - Finished in state Completed()
-13:01:50.790 | INFO    | Flow run 'tough-ant' - Finished in state Completed()
-13:01:50.808 | INFO    | prefect - Stopping temporary server on http://127.0.0.1:8640
+18:35:57.153 | INFO    | Flow run 'resourceful-rattlesnake' - Beginning flow run 'resourceful-rattlesnake' for flow 'model-release'
+18:35:57.345 | INFO    | Task run 'prepare-input-7a6' - PREPARED d18546842ff18885a685a9d6f315b9adcfa2e65d7872ebf3726603ace925e5e3
+18:35:57.349 | INFO    | Task run 'prepare-input-7a6' - Finished in state Completed()
+18:35:57.352 | INFO    | Flow run 'resourceful-rattlesnake' - PREPARATION_STATE=Completed CONTENT_KEY=42ab8a953eee7ac1a3729c84d4b0fba9a6464617ef4b013a32651bd29b0c65de
+18:35:57.426 | INFO    | Task run 'obtain-existing-training-artifact-3ac' - ARTIFACT_VERIFIED fixture-B existing run; no training
+18:35:57.429 | INFO    | Task run 'obtain-existing-training-artifact-3ac' - Finished in state Completed()
+18:35:57.433 | INFO    | Task run 'evaluate-release-admission-c3f' - Finished in state Completed()
+18:35:57.443 | INFO    | Task run 'publish-accepted-pointer-e56' - ARTIFACT_VERIFIED fixture-B existing run; no training
+18:35:57.591 | INFO    | Task run 'publish-accepted-pointer-e56' - ALREADY_PUBLISHED cdfa2da746093e2a2c185d1166718c0d01747ac18884945b0faa68c9ad9c3082
+18:35:57.594 | INFO    | Task run 'publish-accepted-pointer-e56' - Finished in state Completed()
+18:35:58.164 | INFO    | Flow run 'resourceful-rattlesnake' - Finished in state Completed()
+18:35:58.179 | INFO    | prefect - Stopping temporary server on http://127.0.0.1:8213

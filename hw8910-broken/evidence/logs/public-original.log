@@ -69,7 +69,7 @@ FAIL: test_changed_bytes_at_same_path_invalidate_cache (test_release.ReleaseCont
 Traceback (most recent call last):
   File "/home/luserok/VSCodeWSL/MLOps/hw8910-broken/evidence/original/tests/test_release.py", line 42, in test_changed_bytes_at_same_path_invalidate_cache
     self.assertNotEqual(old,release.cache_key(self.data,self.config))
-AssertionError: 'de2f94cd6c37ac2986c5eaf2fe9cb27157b97eb2bbd4f16650383be5c569415c' == 'de2f94cd6c37ac2986c5eaf2fe9cb27157b97eb2bbd4f16650383be5c569415c'
+AssertionError: '67b996e95b868a33825c25d8594d4f0a1c90d8553b0e4b639a5c01c34339aa0b' == '67b996e95b868a33825c25d8594d4f0a1c90d8553b0e4b639a5c01c34339aa0b'
 
 ======================================================================
 FAIL: test_every_preparation_setting_invalidates_cache (test_release.ReleaseContractTests.test_every_preparation_setting_invalidates_cache) (key='tokenizer_revision')
@@ -78,7 +78,7 @@ Traceback (most recent call last):
   File "/home/luserok/VSCodeWSL/MLOps/hw8910-broken/evidence/original/tests/test_release.py", line 48, in test_every_preparation_setting_invalidates_cache
     config={**self.config,key:value};self.assertNotEqual(old,release.cache_key(self.data,config))
                                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-AssertionError: 'a04ffd0591e610309d09b2314778b719558f12b81e94a3a205ccd0c151f925a2' == 'a04ffd0591e610309d09b2314778b719558f12b81e94a3a205ccd0c151f925a2'
+AssertionError: 'aebb9b6765947533a68c14005f7c3b84a114c7fb083bc1dd06b5e472d115edbf' == 'aebb9b6765947533a68c14005f7c3b84a114c7fb083bc1dd06b5e472d115edbf'
 
 ======================================================================
 FAIL: test_every_preparation_setting_invalidates_cache (test_release.ReleaseContractTests.test_every_preparation_setting_invalidates_cache) (key='template_sha256')
@@ -87,7 +87,7 @@ Traceback (most recent call last):
   File "/home/luserok/VSCodeWSL/MLOps/hw8910-broken/evidence/original/tests/test_release.py", line 48, in test_every_preparation_setting_invalidates_cache
     config={**self.config,key:value};self.assertNotEqual(old,release.cache_key(self.data,config))
                                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-AssertionError: 'a04ffd0591e610309d09b2314778b719558f12b81e94a3a205ccd0c151f925a2' == 'a04ffd0591e610309d09b2314778b719558f12b81e94a3a205ccd0c151f925a2'
+AssertionError: 'aebb9b6765947533a68c14005f7c3b84a114c7fb083bc1dd06b5e472d115edbf' == 'aebb9b6765947533a68c14005f7c3b84a114c7fb083bc1dd06b5e472d115edbf'
 
 ======================================================================
 FAIL: test_every_preparation_setting_invalidates_cache (test_release.ReleaseContractTests.test_every_preparation_setting_invalidates_cache) (key='max_length')
@@ -96,7 +96,7 @@ Traceback (most recent call last):
   File "/home/luserok/VSCodeWSL/MLOps/hw8910-broken/evidence/original/tests/test_release.py", line 48, in test_every_preparation_setting_invalidates_cache
     config={**self.config,key:value};self.assertNotEqual(old,release.cache_key(self.data,config))
                                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-AssertionError: 'a04ffd0591e610309d09b2314778b719558f12b81e94a3a205ccd0c151f925a2' == 'a04ffd0591e610309d09b2314778b719558f12b81e94a3a205ccd0c151f925a2'
+AssertionError: 'aebb9b6765947533a68c14005f7c3b84a114c7fb083bc1dd06b5e472d115edbf' == 'aebb9b6765947533a68c14005f7c3b84a114c7fb083bc1dd06b5e472d115edbf'
 
 ======================================================================
 FAIL: test_every_preparation_setting_invalidates_cache (test_release.ReleaseContractTests.test_every_preparation_setting_invalidates_cache) (key='code_revision')
@@ -105,7 +105,7 @@ Traceback (most recent call last):
   File "/home/luserok/VSCodeWSL/MLOps/hw8910-broken/evidence/original/tests/test_release.py", line 48, in test_every_preparation_setting_invalidates_cache
     config={**self.config,key:value};self.assertNotEqual(old,release.cache_key(self.data,config))
                                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-AssertionError: 'a04ffd0591e610309d09b2314778b719558f12b81e94a3a205ccd0c151f925a2' == 'a04ffd0591e610309d09b2314778b719558f12b81e94a3a205ccd0c151f925a2'
+AssertionError: 'aebb9b6765947533a68c14005f7c3b84a114c7fb083bc1dd06b5e472d115edbf' == 'aebb9b6765947533a68c14005f7c3b84a114c7fb083bc1dd06b5e472d115edbf'
 
 ======================================================================
 FAIL: test_failed_atomic_replace_preserves_previous_bytes (test_release.ReleaseContractTests.test_failed_atomic_replace_preserves_previous_bytes)
@@ -113,6 +113,7 @@ FAIL: test_failed_atomic_replace_preserves_previous_bytes (test_release.ReleaseC
 Traceback (most recent call last):
   File "/home/luserok/VSCodeWSL/MLOps/hw8910-broken/evidence/original/tests/test_release.py", line 105, in test_failed_atomic_replace_preserves_previous_bytes
     with self.assertRaises(OSError):release.publish(self.manifest,self.report,self.target)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^
 AssertionError: OSError not raised
 
 ======================================================================
@@ -121,6 +122,7 @@ FAIL: test_incomplete_false_and_truthy_string_rejected (test_release.ReleaseCont
 Traceback (most recent call last):
   File "/home/luserok/VSCodeWSL/MLOps/hw8910-broken/evidence/original/tests/test_release.py", line 57, in test_incomplete_false_and_truthy_string_rejected
     with self.assertRaises(ValueError):release.validate_release(self.manifest,bad)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 AssertionError: ValueError not raised
 
 ======================================================================
@@ -129,6 +131,7 @@ FAIL: test_incomplete_false_and_truthy_string_rejected (test_release.ReleaseCont
 Traceback (most recent call last):
   File "/home/luserok/VSCodeWSL/MLOps/hw8910-broken/evidence/original/tests/test_release.py", line 57, in test_incomplete_false_and_truthy_string_rejected
     with self.assertRaises(ValueError):release.validate_release(self.manifest,bad)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 AssertionError: ValueError not raised
 
 ======================================================================
@@ -137,6 +140,7 @@ FAIL: test_incomplete_false_and_truthy_string_rejected (test_release.ReleaseCont
 Traceback (most recent call last):
   File "/home/luserok/VSCodeWSL/MLOps/hw8910-broken/evidence/original/tests/test_release.py", line 57, in test_incomplete_false_and_truthy_string_rejected
     with self.assertRaises(ValueError):release.validate_release(self.manifest,bad)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 AssertionError: ValueError not raised
 
 ======================================================================
@@ -145,6 +149,7 @@ FAIL: test_incomplete_false_and_truthy_string_rejected (test_release.ReleaseCont
 Traceback (most recent call last):
   File "/home/luserok/VSCodeWSL/MLOps/hw8910-broken/evidence/original/tests/test_release.py", line 57, in test_incomplete_false_and_truthy_string_rejected
     with self.assertRaises(ValueError):release.validate_release(self.manifest,bad)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 AssertionError: ValueError not raised
 
 ======================================================================
@@ -153,6 +158,7 @@ FAIL: test_invalid_digest_and_schema_rejected (test_release.ReleaseContractTests
 Traceback (most recent call last):
   File "/home/luserok/VSCodeWSL/MLOps/hw8910-broken/evidence/original/tests/test_release.py", line 90, in test_invalid_digest_and_schema_rejected
     with self.assertRaises(ValueError):release.validate_release(m,self.report)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 AssertionError: ValueError not raised
 
 ======================================================================
@@ -161,6 +167,7 @@ FAIL: test_invalid_digest_and_schema_rejected (test_release.ReleaseContractTests
 Traceback (most recent call last):
   File "/home/luserok/VSCodeWSL/MLOps/hw8910-broken/evidence/original/tests/test_release.py", line 90, in test_invalid_digest_and_schema_rejected
     with self.assertRaises(ValueError):release.validate_release(m,self.report)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 AssertionError: ValueError not raised
 
 ======================================================================
@@ -169,6 +176,7 @@ FAIL: test_invalid_digest_and_schema_rejected (test_release.ReleaseContractTests
 Traceback (most recent call last):
   File "/home/luserok/VSCodeWSL/MLOps/hw8910-broken/evidence/original/tests/test_release.py", line 90, in test_invalid_digest_and_schema_rejected
     with self.assertRaises(ValueError):release.validate_release(m,self.report)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 AssertionError: ValueError not raised
 
 ======================================================================
@@ -177,6 +185,7 @@ FAIL: test_invalid_digest_and_schema_rejected (test_release.ReleaseContractTests
 Traceback (most recent call last):
   File "/home/luserok/VSCodeWSL/MLOps/hw8910-broken/evidence/original/tests/test_release.py", line 90, in test_invalid_digest_and_schema_rejected
     with self.assertRaises(ValueError):release.validate_release(m,self.report)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 AssertionError: ValueError not raised
 
 ======================================================================
@@ -185,6 +194,7 @@ FAIL: test_invalid_digest_and_schema_rejected (test_release.ReleaseContractTests
 Traceback (most recent call last):
   File "/home/luserok/VSCodeWSL/MLOps/hw8910-broken/evidence/original/tests/test_release.py", line 90, in test_invalid_digest_and_schema_rejected
     with self.assertRaises(ValueError):release.validate_release(m,self.report)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 AssertionError: ValueError not raised
 
 ======================================================================
@@ -193,6 +203,7 @@ FAIL: test_invalid_metric_rejected (test_release.ReleaseContractTests.test_inval
 Traceback (most recent call last):
   File "/home/luserok/VSCodeWSL/MLOps/hw8910-broken/evidence/original/tests/test_release.py", line 84, in test_invalid_metric_rejected
     with self.assertRaises(ValueError):release.validate_release(self.manifest,r)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 AssertionError: ValueError not raised
 
 ======================================================================
@@ -201,6 +212,7 @@ FAIL: test_invalid_metric_rejected (test_release.ReleaseContractTests.test_inval
 Traceback (most recent call last):
   File "/home/luserok/VSCodeWSL/MLOps/hw8910-broken/evidence/original/tests/test_release.py", line 84, in test_invalid_metric_rejected
     with self.assertRaises(ValueError):release.validate_release(self.manifest,r)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 AssertionError: ValueError not raised
 
 ======================================================================
@@ -209,6 +221,7 @@ FAIL: test_invalid_metric_rejected (test_release.ReleaseContractTests.test_inval
 Traceback (most recent call last):
   File "/home/luserok/VSCodeWSL/MLOps/hw8910-broken/evidence/original/tests/test_release.py", line 84, in test_invalid_metric_rejected
     with self.assertRaises(ValueError):release.validate_release(self.manifest,r)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 AssertionError: ValueError not raised
 
 ======================================================================
@@ -217,6 +230,7 @@ FAIL: test_invalid_metric_rejected (test_release.ReleaseContractTests.test_inval
 Traceback (most recent call last):
   File "/home/luserok/VSCodeWSL/MLOps/hw8910-broken/evidence/original/tests/test_release.py", line 84, in test_invalid_metric_rejected
     with self.assertRaises(ValueError):release.validate_release(self.manifest,r)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 AssertionError: ValueError not raised
 
 ======================================================================
@@ -225,6 +239,7 @@ FAIL: test_invalid_metric_rejected (test_release.ReleaseContractTests.test_inval
 Traceback (most recent call last):
   File "/home/luserok/VSCodeWSL/MLOps/hw8910-broken/evidence/original/tests/test_release.py", line 84, in test_invalid_metric_rejected
     with self.assertRaises(ValueError):release.validate_release(self.manifest,r)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 AssertionError: ValueError not raised
 
 ======================================================================
@@ -233,6 +248,7 @@ FAIL: test_invalid_metric_rejected (test_release.ReleaseContractTests.test_inval
 Traceback (most recent call last):
   File "/home/luserok/VSCodeWSL/MLOps/hw8910-broken/evidence/original/tests/test_release.py", line 84, in test_invalid_metric_rejected
     with self.assertRaises(ValueError):release.validate_release(self.manifest,r)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 AssertionError: ValueError not raised
 
 ======================================================================
@@ -241,6 +257,7 @@ FAIL: test_invalid_metric_rejected (test_release.ReleaseContractTests.test_inval
 Traceback (most recent call last):
   File "/home/luserok/VSCodeWSL/MLOps/hw8910-broken/evidence/original/tests/test_release.py", line 84, in test_invalid_metric_rejected
     with self.assertRaises(ValueError):release.validate_release(self.manifest,r)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 AssertionError: ValueError not raised
 
 ======================================================================
@@ -249,6 +266,7 @@ FAIL: test_invalid_metric_rejected (test_release.ReleaseContractTests.test_inval
 Traceback (most recent call last):
   File "/home/luserok/VSCodeWSL/MLOps/hw8910-broken/evidence/original/tests/test_release.py", line 84, in test_invalid_metric_rejected
     with self.assertRaises(ValueError):release.validate_release(self.manifest,r)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 AssertionError: ValueError not raised
 
 ======================================================================
@@ -257,6 +275,7 @@ FAIL: test_invalid_metric_rejected (test_release.ReleaseContractTests.test_inval
 Traceback (most recent call last):
   File "/home/luserok/VSCodeWSL/MLOps/hw8910-broken/evidence/original/tests/test_release.py", line 84, in test_invalid_metric_rejected
     with self.assertRaises(ValueError):release.validate_release(self.manifest,r)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 AssertionError: ValueError not raised
 
 ======================================================================
@@ -265,6 +284,7 @@ FAIL: test_invalid_metric_rejected (test_release.ReleaseContractTests.test_inval
 Traceback (most recent call last):
   File "/home/luserok/VSCodeWSL/MLOps/hw8910-broken/evidence/original/tests/test_release.py", line 84, in test_invalid_metric_rejected
     with self.assertRaises(ValueError):release.validate_release(self.manifest,r)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 AssertionError: ValueError not raised
 
 ======================================================================
@@ -273,6 +293,7 @@ FAIL: test_invalid_metric_rejected (test_release.ReleaseContractTests.test_inval
 Traceback (most recent call last):
   File "/home/luserok/VSCodeWSL/MLOps/hw8910-broken/evidence/original/tests/test_release.py", line 84, in test_invalid_metric_rejected
     with self.assertRaises(ValueError):release.validate_release(self.manifest,r)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 AssertionError: ValueError not raised
 
 ======================================================================
@@ -281,6 +302,7 @@ FAIL: test_invalid_metric_rejected (test_release.ReleaseContractTests.test_inval
 Traceback (most recent call last):
   File "/home/luserok/VSCodeWSL/MLOps/hw8910-broken/evidence/original/tests/test_release.py", line 84, in test_invalid_metric_rejected
     with self.assertRaises(ValueError):release.validate_release(self.manifest,r)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 AssertionError: ValueError not raised
 
 ======================================================================
@@ -289,6 +311,7 @@ FAIL: test_invalid_metric_rejected (test_release.ReleaseContractTests.test_inval
 Traceback (most recent call last):
   File "/home/luserok/VSCodeWSL/MLOps/hw8910-broken/evidence/original/tests/test_release.py", line 84, in test_invalid_metric_rejected
     with self.assertRaises(ValueError):release.validate_release(self.manifest,r)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 AssertionError: ValueError not raised
 
 ======================================================================
@@ -297,6 +320,7 @@ FAIL: test_invalid_metric_rejected (test_release.ReleaseContractTests.test_inval
 Traceback (most recent call last):
   File "/home/luserok/VSCodeWSL/MLOps/hw8910-broken/evidence/original/tests/test_release.py", line 84, in test_invalid_metric_rejected
     with self.assertRaises(ValueError):release.validate_release(self.manifest,r)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 AssertionError: ValueError not raised
 
 ======================================================================
@@ -305,9 +329,9 @@ FAIL: test_key_ignores_path_and_mapping_order (test_release.ReleaseContractTests
 Traceback (most recent call last):
   File "/home/luserok/VSCodeWSL/MLOps/hw8910-broken/evidence/original/tests/test_release.py", line 38, in test_key_ignores_path_and_mapping_order
     self.assertEqual(key,release.cache_key(other,dict(reversed(list(self.config.items())))))
-AssertionError: '7252407bfd01975742b1efe26ac15f758a094a8791b9b8d46a42a3f199b9c55e' != 'bc84086d3a1862237370bb492c9b2229e2204faeb725d81d080287a8b89340c0'
-- 7252407bfd01975742b1efe26ac15f758a094a8791b9b8d46a42a3f199b9c55e
-+ bc84086d3a1862237370bb492c9b2229e2204faeb725d81d080287a8b89340c0
+AssertionError: '519dd177f73a6becdc2b029c7e924232c9ff0fd65b0458d2fce050449f54165b' != '21e7bd0939e6c9317340f60d185f4d601acad07eb944575592a53eb694b13bc0'
+- 519dd177f73a6becdc2b029c7e924232c9ff0fd65b0458d2fce050449f54165b
++ 21e7bd0939e6c9317340f60d185f4d601acad07eb944575592a53eb694b13bc0
 
 
 ======================================================================
@@ -316,6 +340,7 @@ FAIL: test_missing_fields_rejected (test_release.ReleaseContractTests.test_missi
 Traceback (most recent call last):
   File "/home/luserok/VSCodeWSL/MLOps/hw8910-broken/evidence/original/tests/test_release.py", line 65, in test_missing_fields_rejected
     with self.assertRaises(ValueError):release.validate_release(m,r)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 AssertionError: ValueError not raised
 
 ======================================================================
@@ -324,6 +349,7 @@ FAIL: test_missing_fields_rejected (test_release.ReleaseContractTests.test_missi
 Traceback (most recent call last):
   File "/home/luserok/VSCodeWSL/MLOps/hw8910-broken/evidence/original/tests/test_release.py", line 65, in test_missing_fields_rejected
     with self.assertRaises(ValueError):release.validate_release(m,r)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 AssertionError: ValueError not raised
 
 ======================================================================
@@ -332,6 +358,7 @@ FAIL: test_missing_fields_rejected (test_release.ReleaseContractTests.test_missi
 Traceback (most recent call last):
   File "/home/luserok/VSCodeWSL/MLOps/hw8910-broken/evidence/original/tests/test_release.py", line 65, in test_missing_fields_rejected
     with self.assertRaises(ValueError):release.validate_release(m,r)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 AssertionError: ValueError not raised
 
 ======================================================================
@@ -340,6 +367,7 @@ FAIL: test_missing_fields_rejected (test_release.ReleaseContractTests.test_missi
 Traceback (most recent call last):
   File "/home/luserok/VSCodeWSL/MLOps/hw8910-broken/evidence/original/tests/test_release.py", line 65, in test_missing_fields_rejected
     with self.assertRaises(ValueError):release.validate_release(m,r)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 AssertionError: ValueError not raised
 
 ======================================================================
@@ -348,6 +376,7 @@ FAIL: test_missing_fields_rejected (test_release.ReleaseContractTests.test_missi
 Traceback (most recent call last):
   File "/home/luserok/VSCodeWSL/MLOps/hw8910-broken/evidence/original/tests/test_release.py", line 65, in test_missing_fields_rejected
     with self.assertRaises(ValueError):release.validate_release(m,r)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 AssertionError: ValueError not raised
 
 ======================================================================
@@ -356,6 +385,7 @@ FAIL: test_missing_fields_rejected (test_release.ReleaseContractTests.test_missi
 Traceback (most recent call last):
   File "/home/luserok/VSCodeWSL/MLOps/hw8910-broken/evidence/original/tests/test_release.py", line 65, in test_missing_fields_rejected
     with self.assertRaises(ValueError):release.validate_release(m,r)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 AssertionError: ValueError not raised
 
 ======================================================================
@@ -364,6 +394,7 @@ FAIL: test_missing_fields_rejected (test_release.ReleaseContractTests.test_missi
 Traceback (most recent call last):
   File "/home/luserok/VSCodeWSL/MLOps/hw8910-broken/evidence/original/tests/test_release.py", line 65, in test_missing_fields_rejected
     with self.assertRaises(ValueError):release.validate_release(m,r)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 AssertionError: ValueError not raised
 
 ======================================================================
@@ -372,6 +403,7 @@ FAIL: test_missing_fields_rejected (test_release.ReleaseContractTests.test_missi
 Traceback (most recent call last):
   File "/home/luserok/VSCodeWSL/MLOps/hw8910-broken/evidence/original/tests/test_release.py", line 65, in test_missing_fields_rejected
     with self.assertRaises(ValueError):release.validate_release(m,r)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 AssertionError: ValueError not raised
 
 ======================================================================
@@ -380,6 +412,7 @@ FAIL: test_missing_fields_rejected (test_release.ReleaseContractTests.test_missi
 Traceback (most recent call last):
   File "/home/luserok/VSCodeWSL/MLOps/hw8910-broken/evidence/original/tests/test_release.py", line 65, in test_missing_fields_rejected
     with self.assertRaises(ValueError):release.validate_release(m,r)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 AssertionError: ValueError not raised
 
 ======================================================================
@@ -388,6 +421,7 @@ FAIL: test_missing_fields_rejected (test_release.ReleaseContractTests.test_missi
 Traceback (most recent call last):
   File "/home/luserok/VSCodeWSL/MLOps/hw8910-broken/evidence/original/tests/test_release.py", line 65, in test_missing_fields_rejected
     with self.assertRaises(ValueError):release.validate_release(m,r)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 AssertionError: ValueError not raised
 
 ======================================================================
@@ -396,6 +430,7 @@ FAIL: test_missing_fields_rejected (test_release.ReleaseContractTests.test_missi
 Traceback (most recent call last):
   File "/home/luserok/VSCodeWSL/MLOps/hw8910-broken/evidence/original/tests/test_release.py", line 65, in test_missing_fields_rejected
     with self.assertRaises(ValueError):release.validate_release(m,r)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 AssertionError: ValueError not raised
 
 ======================================================================
@@ -404,6 +439,7 @@ FAIL: test_missing_fields_rejected (test_release.ReleaseContractTests.test_missi
 Traceback (most recent call last):
   File "/home/luserok/VSCodeWSL/MLOps/hw8910-broken/evidence/original/tests/test_release.py", line 65, in test_missing_fields_rejected
     with self.assertRaises(ValueError):release.validate_release(m,r)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 AssertionError: ValueError not raised
 
 ======================================================================
@@ -412,6 +448,7 @@ FAIL: test_missing_fields_rejected (test_release.ReleaseContractTests.test_missi
 Traceback (most recent call last):
   File "/home/luserok/VSCodeWSL/MLOps/hw8910-broken/evidence/original/tests/test_release.py", line 65, in test_missing_fields_rejected
     with self.assertRaises(ValueError):release.validate_release(m,r)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 AssertionError: ValueError not raised
 
 ======================================================================
@@ -420,6 +457,7 @@ FAIL: test_missing_fields_rejected (test_release.ReleaseContractTests.test_missi
 Traceback (most recent call last):
   File "/home/luserok/VSCodeWSL/MLOps/hw8910-broken/evidence/original/tests/test_release.py", line 65, in test_missing_fields_rejected
     with self.assertRaises(ValueError):release.validate_release(m,r)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 AssertionError: ValueError not raised
 
 ======================================================================
@@ -428,6 +466,7 @@ FAIL: test_missing_fields_rejected (test_release.ReleaseContractTests.test_missi
 Traceback (most recent call last):
   File "/home/luserok/VSCodeWSL/MLOps/hw8910-broken/evidence/original/tests/test_release.py", line 65, in test_missing_fields_rejected
     with self.assertRaises(ValueError):release.validate_release(m,r)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 AssertionError: ValueError not raised
 
 ======================================================================
@@ -436,6 +475,7 @@ FAIL: test_missing_fields_rejected (test_release.ReleaseContractTests.test_missi
 Traceback (most recent call last):
   File "/home/luserok/VSCodeWSL/MLOps/hw8910-broken/evidence/original/tests/test_release.py", line 65, in test_missing_fields_rejected
     with self.assertRaises(ValueError):release.validate_release(m,r)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 AssertionError: ValueError not raised
 
 ======================================================================
@@ -444,6 +484,7 @@ FAIL: test_report_binding_mismatch_rejected (test_release.ReleaseContractTests.t
 Traceback (most recent call last):
   File "/home/luserok/VSCodeWSL/MLOps/hw8910-broken/evidence/original/tests/test_release.py", line 71, in test_report_binding_mismatch_rejected
     with self.assertRaises(ValueError):release.validate_release(self.manifest,bad)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 AssertionError: ValueError not raised
 
 ======================================================================
@@ -452,6 +493,7 @@ FAIL: test_report_binding_mismatch_rejected (test_release.ReleaseContractTests.t
 Traceback (most recent call last):
   File "/home/luserok/VSCodeWSL/MLOps/hw8910-broken/evidence/original/tests/test_release.py", line 71, in test_report_binding_mismatch_rejected
     with self.assertRaises(ValueError):release.validate_release(self.manifest,bad)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 AssertionError: ValueError not raised
 
 ======================================================================
@@ -460,6 +502,7 @@ FAIL: test_report_binding_mismatch_rejected (test_release.ReleaseContractTests.t
 Traceback (most recent call last):
   File "/home/luserok/VSCodeWSL/MLOps/hw8910-broken/evidence/original/tests/test_release.py", line 71, in test_report_binding_mismatch_rejected
     with self.assertRaises(ValueError):release.validate_release(self.manifest,bad)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 AssertionError: ValueError not raised
 
 ======================================================================
@@ -468,6 +511,7 @@ FAIL: test_report_binding_mismatch_rejected (test_release.ReleaseContractTests.t
 Traceback (most recent call last):
   File "/home/luserok/VSCodeWSL/MLOps/hw8910-broken/evidence/original/tests/test_release.py", line 71, in test_report_binding_mismatch_rejected
     with self.assertRaises(ValueError):release.validate_release(self.manifest,bad)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 AssertionError: ValueError not raised
 
 ======================================================================
@@ -476,6 +520,7 @@ FAIL: test_report_binding_mismatch_rejected (test_release.ReleaseContractTests.t
 Traceback (most recent call last):
   File "/home/luserok/VSCodeWSL/MLOps/hw8910-broken/evidence/original/tests/test_release.py", line 71, in test_report_binding_mismatch_rejected
     with self.assertRaises(ValueError):release.validate_release(self.manifest,bad)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 AssertionError: ValueError not raised
 
 ======================================================================
@@ -484,6 +529,7 @@ FAIL: test_runtime_change_with_stale_hash_rejected (test_release.ReleaseContract
 Traceback (most recent call last):
   File "/home/luserok/VSCodeWSL/MLOps/hw8910-broken/evidence/original/tests/test_release.py", line 77, in test_runtime_change_with_stale_hash_rejected
     with self.assertRaises(ValueError):release.validate_release(m,self.report)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 AssertionError: ValueError not raised
 
 ======================================================================
@@ -492,6 +538,7 @@ FAIL: test_runtime_change_with_stale_hash_rejected (test_release.ReleaseContract
 Traceback (most recent call last):
   File "/home/luserok/VSCodeWSL/MLOps/hw8910-broken/evidence/original/tests/test_release.py", line 77, in test_runtime_change_with_stale_hash_rejected
     with self.assertRaises(ValueError):release.validate_release(m,self.report)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 AssertionError: ValueError not raised
 
 ======================================================================
@@ -500,9 +547,10 @@ FAIL: test_runtime_change_with_stale_hash_rejected (test_release.ReleaseContract
 Traceback (most recent call last):
   File "/home/luserok/VSCodeWSL/MLOps/hw8910-broken/evidence/original/tests/test_release.py", line 77, in test_runtime_change_with_stale_hash_rejected
     with self.assertRaises(ValueError):release.validate_release(m,self.report)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 AssertionError: ValueError not raised
 
 ----------------------------------------------------------------------
-Ran 13 tests in 0.016s
+Ran 13 tests in 0.017s
 
 FAILED (failures=54)

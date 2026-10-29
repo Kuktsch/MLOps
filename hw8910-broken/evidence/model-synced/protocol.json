@@ -1,0 +1,103 @@
+{
+  "baseline_spec": {
+    "kind": "base",
+    "name": "Qwen/Qwen3-0.6B",
+    "revision": "c1899de289a04d12100db370d81485cdf75e47ca"
+  },
+  "behavioral_sha256": "cf0fd06f5f4e51de74c7982cc434a071885970d6df91f8ce9635930c95e58070",
+  "code_hashes": {
+    "hw67_import.py": "d1cb3e866ee6ff42d1e448815eeddf2738393b24f54533e9e4a909fc79e568f6",
+    "model_backend.py": "3155b643a5d3390ae46e0a7681d3523e1a0d7e5e97ead31a228767ca3dcefd97",
+    "vendor/hw67_contract.py": "4a9f63ca6904ce1913b56a1a158df8a5f800fdcb569a9522c95b7f1482ee53c8",
+    "vendor/hw67_gate.py": "76d5308487535ed07f1f8e853c971d80eaccff0b5c997662421f60d9f179b082"
+  },
+  "config": {
+    "behavioral": "data/eval/behavioral.jsonl",
+    "critical_slices": [
+      "chemistry",
+      "astronomy"
+    ],
+    "enable_thinking": false,
+    "golden": "data/eval/golden.jsonl",
+    "max_new_tokens": 32,
+    "seed": 42,
+    "system": "Решай тесты только по географии, химии и астрономии. Выбери правильный вариант и верни только JSON с единственным ключом answer. Значение answer — только метка выбранного варианта, например {\"answer\":\"B\"}. Не пиши название ответа, список choices, пояснения или Markdown. Для запросов вне этих трёх тем верни только {\"answer\":\"REFUSE\"}.",
+    "training_index": "data/eval/training-index.jsonl"
+  },
+  "config_file_sha256": "d497fa1dc80e68a95431787aa294e3f0620f634111cae1d729341c08461e6c4c",
+  "config_source": "/home/luserok/VSCodeWSL/MLOps/mlops26-hw6-7/hw67-broken/evaluation/params.json",
+  "generation_limit_policy": "fixed: request must equal evaluated max_new_tokens",
+  "golden_sha256": "b698bc62db639ed5b7bb07b17ef2cd65e0a141d490af07594baf0f5462313041",
+  "hw67_import": {
+    "metadata": {
+      "config": {
+        "behavioral": "data/eval/behavioral.jsonl",
+        "critical_slices": [
+          "chemistry",
+          "astronomy"
+        ],
+        "enable_thinking": false,
+        "golden": "data/eval/golden.jsonl",
+        "max_new_tokens": 32,
+        "seed": 42,
+        "system": "Решай тесты только по географии, химии и астрономии. Выбери правильный вариант и верни только JSON с единственным ключом answer. Значение answer — только метка выбранного варианта, например {\"answer\":\"B\"}. Не пиши название ответа, список choices, пояснения или Markdown. Для запросов вне этих трёх тем верни только {\"answer\":\"REFUSE\"}.",
+        "training_index": "data/eval/training-index.jsonl"
+      },
+      "decision": {
+        "passed": false,
+        "reason": "Общая регрессия accuracy"
+      },
+      "evaluation_run_id": "f8dd502249724e8d8d05ec3ac0eb4afe",
+      "protocol_sha256": "4ddf9cc34f8eacbad20e3bf7c90ac74c456c9c962f83ff6249ab769a70c3b3d6",
+      "scores": {
+        "baseline": {
+          "accuracy": 0.6296296296296297,
+          "correct": 34,
+          "errors": 0,
+          "format_rate": 1.0,
+          "n": 54,
+          "valid": 54
+        },
+        "candidate": {
+          "accuracy": 0.5925925925925926,
+          "correct": 32,
+          "errors": 0,
+          "format_rate": 1.0,
+          "n": 54,
+          "valid": 54
+        }
+      },
+      "snapshot_files": {
+        "baseline-eval.json": "a0118eae1ed85157193cb463df6f233f49c6cd15610cc689a623266a036d039d",
+        "baseline-outputs.json": "d57dd6fa6679ea404c7b00f35996241790c2137175c59b339234231ff5a82c9e",
+        "baseline.json": "da0ace0ea269b2d9e5c0cad79ab54823d7bae8b4a65ece6446fa6adbbfed787e",
+        "candidate-eval.json": "313a0368ad0b9240b5165876e4d84246897697343c44a94dd981edee8275736c",
+        "candidate-model.json": "5e55e077bb1192d415682c7f264d7a9d6be95389641b66c2b2059c50f992b776",
+        "candidate-outputs.json": "8f954bf9ddca775ad56c28aa01fadad9e7336e27b89e1e2317cd2d78bb5692d9",
+        "evaluation/__init__.py": "7e1eb882d1b9c88756e0500bb9413355aa5115fa7a0b75843def0ca9bd749e4b",
+        "evaluation/cli.py": "3dbad9e9ab7d820a5ea2695b6bb1517a169d811819293397dfcbae0eb38b4507",
+        "evaluation/contract.py": "4a9f63ca6904ce1913b56a1a158df8a5f800fdcb569a9522c95b7f1482ee53c8",
+        "evaluation/solution.py": "76d5308487535ed07f1f8e853c971d80eaccff0b5c997662421f60d9f179b082",
+        "params.json": "d497fa1dc80e68a95431787aa294e3f0620f634111cae1d729341c08461e6c4c",
+        "pre-evaluation.json": "96e2da6ae4d916bbbdbda4e7e1ded0df7f2da1c1fd494c1049545ee54fe292da",
+        "quality-gate.json": "10fa1b071e7f06874fde313cf971c4079d4d21d8b9fdf00b752657c94ab32cb1"
+      },
+      "training_run_id": "cce6597824384cab8697bc597d7500c9"
+    },
+    "uri": "../evidence/model-synced/hw67-original"
+  },
+  "models": {
+    "baseline": {
+      "model_id": "baseline-qwen3-c1899de289a04d12100db370d81485cdf75e47ca",
+      "model_sha256": "052d8c0b8c31f61d79bcbbcca49c85414118746986773d57fb6a56f58e5a0c09",
+      "runtime_sha256": "5ae12f9b60e56faa2075ed81ef4eb77f1994fa5a63dafafdf11f5c475f0e388e"
+    },
+    "candidate": {
+      "model_id": "adapter-cce6597824384cab8697bc597d7500c9",
+      "model_sha256": "e3947d2322de11dad9c4c7f8e4f648b9536dc4da9ac0c1b2af88ef91eeaad027",
+      "runtime_sha256": "bdefdde6ff57f97abac04aca3a1200c219f9735416960319345088554d577f4e"
+    }
+  },
+  "note": "Full reevaluation for the explicitly hashed serving runtime; no training",
+  "training_index_sha256": "7724be5b84c81a41f99cb5d1a1e3256a8b567d04251f097dbdc32a5fc430471c"
+}

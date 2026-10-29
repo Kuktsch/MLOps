@@ -1,14 +1,14 @@
-13:01:38.217 | INFO    | prefect - Starting temporary server on http://127.0.0.1:8678
+18:35:45.734 | INFO    | prefect - Starting temporary server on http://127.0.0.1:8745
 See https://docs.prefect.io/v3/concepts/server#how-to-guides for more information on running a dedicated Prefect server.
-13:01:42.099 | INFO    | Flow run 'wisteria-tody' - Beginning flow run 'wisteria-tody' for flow 'model-release'
-13:01:42.160 | INFO    | Task run 'prepare-input-525' - PREPARED d18546842ff18885a685a9d6f315b9adcfa2e65d7872ebf3726603ace925e5e3
-13:01:42.166 | INFO    | Task run 'prepare-input-525' - Finished in state Completed()
-13:01:42.168 | INFO    | Flow run 'wisteria-tody' - PREPARATION_STATE=Completed CONTENT_KEY=824ccdac0bc70dc8d95d94be7a6da0055d2a6716e804211404655958115050a6
-13:01:42.175 | INFO    | Task run 'obtain-existing-training-artifact-9ef' - ARTIFACT_VERIFIED fixture-B existing run; no training
-13:01:42.179 | INFO    | Task run 'obtain-existing-training-artifact-9ef' - Finished in state Completed()
-13:01:42.185 | INFO    | Task run 'evaluate-release-admission-4c7' - Finished in state Completed()
-13:01:42.189 | INFO    | Task run 'publish-accepted-pointer-314' - ARTIFACT_VERIFIED fixture-B existing run; no training
-13:01:42.199 | INFO    | Task run 'publish-accepted-pointer-314' - ALREADY_PUBLISHED cdfa2da746093e2a2c185d1166718c0d01747ac18884945b0faa68c9ad9c3082
-13:01:42.201 | INFO    | Task run 'publish-accepted-pointer-314' - Finished in state Completed()
-13:01:43.113 | INFO    | Flow run 'wisteria-tody' - Finished in state Completed()
-13:01:43.131 | INFO    | prefect - Stopping temporary server on http://127.0.0.1:8678
+18:35:49.172 | INFO    | Flow run 'opalescent-wombat' - Beginning flow run 'opalescent-wombat' for flow 'model-release'
+18:35:49.241 | INFO    | Task run 'prepare-input-5ab' - PREPARED d18546842ff18885a685a9d6f315b9adcfa2e65d7872ebf3726603ace925e5e3
+18:35:49.246 | INFO    | Task run 'prepare-input-5ab' - Finished in state Completed()
+18:35:49.248 | INFO    | Flow run 'opalescent-wombat' - PREPARATION_STATE=Completed CONTENT_KEY=824ccdac0bc70dc8d95d94be7a6da0055d2a6716e804211404655958115050a6
+18:35:49.255 | INFO    | Task run 'obtain-existing-training-artifact-5c7' - ARTIFACT_VERIFIED fixture-B existing run; no training
+18:35:49.258 | INFO    | Task run 'obtain-existing-training-artifact-5c7' - Finished in state Completed()
+18:35:49.264 | INFO    | Task run 'evaluate-release-admission-14a' - Finished in state Completed()
+18:35:49.270 | INFO    | Task run 'publish-accepted-pointer-db7' - ARTIFACT_VERIFIED fixture-B existing run; no training
+18:35:49.282 | INFO    | Task run 'publish-accepted-pointer-db7' - ALREADY_PUBLISHED cdfa2da746093e2a2c185d1166718c0d01747ac18884945b0faa68c9ad9c3082
+18:35:49.285 | INFO    | Task run 'publish-accepted-pointer-db7' - Finished in state Completed()
+18:35:50.183 | INFO    | Flow run 'opalescent-wombat' - Finished in state Completed()
+18:35:50.199 | INFO    | prefect - Stopping temporary server on http://127.0.0.1:8745

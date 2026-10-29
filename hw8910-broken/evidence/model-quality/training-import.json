@@ -1,0 +1,48 @@
+{
+  "candidate_spec": {
+    "kind": "adapter",
+    "name": "my-qwen-adapter",
+    "run_id": "cce6597824384cab8697bc597d7500c9",
+    "uri": "models:/my-qwen-adapter/2",
+    "version": "2"
+  },
+  "mlmodel_sha256": "33f444a6dfeedfb53ad7ee74f65d7de26fdb1fb8e487f298ec8bdf0b3a082d7b",
+  "original_evaluation_run_id": "cf4fea2cb0ef40e4841c52076d436880",
+  "reused_existing_training_run": true,
+  "run_status": "FINISHED",
+  "tracking_uri": "http://127.0.0.1:5006",
+  "training_executed": false,
+  "training_manifest": {
+    "candidate": {
+      "lr": 0.0003,
+      "name": "all-r8-high",
+      "r": 8,
+      "target_modules": [
+        "q_proj",
+        "k_proj",
+        "v_proj",
+        "o_proj",
+        "gate_proj",
+        "up_proj",
+        "down_proj"
+      ]
+    },
+    "generation": {
+      "max_new_tokens": 16,
+      "prompts": [
+        "Какой химический символ у кислорода?",
+        "Какая планета является крупнейшей в Солнечной системе?"
+      ],
+      "system": "Ответь кратко на энциклопедический вопрос по-русски."
+    },
+    "model": {
+      "device": "auto",
+      "dtype": "bfloat16",
+      "enable_thinking": false,
+      "name": "Qwen/Qwen3-0.6B",
+      "revision": "c1899de289a04d12100db370d81485cdf75e47ca"
+    }
+  },
+  "training_run_id": "cce6597824384cab8697bc597d7500c9",
+  "training_run_uri": "runs:/cce6597824384cab8697bc597d7500c9/model"
+}

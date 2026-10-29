@@ -1,0 +1,86 @@
+.venv/bin/python -m compileall -q release.py lab.py service.py model_backend.py artifacts.py publication.py flow.py gate.py hw67_import.py rollback.py scripts tests vendor
+.venv/bin/python -m unittest discover -s tests -v
+test_incomplete_source_report_remains_rejected_after_rehash (test_gate_binding.GateBindingTests.test_incomplete_source_report_remains_rejected_after_rehash) ... ok
+test_manually_forged_pass_is_rejected (test_gate_binding.GateBindingTests.test_manually_forged_pass_is_rejected) ... ok
+test_real_refusal_is_recomputed_from_full_reports (test_gate_binding.GateBindingTests.test_real_refusal_is_recomputed_from_full_reports) ... ok
+test_rehashed_raw_answers_cannot_reuse_old_scores (test_gate_binding.GateBindingTests.test_rehashed_raw_answers_cannot_reuse_old_scores) ... ok
+test_changed_upstream_scoring_rule_is_rejected (test_hw67_import.HW67ImportTests.test_changed_upstream_scoring_rule_is_rejected) ... ok
+test_complete_upstream_is_recomputed (test_hw67_import.HW67ImportTests.test_complete_upstream_is_recomputed) ... ok
+test_config_change_requires_new_upstream_evaluation (test_hw67_import.HW67ImportTests.test_config_change_requires_new_upstream_evaluation) ... ok
+test_forged_upstream_pass_is_rejected (test_hw67_import.HW67ImportTests.test_forged_upstream_pass_is_rejected) ... ok
+test_rehashed_answers_cannot_reuse_upstream_scores (test_hw67_import.HW67ImportTests.test_rehashed_answers_cannot_reuse_upstream_scores) ... ok
+test_serving_answers_must_match_imported_evaluation (test_hw67_import.HW67ImportTests.test_serving_answers_must_match_imported_evaluation) ... ok
+test_http_bad_request_never_calls_backend (test_integration.IntegrationTests.test_http_bad_request_never_calls_backend) ... ok
+test_http_loaded_version_restart_and_rollback (test_integration.IntegrationTests.test_http_loaded_version_restart_and_rollback) ... ok
+test_http_ready_waits_for_warmup (test_integration.IntegrationTests.test_http_ready_waits_for_warmup) ... ok
+test_process_atomic_disk_error_preserves_pointer (test_integration.IntegrationTests.test_process_atomic_disk_error_preserves_pointer) ... ok
+test_process_cache_recovery_and_input_change (test_integration.IntegrationTests.test_process_cache_recovery_and_input_change) ... ok
+test_process_rejection_incomplete_and_foreign_report (test_integration.IntegrationTests.test_process_rejection_incomplete_and_foreign_report) ... ok
+test_process_repeated_publication_is_one_event (test_integration.IntegrationTests.test_process_repeated_publication_is_one_event) ... ok
+test_changed_artifact_rejected_before_publication_and_load (test_recovery.RecoveryTests.test_changed_artifact_rejected_before_publication_and_load) ... ok
+test_crash_between_pointer_and_event_recovers_once (test_recovery.RecoveryTests.test_crash_between_pointer_and_event_recovers_once) ... ok
+test_publish_serialization_error_keeps_exact_bytes (test_recovery.RecoveryTests.test_publish_serialization_error_keeps_exact_bytes) ... ok
+test_rollback_requires_previously_accepted_release (test_recovery.RecoveryTests.test_rollback_requires_previously_accepted_release) ... ALREADY_PUBLISHED 949197061fef3c7dcb851fb47e89a021f771605597842c3493e6349b48482f1d
+ok
+test_runtime_and_decision_are_part_of_release_identity (test_recovery.RecoveryTests.test_runtime_and_decision_are_part_of_release_identity) ... ROLLBACK fixture-A
+PUBLISHED fixture-B 35ea768ee9050db80200056fb98994be6d55f720394fe0096605dbb946461136
+PUBLISHED fixture-B 1f7d7d3c28f5e8b733923920645712809ce59691c3cf12d169694c90ba44bf08
+ok
+test_changed_bytes_at_same_path_invalidate_cache (test_release.ReleaseContractTests.test_changed_bytes_at_same_path_invalidate_cache) ... ok
+test_complete_bound_report_allowed (test_release.ReleaseContractTests.test_complete_bound_report_allowed) ... ok
+test_every_preparation_setting_invalidates_cache (test_release.ReleaseContractTests.test_every_preparation_setting_invalidates_cache) ... ok
+test_failed_atomic_replace_preserves_previous_bytes (test_release.ReleaseContractTests.test_failed_atomic_replace_preserves_previous_bytes) ... ok
+test_incomplete_false_and_truthy_string_rejected (test_release.ReleaseContractTests.test_incomplete_false_and_truthy_string_rejected) ... ok
+test_invalid_digest_and_schema_rejected (test_release.ReleaseContractTests.test_invalid_digest_and_schema_rejected) ... ok
+test_invalid_metric_rejected (test_release.ReleaseContractTests.test_invalid_metric_rejected) ... ok
+test_key_ignores_path_and_mapping_order (test_release.ReleaseContractTests.test_key_ignores_path_and_mapping_order) ... ok
+test_missing_fields_rejected (test_release.ReleaseContractTests.test_missing_fields_rejected) ... ok
+test_publish_and_repeat (test_release.ReleaseContractTests.test_publish_and_repeat) ... ok
+test_rejection_preserves_previous_bytes (test_release.ReleaseContractTests.test_rejection_preserves_previous_bytes) ... ok
+test_report_binding_mismatch_rejected (test_release.ReleaseContractTests.test_report_binding_mismatch_rejected) ... ok
+test_runtime_change_with_stale_hash_rejected (test_release.ReleaseContractTests.test_runtime_change_with_stale_hash_rejected) ... ok
+
+----------------------------------------------------------------------
+Ran 35 tests in 9.946s
+
+OK
+make -C ../mlops26-hw6-7/hw67-broken check-eval
+make[1]: Entering directory '/home/luserok/VSCodeWSL/MLOps/mlops26-hw6-7/hw67-broken'
+uv run python -m unittest discover -s tests -p 'test_*.py' -v
+test_behavioral_failure_rejected (test_eval.GateContract.test_behavioral_failure_rejected) ... ok
+test_critical_regression_despite_average_growth (test_eval.GateContract.test_critical_regression_despite_average_growth) ... ok
+test_equal_passes (test_eval.GateContract.test_equal_passes) ... ok
+test_improvement_passes (test_eval.GateContract.test_improvement_passes) ... ok
+test_missing_critical_slice_rejected (test_eval.GateContract.test_missing_critical_slice_rejected) ... ok
+test_missing_nan_empty_error_and_incompatible_rejected (test_eval.GateContract.test_missing_nan_empty_error_and_incompatible_rejected) ... ok
+test_regression_rejected (test_eval.GateContract.test_regression_rejected) ... ok
+test_clean_data (test_eval.LeakageContract.test_clean_data) ... ok
+test_duplicate_golden_questions_rejected (test_eval.LeakageContract.test_duplicate_golden_questions_rejected) ... ok
+test_exact_overlap (test_eval.LeakageContract.test_exact_overlap) ... ok
+test_group_overlap (test_eval.LeakageContract.test_group_overlap) ... ok
+test_too_small_or_missing_behavior (test_eval.LeakageContract.test_too_small_or_missing_behavior) ... ok
+test_no_registry_mutation_when_gate_rejects (test_eval.PromotionContract.test_no_registry_mutation_when_gate_rejects) ... ok
+test_accuracy_uses_all_questions (test_eval.ScoreContract.test_accuracy_uses_all_questions) ... ok
+test_missing_duplicate_empty_rejected (test_eval.ScoreContract.test_missing_duplicate_empty_rejected) ... ok
+test_reordered_outputs_are_matched_by_id (test_eval.ScoreContract.test_reordered_outputs_are_matched_by_id) ... ok
+test_slice_counts_and_per_item (test_eval.ScoreContract.test_slice_counts_and_per_item) ... ok
+test_strict_json_and_label (test_eval.ScoreContract.test_strict_json_and_label) ... ok
+test_wrong_label_is_valid_but_incorrect (test_eval.ScoreContract.test_wrong_label_is_valid_but_incorrect) ... ok
+test_baseline_init_refuses_overwrite (test_pipeline.PipelineContract.test_baseline_init_refuses_overwrite) ... ok
+test_negative_check_does_not_mutate_model_or_alias (test_pipeline.PipelineContract.test_negative_check_does_not_mutate_model_or_alias) ... ok
+test_pass_release_and_explicit_baseline_update (test_pipeline.PipelineContract.test_pass_release_and_explicit_baseline_update) ... ok
+test_protocol_or_raw_changes_rejected (test_pipeline.PipelineContract.test_protocol_or_raw_changes_rejected) ... ok
+test_refused_candidate_keeps_alias (test_pipeline.PipelineContract.test_refused_candidate_keeps_alias) ... ok
+
+----------------------------------------------------------------------
+Ran 24 tests in 0.058s
+
+OK
+Отчёты и сырые ответы сохранены. Далее: make eval; только после PASS - make promote
+PASS: испорченные ответы отклонены, alias не менялся
+Отчёты и сырые ответы сохранены. Далее: make eval; только после PASS - make promote
+champion -> models:/fixture-model/2
+Baseline обновлён явно; старый сохранён. Следующая оценка сравнит с принятой версией
+Отчёты и сырые ответы сохранены. Далее: make eval; только после PASS - make promote
+Отчёты и сырые ответы сохранены. Далее: make eval; только после PASS - make promote
+make[1]: Leaving directory '/home/luserok/VSCodeWSL/MLOps/mlops26-hw6-7/hw67-broken'

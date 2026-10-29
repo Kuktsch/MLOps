@@ -1,13 +1,13 @@
-13:02:47.479 | INFO    | prefect - Starting temporary server on http://127.0.0.1:8799
+18:36:39.391 | INFO    | prefect - Starting temporary server on http://127.0.0.1:8880
 See https://docs.prefect.io/v3/concepts/server#how-to-guides for more information on running a dedicated Prefect server.
-13:02:51.211 | INFO    | Flow run 'crystal-bullmastiff' - Beginning flow run 'crystal-bullmastiff' for flow 'model-release'
-13:02:51.271 | INFO    | Task run 'prepare-input-999' - Finished in state Cached(type=COMPLETED)
-13:02:51.275 | INFO    | Flow run 'crystal-bullmastiff' - PREPARATION_STATE=Cached CONTENT_KEY=51056cf10c5589460ef64f9881420bded78bebbfb5580a62619242666d88639e
-13:02:51.288 | INFO    | Task run 'obtain-existing-training-artifact-6a8' - ARTIFACT_VERIFIED fixture-B existing run; no training
-13:02:51.292 | INFO    | Task run 'obtain-existing-training-artifact-6a8' - Finished in state Completed()
-13:02:51.299 | INFO    | Task run 'evaluate-release-admission-045' - Finished in state Completed()
-13:02:51.306 | INFO    | Task run 'publish-accepted-pointer-91e' - ARTIFACT_VERIFIED fixture-B existing run; no training
-13:02:51.317 | INFO    | Task run 'publish-accepted-pointer-91e' - ALREADY_PUBLISHED cdfa2da746093e2a2c185d1166718c0d01747ac18884945b0faa68c9ad9c3082
-13:02:51.319 | INFO    | Task run 'publish-accepted-pointer-91e' - Finished in state Completed()
-13:02:52.222 | INFO    | Flow run 'crystal-bullmastiff' - Finished in state Completed()
-13:02:52.240 | INFO    | prefect - Stopping temporary server on http://127.0.0.1:8799
+18:36:42.702 | INFO    | Flow run 'remarkable-kraken' - Beginning flow run 'remarkable-kraken' for flow 'model-release'
+18:36:42.718 | INFO    | Task run 'prepare-input-7d5' - Finished in state Cached(type=COMPLETED)
+18:36:42.730 | INFO    | Flow run 'remarkable-kraken' - PREPARATION_STATE=Cached CONTENT_KEY=51056cf10c5589460ef64f9881420bded78bebbfb5580a62619242666d88639e
+18:36:42.738 | INFO    | Task run 'obtain-existing-training-artifact-3c1' - ARTIFACT_VERIFIED fixture-B existing run; no training
+18:36:42.742 | INFO    | Task run 'obtain-existing-training-artifact-3c1' - Finished in state Completed()
+18:36:42.750 | INFO    | Task run 'evaluate-release-admission-321' - Finished in state Completed()
+18:36:42.755 | INFO    | Task run 'publish-accepted-pointer-4c4' - ARTIFACT_VERIFIED fixture-B existing run; no training
+18:36:42.770 | INFO    | Task run 'publish-accepted-pointer-4c4' - ALREADY_PUBLISHED cdfa2da746093e2a2c185d1166718c0d01747ac18884945b0faa68c9ad9c3082
+18:36:42.773 | INFO    | Task run 'publish-accepted-pointer-4c4' - Finished in state Completed()
+18:36:43.715 | INFO    | Flow run 'remarkable-kraken' - Finished in state Completed()
+18:36:43.888 | INFO    | prefect - Stopping temporary server on http://127.0.0.1:8880

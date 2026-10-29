@@ -1,0 +1,24 @@
+[
+  {
+    "answer": "{\"answer\":\"A\"}",
+    "generation_seconds": 0.23408882700096,
+    "model_id": "baseline-qwen3-c1899de289a04d12100db370d81485cdf75e47ca",
+    "output_tokens": 6,
+    "queue_seconds": 0.0010686929999792483,
+    "request_id": "31917e7d-57b1-4759-b241-cefa8ffc8bd9",
+    "runtime_sha256": "5ae12f9b60e56faa2075ed81ef4eb77f1994fa5a63dafafdf11f5c475f0e388e",
+    "text": "{\"answer\":\"A\"}",
+    "total_seconds": 0.23515752000093926
+  },
+  {
+    "answer": "{\"answer\":\"A\"}",
+    "generation_seconds": 0.22127624199856655,
+    "model_id": "baseline-qwen3-c1899de289a04d12100db370d81485cdf75e47ca",
+    "output_tokens": 6,
+    "queue_seconds": 0.003554966999217868,
+    "request_id": "f09d7c0e-4462-4258-aaa2-f2fc5dc8381e",
+    "runtime_sha256": "5ae12f9b60e56faa2075ed81ef4eb77f1994fa5a63dafafdf11f5c475f0e388e",
+    "text": "{\"answer\":\"A\"}",
+    "total_seconds": 0.22483120899778442
+  }
+]

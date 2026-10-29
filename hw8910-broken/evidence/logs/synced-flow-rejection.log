@@ -1,0 +1,135 @@
+.venv/bin/python flow.py --workspace .real-synced --manifest manifest-candidate.json --report release-report.json
+18:11:23.884 | INFO    | prefect - Starting temporary server on http://127.0.0.1:8184
+See https://docs.prefect.io/v3/concepts/server#how-to-guides for more information on running a dedicated Prefect server.
+18:11:27.354 | INFO    | Flow run 'generous-goat' - Beginning flow run 'generous-goat' for flow 'model-release'
+18:11:27.412 | INFO    | Task run 'prepare-input-3ec' - PREPARED 3778a8e6e0379309bb4c06afb5e26eefbd7aef870b89809fc082fd0bcff81acb
+18:11:27.416 | INFO    | Task run 'prepare-input-3ec' - Finished in state Completed()
+18:11:27.418 | INFO    | Flow run 'generous-goat' - PREPARATION_STATE=Completed CONTENT_KEY=339e7ba5701d30440679c8523e50d1c343692d24e14839769754cf680d7ca5f3
+18:11:30.521 | INFO    | Task run 'obtain-existing-training-artifact-64e' - ARTIFACT_VERIFIED adapter-cce6597824384cab8697bc597d7500c9 existing run; no training
+18:11:30.524 | INFO    | Task run 'obtain-existing-training-artifact-64e' - Finished in state Completed()
+18:11:30.582 | ERROR   | Task run 'evaluate-release-admission-e93' - Task run failed with exception: ValueError('Incomplete or rejected evaluation')
+Traceback (most recent call last):
+  File "/home/luserok/VSCodeWSL/MLOps/hw8910-broken/.venv/lib/python3.12/site-packages/prefect/task_engine.py", line 1030, in run_context
+    yield self
+  File "/home/luserok/VSCodeWSL/MLOps/hw8910-broken/.venv/lib/python3.12/site-packages/prefect/task_engine.py", line 1699, in run_task_sync
+    engine.call_task_fn(txn)
+  File "/home/luserok/VSCodeWSL/MLOps/hw8910-broken/.venv/lib/python3.12/site-packages/prefect/task_engine.py", line 1047, in call_task_fn
+    result = call_with_parameters(self.task.fn, parameters)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/luserok/VSCodeWSL/MLOps/hw8910-broken/.venv/lib/python3.12/site-packages/prefect/utilities/callables/__init__.py", line 404, in call_with_parameters
+    return fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/luserok/VSCodeWSL/MLOps/hw8910-broken/flow.py", line 44, in admission
+    report = lab.assess(path, manifest, report_name, prepared)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/luserok/VSCodeWSL/MLOps/hw8910-broken/lab.py", line 104, in assess
+    release.validate_release(manifest,report)
+  File "/home/luserok/VSCodeWSL/MLOps/hw8910-broken/release.py", line 54, in validate_release
+    raise ValueError('Incomplete or rejected evaluation')
+ValueError: Incomplete or rejected evaluation
+18:11:30.586 | ERROR   | Task run 'evaluate-release-admission-e93' - Finished in state Failed('Task run encountered an exception ValueError: Incomplete or rejected evaluation')
+18:11:31.365 | ERROR   | Flow run 'generous-goat' - Encountered exception during execution: ValueError('Incomplete or rejected evaluation')
+Traceback (most recent call last):
+  File "/home/luserok/VSCodeWSL/MLOps/hw8910-broken/.venv/lib/python3.12/site-packages/prefect/flow_engine.py", line 1330, in run_context
+    yield self
+  File "/home/luserok/VSCodeWSL/MLOps/hw8910-broken/.venv/lib/python3.12/site-packages/prefect/flow_engine.py", line 2111, in run_flow_sync
+    engine.call_flow_fn()
+  File "/home/luserok/VSCodeWSL/MLOps/hw8910-broken/.venv/lib/python3.12/site-packages/prefect/flow_engine.py", line 1350, in call_flow_fn
+    result = call_with_parameters(self.flow.fn, self.parameters)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/luserok/VSCodeWSL/MLOps/hw8910-broken/.venv/lib/python3.12/site-packages/prefect/utilities/callables/__init__.py", line 404, in call_with_parameters
+    return fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/luserok/VSCodeWSL/MLOps/hw8910-broken/flow.py", line 78, in release_flow
+    decision = admission(root, artifact, report_name, prepared)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/luserok/VSCodeWSL/MLOps/hw8910-broken/.venv/lib/python3.12/site-packages/prefect/tasks.py", line 1240, in __call__
+    return run_task(
+           ^^^^^^^^^
+  File "/home/luserok/VSCodeWSL/MLOps/hw8910-broken/.venv/lib/python3.12/site-packages/prefect/task_engine.py", line 1932, in run_task
+    return run_task_sync(**kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/luserok/VSCodeWSL/MLOps/hw8910-broken/.venv/lib/python3.12/site-packages/prefect/task_engine.py", line 1702, in run_task_sync
+    return engine.state if return_type == "state" else engine.result()
+                                                       ^^^^^^^^^^^^^^^
+  File "/home/luserok/VSCodeWSL/MLOps/hw8910-broken/.venv/lib/python3.12/site-packages/prefect/task_engine.py", line 622, in result
+    raise self._raised
+  File "/home/luserok/VSCodeWSL/MLOps/hw8910-broken/.venv/lib/python3.12/site-packages/prefect/task_engine.py", line 1030, in run_context
+    yield self
+  File "/home/luserok/VSCodeWSL/MLOps/hw8910-broken/.venv/lib/python3.12/site-packages/prefect/task_engine.py", line 1699, in run_task_sync
+    engine.call_task_fn(txn)
+  File "/home/luserok/VSCodeWSL/MLOps/hw8910-broken/.venv/lib/python3.12/site-packages/prefect/task_engine.py", line 1047, in call_task_fn
+    result = call_with_parameters(self.task.fn, parameters)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/luserok/VSCodeWSL/MLOps/hw8910-broken/.venv/lib/python3.12/site-packages/prefect/utilities/callables/__init__.py", line 404, in call_with_parameters
+    return fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/luserok/VSCodeWSL/MLOps/hw8910-broken/flow.py", line 44, in admission
+    report = lab.assess(path, manifest, report_name, prepared)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/luserok/VSCodeWSL/MLOps/hw8910-broken/lab.py", line 104, in assess
+    release.validate_release(manifest,report)
+  File "/home/luserok/VSCodeWSL/MLOps/hw8910-broken/release.py", line 54, in validate_release
+    raise ValueError('Incomplete or rejected evaluation')
+ValueError: Incomplete or rejected evaluation
+18:11:31.398 | INFO    | Flow run 'generous-goat' - Finished in state Failed('Flow run encountered an exception: ValueError: Incomplete or rejected evaluation')
+Traceback (most recent call last):
+  File "/home/luserok/VSCodeWSL/MLOps/hw8910-broken/flow.py", line 100, in <module>
+    main()
+  File "/home/luserok/VSCodeWSL/MLOps/hw8910-broken/flow.py", line 95, in main
+    release_flow(str(args.workspace.resolve()), args.manifest, args.report,
+  File "/home/luserok/VSCodeWSL/MLOps/hw8910-broken/.venv/lib/python3.12/site-packages/prefect/flows.py", line 1887, in __call__
+    return run_flow(
+           ^^^^^^^^^
+  File "/home/luserok/VSCodeWSL/MLOps/hw8910-broken/.venv/lib/python3.12/site-packages/prefect/flow_engine.py", line 2268, in run_flow
+    ret_val = run_flow_sync(**kwargs)
+              ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/luserok/VSCodeWSL/MLOps/hw8910-broken/.venv/lib/python3.12/site-packages/prefect/flow_engine.py", line 2113, in run_flow_sync
+    return engine.state if return_type == "state" else engine.result()
+                                                       ^^^^^^^^^^^^^^^
+  File "/home/luserok/VSCodeWSL/MLOps/hw8910-broken/.venv/lib/python3.12/site-packages/prefect/flow_engine.py", line 788, in result
+    raise self._raised
+  File "/home/luserok/VSCodeWSL/MLOps/hw8910-broken/.venv/lib/python3.12/site-packages/prefect/flow_engine.py", line 1330, in run_context
+    yield self
+  File "/home/luserok/VSCodeWSL/MLOps/hw8910-broken/.venv/lib/python3.12/site-packages/prefect/flow_engine.py", line 2111, in run_flow_sync
+    engine.call_flow_fn()
+  File "/home/luserok/VSCodeWSL/MLOps/hw8910-broken/.venv/lib/python3.12/site-packages/prefect/flow_engine.py", line 1350, in call_flow_fn
+    result = call_with_parameters(self.flow.fn, self.parameters)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/luserok/VSCodeWSL/MLOps/hw8910-broken/.venv/lib/python3.12/site-packages/prefect/utilities/callables/__init__.py", line 404, in call_with_parameters
+    return fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/luserok/VSCodeWSL/MLOps/hw8910-broken/flow.py", line 78, in release_flow
+    decision = admission(root, artifact, report_name, prepared)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/luserok/VSCodeWSL/MLOps/hw8910-broken/.venv/lib/python3.12/site-packages/prefect/tasks.py", line 1240, in __call__
+    return run_task(
+           ^^^^^^^^^
+  File "/home/luserok/VSCodeWSL/MLOps/hw8910-broken/.venv/lib/python3.12/site-packages/prefect/task_engine.py", line 1932, in run_task
+    return run_task_sync(**kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/luserok/VSCodeWSL/MLOps/hw8910-broken/.venv/lib/python3.12/site-packages/prefect/task_engine.py", line 1702, in run_task_sync
+    return engine.state if return_type == "state" else engine.result()
+                                                       ^^^^^^^^^^^^^^^
+  File "/home/luserok/VSCodeWSL/MLOps/hw8910-broken/.venv/lib/python3.12/site-packages/prefect/task_engine.py", line 622, in result
+    raise self._raised
+  File "/home/luserok/VSCodeWSL/MLOps/hw8910-broken/.venv/lib/python3.12/site-packages/prefect/task_engine.py", line 1030, in run_context
+    yield self
+  File "/home/luserok/VSCodeWSL/MLOps/hw8910-broken/.venv/lib/python3.12/site-packages/prefect/task_engine.py", line 1699, in run_task_sync
+    engine.call_task_fn(txn)
+  File "/home/luserok/VSCodeWSL/MLOps/hw8910-broken/.venv/lib/python3.12/site-packages/prefect/task_engine.py", line 1047, in call_task_fn
+    result = call_with_parameters(self.task.fn, parameters)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/luserok/VSCodeWSL/MLOps/hw8910-broken/.venv/lib/python3.12/site-packages/prefect/utilities/callables/__init__.py", line 404, in call_with_parameters
+    return fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/luserok/VSCodeWSL/MLOps/hw8910-broken/flow.py", line 44, in admission
+    report = lab.assess(path, manifest, report_name, prepared)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/luserok/VSCodeWSL/MLOps/hw8910-broken/lab.py", line 104, in assess
+    release.validate_release(manifest,report)
+  File "/home/luserok/VSCodeWSL/MLOps/hw8910-broken/release.py", line 54, in validate_release
+    raise ValueError('Incomplete or rejected evaluation')
+ValueError: Incomplete or rejected evaluation
+18:11:31.411 | INFO    | prefect - Stopping temporary server on http://127.0.0.1:8184
+make: *** [Makefile:24: real-candidate] Error 1

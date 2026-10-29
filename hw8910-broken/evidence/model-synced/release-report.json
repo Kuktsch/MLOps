@@ -1,0 +1,64 @@
+{
+  "admission_kind": "hw67-quality-gate",
+  "candidate_gate": {
+    "passed": false,
+    "reason": "Общая регрессия accuracy",
+    "result": null
+  },
+  "evaluation_run_id": "5e83ce18ce53470192adadef7a0afe71",
+  "golden_sha256": "b698bc62db639ed5b7bb07b17ef2cd65e0a141d490af07594baf0f5462313041",
+  "metrics": {
+    "accuracy": 0.5925925925925926,
+    "format_rate": 1.0
+  },
+  "model_id": "adapter-cce6597824384cab8697bc597d7500c9",
+  "model_sha256": "e3947d2322de11dad9c4c7f8e4f648b9536dc4da9ac0c1b2af88ef91eeaad027",
+  "passed": false,
+  "protocol_sha256": "e6b69bed1af5d1bf7806cdc3c1accd44fc4558464f564ffd7da8a0003428344c",
+  "runtime_sha256": "bdefdde6ff57f97abac04aca3a1200c219f9735416960319345088554d577f4e",
+  "sources": {
+    "baseline_eval": {
+      "sha256": "48cd76937e9c173861a0f95f0ce28032e27218597e64161e07ea81e930b69b69",
+      "uri": "../evidence/model-synced/baseline-eval.json"
+    },
+    "baseline_outputs": {
+      "sha256": "991d95b9014d8c9e23ae026805521c936e23bb08d88952d4b2ea0d72a64f1c96",
+      "uri": "../evidence/model-synced/baseline-outputs.json"
+    },
+    "baseline_spec": {
+      "sha256": "da0ace0ea269b2d9e5c0cad79ab54823d7bae8b4a65ece6446fa6adbbfed787e",
+      "uri": "../evidence/model-synced/baseline-spec.json"
+    },
+    "behavioral": {
+      "sha256": "d68e1ad352be2ca057487e4a2c166b58f40063f03f6fd42319664bc8a3ed05cb",
+      "uri": "../evidence/model-synced/behavioral.jsonl"
+    },
+    "candidate_eval": {
+      "sha256": "834788af4db7c2c0cbfc26ffd0dcdeaf3ecb0a60205be82c6db148e49ca1460a",
+      "uri": "../evidence/model-synced/candidate-eval.json"
+    },
+    "candidate_outputs": {
+      "sha256": "4d0a3b9288a9a0a81ac3da01d9118d04df7f7c5a842b430d891ae1ba87c0fc10",
+      "uri": "../evidence/model-synced/candidate-outputs.json"
+    },
+    "golden": {
+      "sha256": "3778a8e6e0379309bb4c06afb5e26eefbd7aef870b89809fc082fd0bcff81acb",
+      "uri": "../evidence/model-synced/golden.jsonl"
+    },
+    "protocol": {
+      "sha256": "a7a94850dee4ec5585fc258ec3a9f47cf2888bc907735b3a0fc488f341286bb4",
+      "uri": "../evidence/model-synced/protocol.json"
+    },
+    "training_import": {
+      "sha256": "bec0799d526873b1b8b4f9d02d6f37dc5667ad68e3f6dc90b9b3f9069ca3e525",
+      "uri": "../evidence/model-synced/training-import.json"
+    },
+    "training_index": {
+      "sha256": "b5ca651f8145ed753e413fff0927e289e0e9abf257a710e4e2e1f3c3094e0abd",
+      "uri": "../evidence/model-synced/training-index.jsonl"
+    }
+  },
+  "status": "complete",
+  "synthetic": false,
+  "training_run_id": "cce6597824384cab8697bc597d7500c9"
+}

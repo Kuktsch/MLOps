@@ -67,6 +67,17 @@ def load_bundle(root, sources):
                 raise ValueError(f'Evaluation model binding changed: {key}')
         reports[role] = report
     imported = read(paths['training_import'])
+    if 'hw67_import' in protocol:
+        from hw67_import import validate_upstream, verify_answers
+        origin = protocol['hw67_import']
+        snapshot = local_path(root, origin['uri'])
+        upstream = validate_upstream(snapshot, paths['golden'].parent)
+        if (upstream != origin['metadata'] or upstream['config'] != protocol['config'] or
+                upstream['evaluation_run_id'] != imported['original_evaluation_run_id'] or
+                upstream['training_run_id'] != imported['training_run_id']):
+            raise ValueError('HW6–7 import binding changed')
+        for role in ('baseline', 'candidate'):
+            verify_answers(snapshot, role, read(paths[role+'_outputs']))
     if imported['run_status'] != 'FINISHED' or reports['candidate']['model'] != imported['candidate_spec']:
         raise ValueError('Training run not complete or different candidate')
     if reports['baseline']['model'] != baseline_spec:

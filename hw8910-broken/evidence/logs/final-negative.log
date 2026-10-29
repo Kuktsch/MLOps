@@ -1,0 +1,12 @@
+.venv/bin/python scripts/check_negative.py
+BROKEN COPY: exit_code=1
+----------------------------------------------------------------------
+Ran 13 tests in 0.033s
+
+FAILED (failures=50)
+RESTORED COPY: exit_code=0
+----------------------------------------------------------------------
+Ran 13 tests in 0.024s
+
+OK
+PASS: broken code failed with assertion failures; restored code passed; main source unchanged

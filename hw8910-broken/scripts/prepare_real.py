@@ -22,6 +22,7 @@ from vendor.hw67_gate import score
 from vendor.hw67_contract import validate_golden
 from gate import derive_report, verify_decision
 from publication import record_release
+from hw67_import import validate_upstream, verify_answers
 
 
 def read(path):
@@ -44,9 +45,11 @@ def main():
     from transformers import AutoTokenizer
     p = argparse.ArgumentParser()
     p.add_argument('--hw67', type=Path, default=PROJECT.parent/'mlops26-hw6-7/hw67-broken')
-    p.add_argument('--workspace', type=Path, default=PROJECT/'.real')
-    p.add_argument('--evidence', type=Path, default=PROJECT/'evidence/model')
+    p.add_argument('--workspace', type=Path, default=PROJECT/'.real-synced')
+    p.add_argument('--evidence', type=Path, default=PROJECT/'evidence/model-synced')
     p.add_argument('--tracking-uri', default='http://127.0.0.1:5006')
+    p.add_argument('--evaluation-config', type=Path,
+                   help='Optional compatibility check; must equal the HW6-7 evaluation configuration')
     p.add_argument('--device', choices=['cuda', 'cpu'], default='cuda')
     args = p.parse_args()
     old, root = args.hw67.resolve(), args.workspace.resolve()
@@ -63,14 +66,28 @@ def main():
                  'metrics/baseline-eval.json', 'metrics/candidate-eval.json', 'metrics/baseline-outputs.json',
                  'metrics/candidate-outputs.json', 'metrics/quality-gate.json', 'metrics/pre-evaluation.json']:
         shutil.copyfile(old/name, original/Path(name).name)
+    (original/'evaluation').mkdir()
+    for source in (old/'evaluation').glob('*.py'):
+        shutil.copyfile(source, original/'evaluation'/source.name)
+    config_path = old/'evaluation/params.json'
+    config = read(config_path)
     for name in ['golden', 'behavioral', 'training-index']:
-        shutil.copyfile(old/'data/eval'/f'{name}.jsonl', out/f'{name}.jsonl')
-    config = read(old/'evaluation/params.json')
+        key = name.replace('-', '_')
+        source = (old/config[key]).resolve()
+        if not source.is_relative_to(old):
+            raise ValueError('HW6–7 evaluation data must be inside its project')
+        shutil.copyfile(source, out/f'{name}.jsonl')
+    if args.evaluation_config and read(args.evaluation_config) != config:
+        raise ValueError('Use the HW6–7 evaluation configuration; separate overrides would diverge')
+    upstream = validate_upstream(original, out)
+    print('IMPORTED_HW67_EVALUATION', upstream['evaluation_run_id'], upstream['scores'], flush=True)
     spec = read(old/'metrics/candidate-model.json')
     baseline = read(old/'evaluation/baseline.json')
     atomic_json(out/'baseline-spec.json', baseline)
     mlflow.set_tracking_uri(args.tracking_uri)
     client = MlflowClient()
+    if client.get_run(upstream['evaluation_run_id']).info.status != 'FINISHED':
+        raise ValueError('HW6–7 evaluation run is not FINISHED')
     run = client.get_run(spec['run_id'])
     if run.info.status != 'FINISHED':
         raise ValueError('Training run is not FINISHED')
@@ -128,9 +145,11 @@ def main():
     golden, behavioral, training_rows = [rows(out/(name+'.jsonl')) for name in ['golden', 'behavioral', 'training-index']]
     leakage = validate_golden(golden, training_rows, behavioral)
     protocol = {'config': config, 'baseline_spec': baseline,
+        'config_source': str(config_path), 'config_file_sha256': file_digest(config_path),
+        'hw67_import': {'uri': os.path.relpath(original, root), 'metadata': upstream},
         'golden_sha256': digest(canonical(golden)), 'behavioral_sha256': digest(canonical(behavioral)),
         'training_index_sha256': digest(canonical(training_rows)),
-        'code_hashes': {name: file_digest(PROJECT/name) for name in ['model_backend.py', 'vendor/hw67_gate.py', 'vendor/hw67_contract.py']},
+        'code_hashes': {name: file_digest(PROJECT/name) for name in ['model_backend.py', 'vendor/hw67_gate.py', 'vendor/hw67_contract.py', 'hw67_import.py']},
         'models': {role: {k: m[k] for k in ['model_id', 'model_sha256', 'runtime_sha256']} for role, m in manifests.items()},
         'generation_limit_policy': 'fixed: request must equal evaluated max_new_tokens',
         'note': 'Full reevaluation for the explicitly hashed serving runtime; no training'}
@@ -165,6 +184,8 @@ def main():
                 if (index+1)%10 == 0:
                     print('EVALUATED', role, index+1, 'of', len(golden+behavioral), flush=True)
             atomic_json(out/f'{role}-outputs.json', outputs)
+            verify_answers(original, role, outputs)
+            print('HW67_ANSWERS_MATCH', role, len(outputs), flush=True)
             by_id = {r['id']: r for r in outputs}
             report = score(golden, [by_id[r['id']] for r in golden])
             report.update(status='complete', model=manifest['evaluation_model'],

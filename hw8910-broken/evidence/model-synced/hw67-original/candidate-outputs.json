@@ -1,0 +1,344 @@
+[
+  {
+    "id": "geography-01",
+    "raw": "{\"answer\":\"A\"}",
+    "error": null,
+    "latency_seconds": 0.5945665870021912
+  },
+  {
+    "id": "geography-02",
+    "raw": "{\"answer\":\"C\"}",
+    "error": null,
+    "latency_seconds": 0.45915878099913243
+  },
+  {
+    "id": "geography-03",
+    "raw": "{\"answer\":\"A\"}",
+    "error": null,
+    "latency_seconds": 0.4261703589982062
+  },
+  {
+    "id": "geography-04",
+    "raw": "{\"answer\":\"B\"}",
+    "error": null,
+    "latency_seconds": 0.47292381600345834
+  },
+  {
+    "id": "geography-05",
+    "raw": "{\"answer\":\"C\"}",
+    "error": null,
+    "latency_seconds": 0.46580392900068546
+  },
+  {
+    "id": "geography-06",
+    "raw": "{\"answer\":\"C\"}",
+    "error": null,
+    "latency_seconds": 0.4985933339994517
+  },
+  {
+    "id": "geography-07",
+    "raw": "{\"answer\":\"C\"}",
+    "error": null,
+    "latency_seconds": 0.4546221059972595
+  },
+  {
+    "id": "geography-08",
+    "raw": "{\"answer\":\"B\"}",
+    "error": null,
+    "latency_seconds": 0.45676928399916505
+  },
+  {
+    "id": "geography-09",
+    "raw": "{\"answer\":\"C\"}",
+    "error": null,
+    "latency_seconds": 0.4427156239980832
+  },
+  {
+    "id": "geography-10",
+    "raw": "{\"answer\":\"A\"}",
+    "error": null,
+    "latency_seconds": 0.4500514290011779
+  },
+  {
+    "id": "geography-11",
+    "raw": "{\"answer\":\"A\"}",
+    "error": null,
+    "latency_seconds": 0.5390321699997003
+  },
+  {
+    "id": "geography-12",
+    "raw": "{\"answer\":\"C\"}",
+    "error": null,
+    "latency_seconds": 0.4607287099970563
+  },
+  {
+    "id": "geography-13",
+    "raw": "{\"answer\":\"C\"}",
+    "error": null,
+    "latency_seconds": 0.4603730809976696
+  },
+  {
+    "id": "geography-14",
+    "raw": "{\"answer\":\"C\"}",
+    "error": null,
+    "latency_seconds": 0.4364334060010151
+  },
+  {
+    "id": "geography-15",
+    "raw": "{\"answer\":\"C\"}",
+    "error": null,
+    "latency_seconds": 0.4750921949998883
+  },
+  {
+    "id": "geography-16",
+    "raw": "{\"answer\":\"B\"}",
+    "error": null,
+    "latency_seconds": 0.45639715300058015
+  },
+  {
+    "id": "geography-17",
+    "raw": "{\"answer\":\"B\"}",
+    "error": null,
+    "latency_seconds": 0.461678187999496
+  },
+  {
+    "id": "geography-18",
+    "raw": "{\"answer\":\"C\"}",
+    "error": null,
+    "latency_seconds": 0.42754130699904636
+  },
+  {
+    "id": "chemistry-01",
+    "raw": "{\"answer\":\"A\"}",
+    "error": null,
+    "latency_seconds": 0.4728450850016088
+  },
+  {
+    "id": "chemistry-02",
+    "raw": "{\"answer\":\"B\"}",
+    "error": null,
+    "latency_seconds": 0.42545699299807893
+  },
+  {
+    "id": "chemistry-03",
+    "raw": "{\"answer\":\"C\"}",
+    "error": null,
+    "latency_seconds": 0.43126806399959605
+  },
+  {
+    "id": "chemistry-04",
+    "raw": "{\"answer\":\"A\"}",
+    "error": null,
+    "latency_seconds": 0.435867498999869
+  },
+  {
+    "id": "chemistry-05",
+    "raw": "{\"answer\":\"B\"}",
+    "error": null,
+    "latency_seconds": 0.4324767990001419
+  },
+  {
+    "id": "chemistry-06",
+    "raw": "{\"answer\":\"C\"}",
+    "error": null,
+    "latency_seconds": 0.47004920200197375
+  },
+  {
+    "id": "chemistry-07",
+    "raw": "{\"answer\":\"A\"}",
+    "error": null,
+    "latency_seconds": 0.46262888399724034
+  },
+  {
+    "id": "chemistry-08",
+    "raw": "{\"answer\":\"B\"}",
+    "error": null,
+    "latency_seconds": 0.4684302550012944
+  },
+  {
+    "id": "chemistry-09",
+    "raw": "{\"answer\":\"C\"}",
+    "error": null,
+    "latency_seconds": 0.4738151130004553
+  },
+  {
+    "id": "chemistry-10",
+    "raw": "{\"answer\":\"A\"}",
+    "error": null,
+    "latency_seconds": 0.5334317640008521
+  },
+  {
+    "id": "chemistry-11",
+    "raw": "{\"answer\":\"B\"}",
+    "error": null,
+    "latency_seconds": 0.4381910669981153
+  },
+  {
+    "id": "chemistry-12",
+    "raw": "{\"answer\":\"C\"}",
+    "error": null,
+    "latency_seconds": 0.4585868659996777
+  },
+  {
+    "id": "chemistry-13",
+    "raw": "{\"answer\":\"A\"}",
+    "error": null,
+    "latency_seconds": 0.42882469200048945
+  },
+  {
+    "id": "chemistry-14",
+    "raw": "{\"answer\":\"B\"}",
+    "error": null,
+    "latency_seconds": 0.42998012600219226
+  },
+  {
+    "id": "chemistry-15",
+    "raw": "{\"answer\":\"C\"}",
+    "error": null,
+    "latency_seconds": 0.4413222589973884
+  },
+  {
+    "id": "chemistry-16",
+    "raw": "{\"answer\":\"A\"}",
+    "error": null,
+    "latency_seconds": 0.422696112000267
+  },
+  {
+    "id": "chemistry-17",
+    "raw": "{\"answer\":\"C\"}",
+    "error": null,
+    "latency_seconds": 0.457311728001514
+  },
+  {
+    "id": "chemistry-18",
+    "raw": "{\"answer\":\"C\"}",
+    "error": null,
+    "latency_seconds": 0.43601141900217044
+  },
+  {
+    "id": "astronomy-01",
+    "raw": "{\"answer\":\"B\"}",
+    "error": null,
+    "latency_seconds": 0.43508155000017723
+  },
+  {
+    "id": "astronomy-02",
+    "raw": "{\"answer\":\"B\"}",
+    "error": null,
+    "latency_seconds": 0.4356045849999646
+  },
+  {
+    "id": "astronomy-03",
+    "raw": "{\"answer\":\"B\"}",
+    "error": null,
+    "latency_seconds": 0.45719316200120375
+  },
+  {
+    "id": "astronomy-04",
+    "raw": "{\"answer\":\"A\"}",
+    "error": null,
+    "latency_seconds": 0.416858502998366
+  },
+  {
+    "id": "astronomy-05",
+    "raw": "{\"answer\":\"C\"}",
+    "error": null,
+    "latency_seconds": 0.4365207480004756
+  },
+  {
+    "id": "astronomy-06",
+    "raw": "{\"answer\":\"C\"}",
+    "error": null,
+    "latency_seconds": 0.49679886999729206
+  },
+  {
+    "id": "astronomy-07",
+    "raw": "{\"answer\":\"C\"}",
+    "error": null,
+    "latency_seconds": 0.4452954479966138
+  },
+  {
+    "id": "astronomy-08",
+    "raw": "{\"answer\":\"A\"}",
+    "error": null,
+    "latency_seconds": 0.43284929700166686
+  },
+  {
+    "id": "astronomy-09",
+    "raw": "{\"answer\":\"A\"}",
+    "error": null,
+    "latency_seconds": 0.44734368799981894
+  },
+  {
+    "id": "astronomy-10",
+    "raw": "{\"answer\":\"A\"}",
+    "error": null,
+    "latency_seconds": 0.43611392000093474
+  },
+  {
+    "id": "astronomy-11",
+    "raw": "{\"answer\":\"A\"}",
+    "error": null,
+    "latency_seconds": 0.47979780699824914
+  },
+  {
+    "id": "astronomy-12",
+    "raw": "{\"answer\":\"C\"}",
+    "error": null,
+    "latency_seconds": 0.4829145200019411
+  },
+  {
+    "id": "astronomy-13",
+    "raw": "{\"answer\":\"C\"}",
+    "error": null,
+    "latency_seconds": 0.4484698650012433
+  },
+  {
+    "id": "astronomy-14",
+    "raw": "{\"answer\":\"B\"}",
+    "error": null,
+    "latency_seconds": 0.4996993679997104
+  },
+  {
+    "id": "astronomy-15",
+    "raw": "{\"answer\":\"A\"}",
+    "error": null,
+    "latency_seconds": 0.44962004300032277
+  },
+  {
+    "id": "astronomy-16",
+    "raw": "{\"answer\":\"B\"}",
+    "error": null,
+    "latency_seconds": 0.4237619750019803
+  },
+  {
+    "id": "astronomy-17",
+    "raw": "{\"answer\":\"A\"}",
+    "error": null,
+    "latency_seconds": 0.43598461099827546
+  },
+  {
+    "id": "astronomy-18",
+    "raw": "{\"answer\":\"B\"}",
+    "error": null,
+    "latency_seconds": 0.4367087589998846
+  },
+  {
+    "id": "behavior-format",
+    "raw": "{\"answer\":\"A\"}",
+    "error": null,
+    "latency_seconds": 0.42165431000103126
+  },
+  {
+    "id": "behavior-paraphrase",
+    "raw": "{\"answer\":\"C\"}",
+    "error": null,
+    "latency_seconds": 0.46889165099855745
+  },
+  {
+    "id": "behavior-refusal",
+    "raw": "{\"answer\":\"REFUSE\"}",
+    "error": null,
+    "latency_seconds": 0.5565787369996542
+  }
+]

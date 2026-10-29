@@ -1,14 +1,14 @@
-13:02:31.591 | INFO    | prefect - Starting temporary server on http://127.0.0.1:8405
+18:36:24.312 | INFO    | prefect - Starting temporary server on http://127.0.0.1:8401
 See https://docs.prefect.io/v3/concepts/server#how-to-guides for more information on running a dedicated Prefect server.
-13:02:35.254 | INFO    | Flow run 'interesting-coucal' - Beginning flow run 'interesting-coucal' for flow 'model-release'
-13:02:35.274 | INFO    | Task run 'prepare-input-45f' - PREPARED 88bbd559a04a7a432693a1c611ef2704bb711ac17dd5e22203ee9e5020f59fd4
-13:02:35.278 | INFO    | Task run 'prepare-input-45f' - Finished in state Completed()
-13:02:35.290 | INFO    | Flow run 'interesting-coucal' - PREPARATION_STATE=Completed CONTENT_KEY=51056cf10c5589460ef64f9881420bded78bebbfb5580a62619242666d88639e
-13:02:35.299 | INFO    | Task run 'obtain-existing-training-artifact-8ed' - ARTIFACT_VERIFIED fixture-B existing run; no training
-13:02:35.302 | INFO    | Task run 'obtain-existing-training-artifact-8ed' - Finished in state Completed()
-13:02:35.309 | INFO    | Task run 'evaluate-release-admission-f48' - Finished in state Completed()
-13:02:35.313 | INFO    | Task run 'publish-accepted-pointer-396' - ARTIFACT_VERIFIED fixture-B existing run; no training
-13:02:35.331 | ERROR   | Task run 'publish-accepted-pointer-396' - Task run failed with exception: RuntimeError('Injected crash after pointer, before event')
+18:36:27.880 | INFO    | Flow run 'favorite-chinchilla' - Beginning flow run 'favorite-chinchilla' for flow 'model-release'
+18:36:27.941 | INFO    | Task run 'prepare-input-4c6' - PREPARED 88bbd559a04a7a432693a1c611ef2704bb711ac17dd5e22203ee9e5020f59fd4
+18:36:27.945 | INFO    | Task run 'prepare-input-4c6' - Finished in state Completed()
+18:36:27.948 | INFO    | Flow run 'favorite-chinchilla' - PREPARATION_STATE=Completed CONTENT_KEY=51056cf10c5589460ef64f9881420bded78bebbfb5580a62619242666d88639e
+18:36:27.956 | INFO    | Task run 'obtain-existing-training-artifact-7e6' - ARTIFACT_VERIFIED fixture-B existing run; no training
+18:36:27.959 | INFO    | Task run 'obtain-existing-training-artifact-7e6' - Finished in state Completed()
+18:36:27.966 | INFO    | Task run 'evaluate-release-admission-dd6' - Finished in state Completed()
+18:36:27.973 | INFO    | Task run 'publish-accepted-pointer-261' - ARTIFACT_VERIFIED fixture-B existing run; no training
+18:36:28.488 | ERROR   | Task run 'publish-accepted-pointer-261' - Task run failed with exception: RuntimeError('Injected crash after pointer, before event')
 Traceback (most recent call last):
   File "/home/luserok/VSCodeWSL/MLOps/hw8910-broken/.venv/lib/python3.12/site-packages/prefect/task_engine.py", line 1030, in run_context
     yield self
@@ -26,8 +26,8 @@ Traceback (most recent call last):
   File "/home/luserok/VSCodeWSL/MLOps/hw8910-broken/publication.py", line 61, in record_release
     raise RuntimeError('Injected crash after pointer, before event')
 RuntimeError: Injected crash after pointer, before event
-13:02:35.336 | ERROR   | Task run 'publish-accepted-pointer-396' - Finished in state Failed('Task run encountered an exception RuntimeError: Injected crash after pointer, before event')
-13:02:36.269 | ERROR   | Flow run 'interesting-coucal' - Encountered exception during execution: RuntimeError('Injected crash after pointer, before event')
+18:36:28.501 | ERROR   | Task run 'publish-accepted-pointer-261' - Finished in state Failed('Task run encountered an exception RuntimeError: Injected crash after pointer, before event')
+18:36:28.891 | ERROR   | Flow run 'favorite-chinchilla' - Encountered exception during execution: RuntimeError('Injected crash after pointer, before event')
 Traceback (most recent call last):
   File "/home/luserok/VSCodeWSL/MLOps/hw8910-broken/.venv/lib/python3.12/site-packages/prefect/flow_engine.py", line 1330, in run_context
     yield self
@@ -69,7 +69,7 @@ Traceback (most recent call last):
   File "/home/luserok/VSCodeWSL/MLOps/hw8910-broken/publication.py", line 61, in record_release
     raise RuntimeError('Injected crash after pointer, before event')
 RuntimeError: Injected crash after pointer, before event
-13:02:36.301 | INFO    | Flow run 'interesting-coucal' - Finished in state Failed('Flow run encountered an exception: RuntimeError: Injected crash after pointer, before event')
+18:36:28.943 | INFO    | Flow run 'favorite-chinchilla' - Finished in state Failed('Flow run encountered an exception: RuntimeError: Injected crash after pointer, before event')
 Traceback (most recent call last):
   File "/home/luserok/VSCodeWSL/MLOps/hw8910-broken/flow.py", line 100, in <module>
     main()
@@ -126,4 +126,4 @@ Traceback (most recent call last):
   File "/home/luserok/VSCodeWSL/MLOps/hw8910-broken/publication.py", line 61, in record_release
     raise RuntimeError('Injected crash after pointer, before event')
 RuntimeError: Injected crash after pointer, before event
-13:02:36.325 | INFO    | prefect - Stopping temporary server on http://127.0.0.1:8405
+18:36:28.962 | INFO    | prefect - Stopping temporary server on http://127.0.0.1:8401

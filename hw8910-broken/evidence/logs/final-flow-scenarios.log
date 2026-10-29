@@ -1,0 +1,16 @@
+.venv/bin/python scripts/demo_flow.py
+flow-init 0
+flow-fail-prepare 1
+flow-recovery 0
+flow-repeat 0
+flow-change-input 0
+flow-change-config 0
+flow-negative-report-reject 1
+flow-negative-report-incomplete 1
+flow-negative-report-A 1
+crash-init 0
+flow-crash-pointer 1
+flow-crash-recovery 0
+flow-crash-repeat 0
+flow-controlled-rollback 0
+FLOW_SCENARIOS_VERIFIED 14

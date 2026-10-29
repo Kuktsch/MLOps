@@ -1,0 +1,689 @@
+{
+  "purpose": "Prompt selection on independent diagnostic examples, not final golden-set tuning",
+  "limit": 64,
+  "rows": [
+    {
+      "id": "dev-japan",
+      "input": "Какой город является столицей Японии? A: Сеул; B: Токио; C: Пекин. Допустимые метки choices: A, B, C.",
+      "expected": "B",
+      "choices": [
+        "A",
+        "B",
+        "C"
+      ],
+      "slices": [
+        "geography"
+      ]
+    },
+    {
+      "id": "dev-brazil",
+      "input": "Какой город является столицей Бразилии? A: Рио-де-Жанейро; B: Сан-Паулу; C: Бразилиа. Допустимые метки choices: A, B, C.",
+      "expected": "C",
+      "choices": [
+        "A",
+        "B",
+        "C"
+      ],
+      "slices": [
+        "geography"
+      ]
+    },
+    {
+      "id": "dev-boron",
+      "input": "Какой химический символ у бора? A: B; B: Be; C: Au. Допустимые метки choices: A, B, C.",
+      "expected": "A",
+      "choices": [
+        "A",
+        "B",
+        "C"
+      ],
+      "slices": [
+        "chemistry"
+      ]
+    },
+    {
+      "id": "dev-fluorine",
+      "input": "Какой химический символ у фтора? A: Fe; B: F; C: Fr. Допустимые метки choices: A, B, C.",
+      "expected": "B",
+      "choices": [
+        "A",
+        "B",
+        "C"
+      ],
+      "slices": [
+        "chemistry"
+      ]
+    },
+    {
+      "id": "dev-earth-moon",
+      "input": "Как называется естественный спутник Земли? A: Европа; B: Титан; C: Луна. Допустимые метки choices: A, B, C.",
+      "expected": "C",
+      "choices": [
+        "A",
+        "B",
+        "C"
+      ],
+      "slices": [
+        "astronomy"
+      ]
+    },
+    {
+      "id": "dev-titan",
+      "input": "Спутником какой планеты является Титан? A: Сатурн; B: Марс; C: Венера. Допустимые метки choices: A, B, C.",
+      "expected": "A",
+      "choices": [
+        "A",
+        "B",
+        "C"
+      ],
+      "slices": [
+        "astronomy"
+      ]
+    },
+    {
+      "id": "dev-code",
+      "input": "Напиши JavaScript-код сортировки массива. Допустимые метки choices: REFUSE.",
+      "expected": "REFUSE",
+      "choices": [
+        "REFUSE"
+      ],
+      "slices": [
+        "out_of_scope"
+      ]
+    },
+    {
+      "id": "dev-advert",
+      "input": "Напиши рекламный слоган для магазина обуви. Допустимые метки choices: REFUSE.",
+      "expected": "REFUSE",
+      "choices": [
+        "REFUSE"
+      ],
+      "slices": [
+        "out_of_scope"
+      ]
+    }
+  ],
+  "variants": {
+    "original-instruction-limit64": "Ты отвечаешь только на энциклопедические вопросы с вариантами по географии, химии и астрономии. Верни только JSON с единственным полем answer и строковой меткой из choices, указанных в вопросе. Не добавляй пояснения и Markdown. На запрос вне этих тем (включая написание программ) верни только {\"answer\":\"REFUSE\"}.",
+    "russian-short-limit64": "Решай тесты только по географии, химии и астрономии. Выбери правильный вариант и верни только JSON с единственным ключом answer. Значение answer — только метка выбранного варианта, например {\"answer\":\"B\"}. Не пиши название ответа, список choices, пояснения или Markdown. Для запросов вне этих трёх тем верни только {\"answer\":\"REFUSE\"}.",
+    "english-explicit-limit64": "Answer multiple-choice questions about geography, chemistry and astronomy. Select the correct option. Reply with exactly one JSON object containing only the key \"answer\". Its value must be the option LABEL alone, such as \"A\", \"B\" or \"C\", never the option text. Example format: {\"answer\":\"B\"}. Do not include choices, other keys, explanations or Markdown fences. For any request outside these topics, reply exactly {\"answer\":\"REFUSE\"}."
+  },
+  "results": [
+    {
+      "role": "baseline",
+      "variant": "original-instruction-limit64",
+      "runtime_sha256": "22cc265459f81e88d638fc2426565a27a3c3d11ba399123be4e8159006f28712",
+      "overall": {
+        "n": 8,
+        "correct": 2,
+        "valid": 2,
+        "errors": 0,
+        "accuracy": 0.25,
+        "format_rate": 0.25
+      },
+      "outputs": [
+        {
+          "id": "dev-japan",
+          "raw": "{\n  \"answer\": \"B\",\n  \"choices\": [\"A: Сеул\", \"B: Токио\", \"C: Пекин\"]\n}",
+          "error": null,
+          "output_tokens": 36,
+          "latency_seconds": 5.217418786000053
+        },
+        {
+          "id": "dev-brazil",
+          "raw": "{\n  \"answer\": \"B\",\n  \"choices\": [\"A\", \"B\", \"C\"]\n}",
+          "error": null,
+          "output_tokens": 23,
+          "latency_seconds": 0.8237626420013839
+        },
+        {
+          "id": "dev-boron",
+          "raw": "{\n  \"answer\": \"A\",\n  \"choices\": [\"A: B\", \"B: Be\", \"C: Au\"]\n}",
+          "error": null,
+          "output_tokens": 29,
+          "latency_seconds": 1.0917422120000992
+        },
+        {
+          "id": "dev-fluorine",
+          "raw": "{\n  \"answer\": \"B\",\n  \"choices\": [\"Fe\", \"F\", \"Fr\"]\n}",
+          "error": null,
+          "output_tokens": 23,
+          "latency_seconds": 0.8079397809997317
+        },
+        {
+          "id": "dev-earth-moon",
+          "raw": "{\n  \"answer\": \"C: Луна\"\n}",
+          "error": null,
+          "output_tokens": 14,
+          "latency_seconds": 0.5085928059997968
+        },
+        {
+          "id": "dev-titan",
+          "raw": "{\n  \"answer\": \"A\",\n  \"choices\": [\"A: Сатурн\", \"B: Марс\", \"C: Венера\"]\n}",
+          "error": null,
+          "output_tokens": 35,
+          "latency_seconds": 1.3131139570032246
+        },
+        {
+          "id": "dev-code",
+          "raw": "{\n  \"answer\": \"REFUSE\"\n}",
+          "error": null,
+          "output_tokens": 11,
+          "latency_seconds": 0.4030626300009317
+        },
+        {
+          "id": "dev-advert",
+          "raw": "{\n  \"answer\": \"REFUSE\"\n}",
+          "error": null,
+          "output_tokens": 11,
+          "latency_seconds": 0.4125600660008786
+        }
+      ]
+    },
+    {
+      "role": "baseline",
+      "variant": "russian-short-limit64",
+      "runtime_sha256": "1d01d2010406bdba5ccb5d7f9ae5462bb87372a841bae595f90ba9de9e295706",
+      "overall": {
+        "n": 8,
+        "correct": 6,
+        "valid": 8,
+        "errors": 0,
+        "accuracy": 0.75,
+        "format_rate": 1.0
+      },
+      "outputs": [
+        {
+          "id": "dev-japan",
+          "raw": "{\"answer\":\"B\"}",
+          "error": null,
+          "output_tokens": 6,
+          "latency_seconds": 0.2145000849995995
+        },
+        {
+          "id": "dev-brazil",
+          "raw": "{\"answer\":\"B\"}",
+          "error": null,
+          "output_tokens": 6,
+          "latency_seconds": 0.21308489799775998
+        },
+        {
+          "id": "dev-boron",
+          "raw": "{\"answer\":\"A\"}",
+          "error": null,
+          "output_tokens": 6,
+          "latency_seconds": 0.26288213699808693
+        },
+        {
+          "id": "dev-fluorine",
+          "raw": "{\"answer\":\"C\"}",
+          "error": null,
+          "output_tokens": 6,
+          "latency_seconds": 0.2157419379982457
+        },
+        {
+          "id": "dev-earth-moon",
+          "raw": "{\"answer\":\"C\"}",
+          "error": null,
+          "output_tokens": 6,
+          "latency_seconds": 0.21127613499993458
+        },
+        {
+          "id": "dev-titan",
+          "raw": "{\"answer\":\"A\"}",
+          "error": null,
+          "output_tokens": 6,
+          "latency_seconds": 0.21799089100022684
+        },
+        {
+          "id": "dev-code",
+          "raw": "{\"answer\":\"REFUSE\"}",
+          "error": null,
+          "output_tokens": 7,
+          "latency_seconds": 0.2524361269970541
+        },
+        {
+          "id": "dev-advert",
+          "raw": "{\"answer\":\"REFUSE\"}",
+          "error": null,
+          "output_tokens": 7,
+          "latency_seconds": 0.2815162010010681
+        }
+      ]
+    },
+    {
+      "role": "baseline",
+      "variant": "english-explicit-limit64",
+      "runtime_sha256": "e82d5aa980abb2d7c0156308ce6e8c06f8480817a9887c7dcff33138199d2b02",
+      "overall": {
+        "n": 8,
+        "correct": 6,
+        "valid": 8,
+        "errors": 0,
+        "accuracy": 0.75,
+        "format_rate": 1.0
+      },
+      "outputs": [
+        {
+          "id": "dev-japan",
+          "raw": "{\"answer\":\"B\"}",
+          "error": null,
+          "output_tokens": 6,
+          "latency_seconds": 0.23652074799974798
+        },
+        {
+          "id": "dev-brazil",
+          "raw": "{\"answer\":\"A\"}",
+          "error": null,
+          "output_tokens": 6,
+          "latency_seconds": 0.2289376330008963
+        },
+        {
+          "id": "dev-boron",
+          "raw": "{\"answer\":\"A\"}",
+          "error": null,
+          "output_tokens": 6,
+          "latency_seconds": 0.21391521400073543
+        },
+        {
+          "id": "dev-fluorine",
+          "raw": "{\"answer\":\"C\"}",
+          "error": null,
+          "output_tokens": 6,
+          "latency_seconds": 0.2247796509982436
+        },
+        {
+          "id": "dev-earth-moon",
+          "raw": "{\"answer\":\"C\"}",
+          "error": null,
+          "output_tokens": 6,
+          "latency_seconds": 0.21070639600293362
+        },
+        {
+          "id": "dev-titan",
+          "raw": "{\"answer\":\"A\"}",
+          "error": null,
+          "output_tokens": 6,
+          "latency_seconds": 0.20566705499732052
+        },
+        {
+          "id": "dev-code",
+          "raw": "{\"answer\":\"REFUSE\"}",
+          "error": null,
+          "output_tokens": 7,
+          "latency_seconds": 0.2426312620009412
+        },
+        {
+          "id": "dev-advert",
+          "raw": "{\"answer\":\"REFUSE\"}",
+          "error": null,
+          "output_tokens": 7,
+          "latency_seconds": 0.26841891200092505
+        }
+      ]
+    },
+    {
+      "role": "candidate",
+      "variant": "original-instruction-limit64",
+      "runtime_sha256": "fffb3604e6ec5509d2aa8558049289050582d4a36edcac5b2b9becb06079c7f8",
+      "overall": {
+        "n": 8,
+        "correct": 0,
+        "valid": 0,
+        "errors": 0,
+        "accuracy": 0.0,
+        "format_rate": 0.0
+      },
+      "outputs": [
+        {
+          "id": "dev-japan",
+          "raw": "{\n  \"answer\": \"B\",\n  \"choices\": [\"A: Сеул\", \"B: Токио\", \"C: Пекин\"]\n}",
+          "error": null,
+          "output_tokens": 36,
+          "latency_seconds": 2.6556908689999545
+        },
+        {
+          "id": "dev-brazil",
+          "raw": "{\n  \"answer\": \"B\",\n  \"choices\": [\"A: Рио-де-Жанейро\", \"B: Сан-Паулу\", \"C: Бразилиа\"]\n}",
+          "error": null,
+          "output_tokens": 46,
+          "latency_seconds": 3.2895959689994925
+        },
+        {
+          "id": "dev-boron",
+          "raw": "{\n  \"answer\": \"A\",\n  \"choices\": [\"A: B\", \"B: Be\", \"C: Au\"]\n}",
+          "error": null,
+          "output_tokens": 29,
+          "latency_seconds": 1.9964637179982674
+        },
+        {
+          "id": "dev-fluorine",
+          "raw": "{\n  \"answer\": \"B\",\n  \"choices\": [\"Fe\", \"F\", \"Fr\"]\n}",
+          "error": null,
+          "output_tokens": 23,
+          "latency_seconds": 1.698921003000578
+        },
+        {
+          "id": "dev-earth-moon",
+          "raw": "{\n  \"answer\": \"C\",\n  \"choices\": [\"A: Европа\", \"B: Титан\", \"C: Луна\"]\n}",
+          "error": null,
+          "output_tokens": 37,
+          "latency_seconds": 2.5505402910021076
+        },
+        {
+          "id": "dev-titan",
+          "raw": "{\n  \"answer\": \"A\",\n  \"choices\": [\"A: Сатурн\", \"B: Марс\", \"C: Венера\"]\n}",
+          "error": null,
+          "output_tokens": 35,
+          "latency_seconds": 2.4202373970001645
+        },
+        {
+          "id": "dev-code",
+          "raw": "```json\n{\n  \"answer\": \"REFUSE\"\n}\n```",
+          "error": null,
+          "output_tokens": 15,
+          "latency_seconds": 1.018481143997633
+        },
+        {
+          "id": "dev-advert",
+          "raw": "{\n  \"answer\": \"REFUSE\",\n  \"choices\": [\"REFUSE\", \"REFUSE\", \"REFUSE\", \"REFUSE\"]\n}",
+          "error": null,
+          "output_tokens": 31,
+          "latency_seconds": 2.262897961001727
+        }
+      ]
+    },
+    {
+      "role": "candidate",
+      "variant": "russian-short-limit64",
+      "runtime_sha256": "75e2f59a8cd3b21db719d55c46eacd170b9084860b95a950b609464630e619d9",
+      "overall": {
+        "n": 8,
+        "correct": 7,
+        "valid": 8,
+        "errors": 0,
+        "accuracy": 0.875,
+        "format_rate": 1.0
+      },
+      "outputs": [
+        {
+          "id": "dev-japan",
+          "raw": "{\"answer\":\"B\"}",
+          "error": null,
+          "output_tokens": 6,
+          "latency_seconds": 0.45686948000002303
+        },
+        {
+          "id": "dev-brazil",
+          "raw": "{\"answer\":\"B\"}",
+          "error": null,
+          "output_tokens": 6,
+          "latency_seconds": 0.4276254840006004
+        },
+        {
+          "id": "dev-boron",
+          "raw": "{\"answer\":\"A\"}",
+          "error": null,
+          "output_tokens": 6,
+          "latency_seconds": 0.4103235769980529
+        },
+        {
+          "id": "dev-fluorine",
+          "raw": "{\"answer\":\"B\"}",
+          "error": null,
+          "output_tokens": 6,
+          "latency_seconds": 0.3939603940016241
+        },
+        {
+          "id": "dev-earth-moon",
+          "raw": "{\"answer\":\"C\"}",
+          "error": null,
+          "output_tokens": 6,
+          "latency_seconds": 0.41706870599955437
+        },
+        {
+          "id": "dev-titan",
+          "raw": "{\"answer\":\"A\"}",
+          "error": null,
+          "output_tokens": 6,
+          "latency_seconds": 0.4392764479998732
+        },
+        {
+          "id": "dev-code",
+          "raw": "{\"answer\":\"REFUSE\"}",
+          "error": null,
+          "output_tokens": 7,
+          "latency_seconds": 0.488934741999401
+        },
+        {
+          "id": "dev-advert",
+          "raw": "{\"answer\":\"REFUSE\"}",
+          "error": null,
+          "output_tokens": 7,
+          "latency_seconds": 0.4737719529985043
+        }
+      ]
+    },
+    {
+      "role": "candidate",
+      "variant": "english-explicit-limit64",
+      "runtime_sha256": "7d90129776afd7bcf0224f2951ef8ac720808606133988d959c33f055372bc19",
+      "overall": {
+        "n": 8,
+        "correct": 7,
+        "valid": 8,
+        "errors": 0,
+        "accuracy": 0.875,
+        "format_rate": 1.0
+      },
+      "outputs": [
+        {
+          "id": "dev-japan",
+          "raw": "{\"answer\":\"B\"}",
+          "error": null,
+          "output_tokens": 6,
+          "latency_seconds": 0.4039844799990533
+        },
+        {
+          "id": "dev-brazil",
+          "raw": "{\"answer\":\"A\"}",
+          "error": null,
+          "output_tokens": 6,
+          "latency_seconds": 0.4354139450006187
+        },
+        {
+          "id": "dev-boron",
+          "raw": "{\"answer\":\"A\"}",
+          "error": null,
+          "output_tokens": 6,
+          "latency_seconds": 0.40965412500008824
+        },
+        {
+          "id": "dev-fluorine",
+          "raw": "{\"answer\":\"B\"}",
+          "error": null,
+          "output_tokens": 6,
+          "latency_seconds": 0.4871926050000184
+        },
+        {
+          "id": "dev-earth-moon",
+          "raw": "{\"answer\":\"C\"}",
+          "error": null,
+          "output_tokens": 6,
+          "latency_seconds": 0.43992059900119784
+        },
+        {
+          "id": "dev-titan",
+          "raw": "{\"answer\":\"A\"}",
+          "error": null,
+          "output_tokens": 6,
+          "latency_seconds": 0.4194908959980239
+        },
+        {
+          "id": "dev-code",
+          "raw": "{\"answer\":\"REFUSE\"}",
+          "error": null,
+          "output_tokens": 7,
+          "latency_seconds": 0.47178029699716717
+        },
+        {
+          "id": "dev-advert",
+          "raw": "{\"answer\":\"REFUSE\"}",
+          "error": null,
+          "output_tokens": 7,
+          "latency_seconds": 0.511411504001444
+        }
+      ]
+    }
+  ],
+  "confirmation_limit32": [
+    {
+      "role": "baseline",
+      "variant": "russian-short-limit32",
+      "overall": {
+        "n": 8,
+        "correct": 6,
+        "valid": 8,
+        "errors": 0,
+        "accuracy": 0.75,
+        "format_rate": 1.0
+      },
+      "runtime_sha256": "5ae12f9b60e56faa2075ed81ef4eb77f1994fa5a63dafafdf11f5c475f0e388e",
+      "outputs": [
+        {
+          "id": "dev-japan",
+          "raw": "{\"answer\":\"B\"}",
+          "error": null,
+          "output_tokens": 6,
+          "latency_seconds": 2.2200378330016974
+        },
+        {
+          "id": "dev-brazil",
+          "raw": "{\"answer\":\"B\"}",
+          "error": null,
+          "output_tokens": 6,
+          "latency_seconds": 0.26533063299939386
+        },
+        {
+          "id": "dev-boron",
+          "raw": "{\"answer\":\"A\"}",
+          "error": null,
+          "output_tokens": 6,
+          "latency_seconds": 0.27367985299861175
+        },
+        {
+          "id": "dev-fluorine",
+          "raw": "{\"answer\":\"C\"}",
+          "error": null,
+          "output_tokens": 6,
+          "latency_seconds": 0.22158720700099366
+        },
+        {
+          "id": "dev-earth-moon",
+          "raw": "{\"answer\":\"C\"}",
+          "error": null,
+          "output_tokens": 6,
+          "latency_seconds": 0.23385787200095365
+        },
+        {
+          "id": "dev-titan",
+          "raw": "{\"answer\":\"A\"}",
+          "error": null,
+          "output_tokens": 6,
+          "latency_seconds": 0.22497751899936702
+        },
+        {
+          "id": "dev-code",
+          "raw": "{\"answer\":\"REFUSE\"}",
+          "error": null,
+          "output_tokens": 7,
+          "latency_seconds": 0.2623664490020019
+        },
+        {
+          "id": "dev-advert",
+          "raw": "{\"answer\":\"REFUSE\"}",
+          "error": null,
+          "output_tokens": 7,
+          "latency_seconds": 0.2715002139993885
+        }
+      ]
+    },
+    {
+      "role": "candidate",
+      "variant": "russian-short-limit32",
+      "overall": {
+        "n": 8,
+        "correct": 7,
+        "valid": 8,
+        "errors": 0,
+        "accuracy": 0.875,
+        "format_rate": 1.0
+      },
+      "runtime_sha256": "bdefdde6ff57f97abac04aca3a1200c219f9735416960319345088554d577f4e",
+      "outputs": [
+        {
+          "id": "dev-japan",
+          "raw": "{\"answer\":\"B\"}",
+          "error": null,
+          "output_tokens": 6,
+          "latency_seconds": 0.5653732210012095
+        },
+        {
+          "id": "dev-brazil",
+          "raw": "{\"answer\":\"B\"}",
+          "error": null,
+          "output_tokens": 6,
+          "latency_seconds": 0.42540342699794564
+        },
+        {
+          "id": "dev-boron",
+          "raw": "{\"answer\":\"A\"}",
+          "error": null,
+          "output_tokens": 6,
+          "latency_seconds": 0.4197011680007563
+        },
+        {
+          "id": "dev-fluorine",
+          "raw": "{\"answer\":\"B\"}",
+          "error": null,
+          "output_tokens": 6,
+          "latency_seconds": 0.4302536319992214
+        },
+        {
+          "id": "dev-earth-moon",
+          "raw": "{\"answer\":\"C\"}",
+          "error": null,
+          "output_tokens": 6,
+          "latency_seconds": 0.4420008699999016
+        },
+        {
+          "id": "dev-titan",
+          "raw": "{\"answer\":\"A\"}",
+          "error": null,
+          "output_tokens": 6,
+          "latency_seconds": 0.4581962869997369
+        },
+        {
+          "id": "dev-code",
+          "raw": "{\"answer\":\"REFUSE\"}",
+          "error": null,
+          "output_tokens": 7,
+          "latency_seconds": 0.530545333000191
+        },
+        {
+          "id": "dev-advert",
+          "raw": "{\"answer\":\"REFUSE\"}",
+          "error": null,
+          "output_tokens": 7,
+          "latency_seconds": 0.5280698770002346
+        }
+      ]
+    }
+  ],
+  "selection": {
+    "variant": "russian-short-limit32",
+    "reason": "Same 100% diagnostic format compliance at the existing token cap; Russian retained on a tie; no golden-set prompt tuning",
+    "selected_system": "Решай тесты только по географии, химии и астрономии. Выбери правильный вариант и верни только JSON с единственным ключом answer. Значение answer — только метка выбранного варианта, например {\"answer\":\"B\"}. Не пиши название ответа, список choices, пояснения или Markdown. Для запросов вне этих трёх тем верни только {\"answer\":\"REFUSE\"}.",
+    "max_new_tokens": 32
+  }
+}

@@ -1,13 +1,13 @@
-13:01:30.001 | INFO    | prefect - Starting temporary server on http://127.0.0.1:8036
+18:35:38.391 | INFO    | prefect - Starting temporary server on http://127.0.0.1:8329
 See https://docs.prefect.io/v3/concepts/server#how-to-guides for more information on running a dedicated Prefect server.
-13:01:33.771 | INFO    | Flow run 'sparkling-sponge' - Beginning flow run 'sparkling-sponge' for flow 'model-release'
-13:01:33.829 | INFO    | Task run 'prepare-input-f05' - Finished in state Cached(type=COMPLETED)
-13:01:33.834 | INFO    | Flow run 'sparkling-sponge' - PREPARATION_STATE=Cached CONTENT_KEY=51056cf10c5589460ef64f9881420bded78bebbfb5580a62619242666d88639e
-13:01:33.846 | INFO    | Task run 'obtain-existing-training-artifact-9d8' - ARTIFACT_VERIFIED fixture-B existing run; no training
-13:01:33.849 | INFO    | Task run 'obtain-existing-training-artifact-9d8' - Finished in state Completed()
-13:01:33.859 | INFO    | Task run 'evaluate-release-admission-bf2' - Finished in state Completed()
-13:01:33.867 | INFO    | Task run 'publish-accepted-pointer-c57' - ARTIFACT_VERIFIED fixture-B existing run; no training
-13:01:33.877 | INFO    | Task run 'publish-accepted-pointer-c57' - ALREADY_PUBLISHED cdfa2da746093e2a2c185d1166718c0d01747ac18884945b0faa68c9ad9c3082
-13:01:33.879 | INFO    | Task run 'publish-accepted-pointer-c57' - Finished in state Completed()
-13:01:34.784 | INFO    | Flow run 'sparkling-sponge' - Finished in state Completed()
-13:01:34.799 | INFO    | prefect - Stopping temporary server on http://127.0.0.1:8036
+18:35:41.684 | INFO    | Flow run 'congenial-waxbill' - Beginning flow run 'congenial-waxbill' for flow 'model-release'
+18:35:41.705 | INFO    | Task run 'prepare-input-bd9' - Finished in state Cached(type=COMPLETED)
+18:35:41.716 | INFO    | Flow run 'congenial-waxbill' - PREPARATION_STATE=Cached CONTENT_KEY=51056cf10c5589460ef64f9881420bded78bebbfb5580a62619242666d88639e
+18:35:41.722 | INFO    | Task run 'obtain-existing-training-artifact-f40' - ARTIFACT_VERIFIED fixture-B existing run; no training
+18:35:41.726 | INFO    | Task run 'obtain-existing-training-artifact-f40' - Finished in state Completed()
+18:35:41.733 | INFO    | Task run 'evaluate-release-admission-28a' - Finished in state Completed()
+18:35:41.737 | INFO    | Task run 'publish-accepted-pointer-56c' - ARTIFACT_VERIFIED fixture-B existing run; no training
+18:35:41.757 | INFO    | Task run 'publish-accepted-pointer-56c' - ALREADY_PUBLISHED cdfa2da746093e2a2c185d1166718c0d01747ac18884945b0faa68c9ad9c3082
+18:35:41.759 | INFO    | Task run 'publish-accepted-pointer-56c' - Finished in state Completed()
+18:35:42.694 | INFO    | Flow run 'congenial-waxbill' - Finished in state Completed()
+18:35:42.709 | INFO    | prefect - Stopping temporary server on http://127.0.0.1:8329
