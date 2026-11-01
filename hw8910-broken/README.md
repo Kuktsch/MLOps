@@ -6,11 +6,11 @@
 
 Текстовый разбор семи исправленных ошибок: [docs/defects.md](docs/defects.md).
 
-Текущая инструкция [evaluation/params.json ДЗ 6–7](../mlops26-hw6-7/hw67-broken/evaluation/params.json) улучшила реальные ответы:
-база — с 4/54 до 34/54, адаптер — с 0/54 до 32/54; формат JSON корректен в 54/54
-случаях у обеих моделей. Веса, эталоны и scorer не менялись. Полная новая оценка —
-[evidence/model-synced/](evidence/model-synced/); прежняя сохранена в `evidence/model/`.
-Кандидат уступает новой базе и по-прежнему отклонён неизменённым gate.
+Результат выпуска: API обслуживает baseline с оценкой **34/54**.
+Кандидат с готовым LoRA-адаптером получил **32/54** и отклонён правилом качества
+из ДЗ 6–7. У обеих моделей корректный JSON в 54/54 случаях. Manifest, полная
+оценка, сырые ответы и решения допуска — [evidence/model-synced/](evidence/model-synced/).
+Конфигурация оценки — [evaluation/params.json ДЗ 6–7](../mlops26-hw6-7/hw67-broken/evaluation/params.json).
 
 ## Проверки
 
@@ -52,7 +52,7 @@ curl -H 'Content-Type: application/json' -d '{"prompt":"Какой город я
 make benchmark BENCHMARK_OUTPUT=evidence/synced-api-recheck/benchmark
 ```
 
-`make real-api` использует `.real-synced` с новой оценённой инструкцией.
+`make real-api` использует оценённый выпуск из `.real-synced`.
 Обслуживается baseline: 34/54. `make real-baseline` сохраняет её,
 `make real-candidate` ожидаемо завершается отказом; указатель не меняется.
 Benchmark запускается во втором терминале, пока API работает. Для повторов
@@ -92,7 +92,6 @@ backend должны совпасть с raw ДЗ 6–7. Обучение и swe
 Текущий источник — evaluation run `f8dd502249724e8d8d05ec3ac0eb4afe` ДЗ 6–7;
 связанный serving evaluation run — `5e83ce18ce53470192adadef7a0afe71`. Связи, хеши и исходные
 отчёты сохранены в `evidence/model-synced/protocol.json` и `hw67-original/`.
-Предыдущий отдельный эксперимент остаётся в `evidence/model-quality/`.
 
 `make check` запускает 35 тестов текущего проекта; `make check-hw67` —
 сохранённые 24 теста ДЗ 6–7; `make check-all` объединяет оба набора.
@@ -111,8 +110,8 @@ cd ../mlops26-hw6-7/hw67-broken
 - `requirements-fast.txt`, `requirements-flow.txt` — списки зависимостей для установки, не отчёты.
 - `input.txt`, `model-A.txt`, `model-B.txt` в STUB-опытах — вход и синтетические артефакты; имена используются исходным прототипом и тестами.
 
-Веса, окружения, кеши и видео исключены из Git. Контрольная версия до улучшения
-сохранена локальным коммитом `3154384` (`homework 8 9 10`). Последующий эксперимент
-выполнен в той же ветке `main`, без нового коммита и отправки на GitHub.
+Веса, окружения, кеши и видео исключены из Git. Исправленная реализация сохранена
+в локальном коммите `6e19e28`; исходный прототип — в `evidence/original/`.
+Отправка на GitHub не выполнялась.
 Видео `hw8910-report.mp4` показывает текущие результаты: 34/54 у базы и
 32/54 у кандидата, проверки и работу реального API. Удалённый CI и защита merge не заявляются.
