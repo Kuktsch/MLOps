@@ -1,0 +1,13 @@
+{"event": "warmup_start", "epoch": 1794676887.6916785, "mode": "bad"}
+{"event": "warmup_verified", "epoch": 1794676921.3284526, "mode": "bad"}
+{"event": "warmup_start", "epoch": 1794676926.9444993, "mode": "fixed"}
+{"event": "warmup_verified", "epoch": 1794676959.5189319, "mode": "fixed"}
+{"event": "rollout_a_to_b", "epoch": 1794676964.2614872, "stream_pods": ["api-8bb46ccb-72xtw", "api-8bb46ccb-8mbn7"]}
+{"event": "rollout_validated", "epoch": 1794677026.1236587, "requests": 322}
+{"event": "return_to_a_for_failure", "epoch": 1794677027.367495, "revision": 2}
+{"event": "unready_b", "epoch": 1794677076.2783725}
+{"event": "rollback_to_a", "epoch": 1794677091.505683, "revision": 4}
+{"event": "sigkill", "epoch": 1794677115.9019604, "pod": "api-8bb46ccb-dq4sb"}
+{"event": "restarted_ready", "epoch": 1794677137.999371, "pod": "api-8bb46ccb-dq4sb"}
+{"event": "replace_pod", "epoch": 1794677138.5346565, "pod": "api-8bb46ccb-dq4sb"}
+{"event": "checks_passed", "epoch": 1794677170.0400894, "names": ["warmup", "rollback", "replacement", "history", "dialogue", "overload", "abort"]}

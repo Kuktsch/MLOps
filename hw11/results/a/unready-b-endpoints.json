@@ -1,0 +1,468 @@
+{
+    "apiVersion": "v1",
+    "items": [
+        {
+            "addressType": "IPv4",
+            "apiVersion": "discovery.k8s.io/v1",
+            "endpoints": [
+                {
+                    "addresses": [
+                        "10.244.0.46"
+                    ],
+                    "conditions": {
+                        "ready": true,
+                        "serving": true,
+                        "terminating": false
+                    },
+                    "nodeName": "hw11-control-plane",
+                    "targetRef": {
+                        "kind": "Pod",
+                        "name": "api-8bb46ccb-mpncg",
+                        "namespace": "hw11",
+                        "uid": "d96e06ee-f046-423b-8c32-faf82f9c754a"
+                    }
+                },
+                {
+                    "addresses": [
+                        "10.244.0.47"
+                    ],
+                    "conditions": {
+                        "ready": true,
+                        "serving": true,
+                        "terminating": false
+                    },
+                    "nodeName": "hw11-control-plane",
+                    "targetRef": {
+                        "kind": "Pod",
+                        "name": "api-8bb46ccb-dq4sb",
+                        "namespace": "hw11",
+                        "uid": "06bf5bcb-3809-4808-bf3a-5bb2a40bb52e"
+                    }
+                },
+                {
+                    "addresses": [
+                        "10.244.0.48"
+                    ],
+                    "conditions": {
+                        "ready": false,
+                        "serving": false,
+                        "terminating": false
+                    },
+                    "nodeName": "hw11-control-plane",
+                    "targetRef": {
+                        "kind": "Pod",
+                        "name": "api-756cf64dcc-n7p87",
+                        "namespace": "hw11",
+                        "uid": "16413bc8-909e-4ab5-8a34-d229bacacb94"
+                    }
+                }
+            ],
+            "kind": "EndpointSlice",
+            "metadata": {
+                "annotations": {
+                    "endpoints.kubernetes.io/last-change-trigger-time": "2026-11-14T17:24:39Z"
+                },
+                "creationTimestamp": "2026-11-14T17:21:28Z",
+                "generateName": "api-",
+                "generation": 33,
+                "labels": {
+                    "app.kubernetes.io/managed-by": "Helm",
+                    "endpointslice.kubernetes.io/managed-by": "endpointslice-controller.k8s.io",
+                    "kubernetes.io/service-name": "api"
+                },
+                "name": "api-jgjpt",
+                "namespace": "hw11",
+                "ownerReferences": [
+                    {
+                        "apiVersion": "v1",
+                        "blockOwnerDeletion": true,
+                        "controller": true,
+                        "kind": "Service",
+                        "name": "api",
+                        "uid": "b40e014e-7dbc-41a3-8a46-7b57b3a550a9"
+                    }
+                ],
+                "resourceVersion": "3128",
+                "uid": "7133a690-8aa6-487a-a38f-57cf8dcea463"
+            },
+            "ports": [
+                {
+                    "name": "http",
+                    "port": 8091,
+                    "protocol": "TCP"
+                }
+            ]
+        },
+        {
+            "addressType": "IPv4",
+            "apiVersion": "discovery.k8s.io/v1",
+            "endpoints": [
+                {
+                    "addresses": [
+                        "10.244.0.46"
+                    ],
+                    "conditions": {
+                        "ready": true,
+                        "serving": true,
+                        "terminating": false
+                    },
+                    "nodeName": "hw11-control-plane",
+                    "targetRef": {
+                        "kind": "Pod",
+                        "name": "api-8bb46ccb-mpncg",
+                        "namespace": "hw11",
+                        "uid": "d96e06ee-f046-423b-8c32-faf82f9c754a"
+                    }
+                },
+                {
+                    "addresses": [
+                        "10.244.0.47"
+                    ],
+                    "conditions": {
+                        "ready": true,
+                        "serving": true,
+                        "terminating": false
+                    },
+                    "nodeName": "hw11-control-plane",
+                    "targetRef": {
+                        "kind": "Pod",
+                        "name": "api-8bb46ccb-dq4sb",
+                        "namespace": "hw11",
+                        "uid": "06bf5bcb-3809-4808-bf3a-5bb2a40bb52e"
+                    }
+                },
+                {
+                    "addresses": [
+                        "10.244.0.48"
+                    ],
+                    "conditions": {
+                        "ready": false,
+                        "serving": false,
+                        "terminating": false
+                    },
+                    "nodeName": "hw11-control-plane",
+                    "targetRef": {
+                        "kind": "Pod",
+                        "name": "api-756cf64dcc-n7p87",
+                        "namespace": "hw11",
+                        "uid": "16413bc8-909e-4ab5-8a34-d229bacacb94"
+                    }
+                }
+            ],
+            "kind": "EndpointSlice",
+            "metadata": {
+                "annotations": {
+                    "endpoints.kubernetes.io/last-change-trigger-time": "2026-11-14T17:24:39Z"
+                },
+                "creationTimestamp": "2026-11-14T17:21:28Z",
+                "generateName": "api-sticky-",
+                "generation": 33,
+                "labels": {
+                    "app.kubernetes.io/managed-by": "Helm",
+                    "endpointslice.kubernetes.io/managed-by": "endpointslice-controller.k8s.io",
+                    "kubernetes.io/service-name": "api-sticky"
+                },
+                "name": "api-sticky-lfqkg",
+                "namespace": "hw11",
+                "ownerReferences": [
+                    {
+                        "apiVersion": "v1",
+                        "blockOwnerDeletion": true,
+                        "controller": true,
+                        "kind": "Service",
+                        "name": "api-sticky",
+                        "uid": "2f5351e1-db53-4b93-a829-00c0ccb3d1be"
+                    }
+                ],
+                "resourceVersion": "3129",
+                "uid": "fdf85394-4542-4200-b328-c35f7c17afab"
+            },
+            "ports": [
+                {
+                    "name": "http",
+                    "port": 8091,
+                    "protocol": "TCP"
+                }
+            ]
+        },
+        {
+            "addressType": "IPv4",
+            "apiVersion": "discovery.k8s.io/v1",
+            "endpoints": [
+                {
+                    "addresses": [
+                        "10.244.0.32"
+                    ],
+                    "conditions": {
+                        "ready": true,
+                        "serving": true,
+                        "terminating": false
+                    },
+                    "hostname": "client-0",
+                    "nodeName": "hw11-control-plane",
+                    "targetRef": {
+                        "kind": "Pod",
+                        "name": "client-0",
+                        "namespace": "hw11",
+                        "uid": "bff381de-f30d-4487-b269-f38633c44c67"
+                    }
+                },
+                {
+                    "addresses": [
+                        "10.244.0.34"
+                    ],
+                    "conditions": {
+                        "ready": true,
+                        "serving": true,
+                        "terminating": false
+                    },
+                    "hostname": "client-1",
+                    "nodeName": "hw11-control-plane",
+                    "targetRef": {
+                        "kind": "Pod",
+                        "name": "client-1",
+                        "namespace": "hw11",
+                        "uid": "fde120ce-ec28-4a7a-84aa-009daec53b8f"
+                    }
+                },
+                {
+                    "addresses": [
+                        "10.244.0.33"
+                    ],
+                    "conditions": {
+                        "ready": true,
+                        "serving": true,
+                        "terminating": false
+                    },
+                    "hostname": "client-2",
+                    "nodeName": "hw11-control-plane",
+                    "targetRef": {
+                        "kind": "Pod",
+                        "name": "client-2",
+                        "namespace": "hw11",
+                        "uid": "18c3e747-599d-4fcf-9210-03b3e28594c8"
+                    }
+                },
+                {
+                    "addresses": [
+                        "10.244.0.31"
+                    ],
+                    "conditions": {
+                        "ready": true,
+                        "serving": true,
+                        "terminating": false
+                    },
+                    "hostname": "client-3",
+                    "nodeName": "hw11-control-plane",
+                    "targetRef": {
+                        "kind": "Pod",
+                        "name": "client-3",
+                        "namespace": "hw11",
+                        "uid": "275f3384-89b5-4ae4-b0a0-201267f0bbc3"
+                    }
+                }
+            ],
+            "kind": "EndpointSlice",
+            "metadata": {
+                "creationTimestamp": "2026-11-14T17:14:49Z",
+                "generateName": "clients-",
+                "generation": 24,
+                "labels": {
+                    "endpointslice.kubernetes.io/managed-by": "endpointslice-controller.k8s.io",
+                    "kubernetes.io/service-name": "clients",
+                    "service.kubernetes.io/headless": ""
+                },
+                "name": "clients-tbdgb",
+                "namespace": "hw11",
+                "ownerReferences": [
+                    {
+                        "apiVersion": "v1",
+                        "blockOwnerDeletion": true,
+                        "controller": true,
+                        "kind": "Service",
+                        "name": "clients",
+                        "uid": "6d775446-ecc7-4989-bb45-a9eb96954bfe"
+                    }
+                ],
+                "resourceVersion": "1977",
+                "uid": "740309e8-910f-40b6-97f4-f65e5b2d2a2c"
+            },
+            "ports": null
+        },
+        {
+            "addressType": "IPv4",
+            "apiVersion": "discovery.k8s.io/v1",
+            "endpoints": [
+                {
+                    "addresses": [
+                        "10.244.0.39"
+                    ],
+                    "conditions": {
+                        "ready": true,
+                        "serving": true,
+                        "terminating": false
+                    },
+                    "nodeName": "hw11-control-plane",
+                    "targetRef": {
+                        "kind": "Pod",
+                        "name": "grafana-7548bb595d-xxvzg",
+                        "namespace": "hw11",
+                        "uid": "656018b6-e994-4eed-babe-1b9d549c901e"
+                    }
+                }
+            ],
+            "kind": "EndpointSlice",
+            "metadata": {
+                "annotations": {
+                    "endpoints.kubernetes.io/last-change-trigger-time": "2026-11-14T17:20:50Z"
+                },
+                "creationTimestamp": "2026-11-14T17:14:49Z",
+                "generateName": "grafana-",
+                "generation": 7,
+                "labels": {
+                    "endpointslice.kubernetes.io/managed-by": "endpointslice-controller.k8s.io",
+                    "kubernetes.io/service-name": "grafana"
+                },
+                "name": "grafana-znl8s",
+                "namespace": "hw11",
+                "ownerReferences": [
+                    {
+                        "apiVersion": "v1",
+                        "blockOwnerDeletion": true,
+                        "controller": true,
+                        "kind": "Service",
+                        "name": "grafana",
+                        "uid": "98ab7dd2-e16c-4b98-b425-eeed14c34054"
+                    }
+                ],
+                "resourceVersion": "2315",
+                "uid": "1073fc5c-e3ca-4aa7-9384-63ce873157e6"
+            },
+            "ports": [
+                {
+                    "name": "",
+                    "port": 3000,
+                    "protocol": "TCP"
+                }
+            ]
+        },
+        {
+            "addressType": "IPv4",
+            "apiVersion": "discovery.k8s.io/v1",
+            "endpoints": [
+                {
+                    "addresses": [
+                        "10.244.0.37"
+                    ],
+                    "conditions": {
+                        "ready": true,
+                        "serving": true,
+                        "terminating": false
+                    },
+                    "nodeName": "hw11-control-plane",
+                    "targetRef": {
+                        "kind": "Pod",
+                        "name": "kube-state-metrics-f585c6d66-f4rsj",
+                        "namespace": "hw11",
+                        "uid": "41c35cd5-5ecf-4444-b0ce-1b2be3f42903"
+                    }
+                }
+            ],
+            "kind": "EndpointSlice",
+            "metadata": {
+                "annotations": {
+                    "endpoints.kubernetes.io/last-change-trigger-time": "2026-11-14T17:20:28Z"
+                },
+                "creationTimestamp": "2026-11-14T17:20:26Z",
+                "generateName": "kube-state-metrics-",
+                "generation": 2,
+                "labels": {
+                    "endpointslice.kubernetes.io/managed-by": "endpointslice-controller.k8s.io",
+                    "kubernetes.io/service-name": "kube-state-metrics"
+                },
+                "name": "kube-state-metrics-zf2gb",
+                "namespace": "hw11",
+                "ownerReferences": [
+                    {
+                        "apiVersion": "v1",
+                        "blockOwnerDeletion": true,
+                        "controller": true,
+                        "kind": "Service",
+                        "name": "kube-state-metrics",
+                        "uid": "f2e2cd78-c5a7-42a5-9b5d-18f898031095"
+                    }
+                ],
+                "resourceVersion": "2250",
+                "uid": "cd820200-fcaf-4de6-ade9-e42ff8d978fa"
+            },
+            "ports": [
+                {
+                    "name": "",
+                    "port": 8080,
+                    "protocol": "TCP"
+                }
+            ]
+        },
+        {
+            "addressType": "IPv4",
+            "apiVersion": "discovery.k8s.io/v1",
+            "endpoints": [
+                {
+                    "addresses": [
+                        "10.244.0.38"
+                    ],
+                    "conditions": {
+                        "ready": true,
+                        "serving": true,
+                        "terminating": false
+                    },
+                    "nodeName": "hw11-control-plane",
+                    "targetRef": {
+                        "kind": "Pod",
+                        "name": "prometheus-78c7ccc56f-vmkrk",
+                        "namespace": "hw11",
+                        "uid": "eae7f3cd-f849-45f3-bf49-743f26dde4e3"
+                    }
+                }
+            ],
+            "kind": "EndpointSlice",
+            "metadata": {
+                "annotations": {
+                    "endpoints.kubernetes.io/last-change-trigger-time": "2026-11-14T17:20:29Z"
+                },
+                "creationTimestamp": "2026-11-14T17:14:49Z",
+                "generateName": "prometheus-",
+                "generation": 5,
+                "labels": {
+                    "endpointslice.kubernetes.io/managed-by": "endpointslice-controller.k8s.io",
+                    "kubernetes.io/service-name": "prometheus"
+                },
+                "name": "prometheus-vnmjn",
+                "namespace": "hw11",
+                "ownerReferences": [
+                    {
+                        "apiVersion": "v1",
+                        "blockOwnerDeletion": true,
+                        "controller": true,
+                        "kind": "Service",
+                        "name": "prometheus",
+                        "uid": "a9fb2c13-fef2-46c6-a5e4-5a9d55c99fd8"
+                    }
+                ],
+                "resourceVersion": "2267",
+                "uid": "cb9847d0-cb94-4c44-a396-e554e9b1d626"
+            },
+            "ports": [
+                {
+                    "name": "",
+                    "port": 9090,
+                    "protocol": "TCP"
+                }
+            ]
+        }
+    ],
+    "kind": "List",
+    "metadata": {
+        "resourceVersion": ""
+    }
+}

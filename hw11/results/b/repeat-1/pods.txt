@@ -1,0 +1,7 @@
+NAME                  READY   STATUS    RESTARTS   AGE     IP            NODE                 NOMINATED NODE   READINESS GATES
+api-f558df8b7-nlnrv   1/1     Running   0          19m     10.244.0.27   hw11-control-plane   <none>           <none>
+api-f558df8b7-vwdd5   1/1     Running   0          19m     10.244.0.30   hw11-control-plane   <none>           <none>
+client-0              1/1     Running   0          2m35s   10.244.0.66   hw11-control-plane   <none>           <none>
+client-1              1/1     Running   0          3m7s    10.244.0.60   hw11-control-plane   <none>           <none>
+client-2              1/1     Running   0          3m39s   10.244.0.58   hw11-control-plane   <none>           <none>
+client-3              1/1     Running   0          4m12s   10.244.0.55   hw11-control-plane   <none>           <none>

@@ -1,0 +1,2 @@
+{"run": "c-sticky-cpu", "target": "http://api-sticky:8091", "start": 1794677867.099, "duration": 115, "rate": 9, "chunks": 4, "chunk_delay": 10, "traffic": "solo", "cpu_iterations": 320000}
+{"run": "c-quiet-comparison", "target": "http://api:8091", "start": 1794678073.314, "duration": 55, "rate": 6, "chunks": 3, "chunk_delay": 35, "traffic": "even"}

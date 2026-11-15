@@ -1,0 +1,1 @@
+{"status":"success","data":{"resultType":"vector","result":[{"metric":{"instance":"10.244.0.51:8091","job":"api","pod":"api-f558df8b7-sjlwz"},"value":[1794678121.314,"1794678118.968"]},{"metric":{"instance":"10.244.0.52:8091","job":"api","pod":"api-f558df8b7-kr62t"},"value":[1794678121.314,"1794678119.134"]}]}}

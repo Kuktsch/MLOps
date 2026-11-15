@@ -1,0 +1,2 @@
+{"run": "a-rollout", "target": "http://api:8091", "start": 1794676962.019, "duration": 64, "rate": 5, "traffic": "even"}
+{"run": "a-unready", "target": "http://api:8091", "start": 1794677078.778, "duration": 35, "rate": 2, "traffic": "even"}

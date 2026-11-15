@@ -1,0 +1,57 @@
+2026-11-14T20:42:05+03:00
+TYPE            TOTAL     ACTIVE    SIZE      RECLAIMABLE
+Images          10        3         5.745GB   1.462GB (25%)
+Containers      3         1         5.386MB   1.925MB (35%)
+Local Volumes   13        3         3.424GB   69.89MB (2%)
+Build Cache     24        0         1.35GB    23.67MB
+CONTAINER ID   IMAGE                  COMMAND                  CREATED          STATUS          PORTS                       NAMES                SIZE
+4fa9e7125270   kindest/node:v1.32.2   "/usr/local/bin/entr…"   33 minutes ago   Up 33 minutes   127.0.0.1:43517->6443/tcp   hw11-control-plane   3.46MB (virtual 1.06GB)
+sha256:4c7a9e00f574107edd70326f40f485b9a3c8985b7ab4c3a11c4478a5fe589407 50798529 hw11-api:1.0.0
+sha256:d6028d54a4f7746759683cf7111932f4fccea3fb2187ff96ea1f2a3230373c3f 50798583 hw11-api:1.0.1
+sha256:f226345927d7e348497136874b6d207e0b32cc52154ad8323129352923a3142f 435754282 kindest/node@sha256:f226345927d7e348497136874b6d207e0b32cc52154ad8323129352923a3142f
+sha256:e2b8aa62b64855956e3ec1e18b4f9387fb6203174a4471936f4662f437f04405 119326550 prom/prometheus:v3.3.1
+sha256:52c3e20686b860c6dc1f623811565773cf51eefa378817a4896dfc863c3c82c8 181679571 grafana/grafana:11.6.1
+sha256:ffcb2bf004d6aa0a17d90e0247cf94f2865c8901dcab4427034c341951c239f9 19494617 registry.k8s.io/metrics-server/metrics-server:v0.7.2
+sha256:db384bf43222b066c378e77027a675d4cd9911107adba46c2922b3a55e10d6fb 15293353 registry.k8s.io/kube-state-metrics/kube-state-metrics:v2.15.0
+2.7G	/var/lib/containerd
+32M	/var/lib/kubelet
+NAMESPACE            NAME                                         READY   STATUS    RESTARTS   AGE     IP            NODE                 NOMINATED NODE   READINESS GATES
+hw11-b1              api-f558df8b7-nlnrv                          1/1     Running   0          23m     10.244.0.27   hw11-control-plane   <none>           <none>
+hw11-b1              api-f558df8b7-vwdd5                          1/1     Running   0          23m     10.244.0.30   hw11-control-plane   <none>           <none>
+hw11-b1              client-0                                     1/1     Running   0          7m9s    10.244.0.66   hw11-control-plane   <none>           <none>
+hw11-b1              client-1                                     1/1     Running   0          7m41s   10.244.0.60   hw11-control-plane   <none>           <none>
+hw11-b1              client-2                                     1/1     Running   0          8m13s   10.244.0.58   hw11-control-plane   <none>           <none>
+hw11-b1              client-3                                     1/1     Running   0          8m46s   10.244.0.55   hw11-control-plane   <none>           <none>
+hw11-b2              api-f558df8b7-fvnqt                          1/1     Running   0          23m     10.244.0.26   hw11-control-plane   <none>           <none>
+hw11-b2              api-f558df8b7-rshhc                          1/1     Running   0          23m     10.244.0.25   hw11-control-plane   <none>           <none>
+hw11-b2              client-0                                     1/1     Running   0          7m9s    10.244.0.65   hw11-control-plane   <none>           <none>
+hw11-b2              client-1                                     1/1     Running   0          7m41s   10.244.0.61   hw11-control-plane   <none>           <none>
+hw11-b2              client-2                                     1/1     Running   0          8m13s   10.244.0.57   hw11-control-plane   <none>           <none>
+hw11-b2              client-3                                     1/1     Running   0          8m46s   10.244.0.54   hw11-control-plane   <none>           <none>
+hw11-b3              api-f558df8b7-9lbcm                          1/1     Running   0          23m     10.244.0.28   hw11-control-plane   <none>           <none>
+hw11-b3              api-f558df8b7-kzrcb                          1/1     Running   0          23m     10.244.0.29   hw11-control-plane   <none>           <none>
+hw11-b3              client-0                                     1/1     Running   0          7m9s    10.244.0.64   hw11-control-plane   <none>           <none>
+hw11-b3              client-1                                     1/1     Running   0          7m41s   10.244.0.62   hw11-control-plane   <none>           <none>
+hw11-b3              client-2                                     1/1     Running   0          8m14s   10.244.0.56   hw11-control-plane   <none>           <none>
+hw11-b3              client-3                                     1/1     Running   0          8m47s   10.244.0.53   hw11-control-plane   <none>           <none>
+hw11                 api-f558df8b7-kr62t                          1/1     Running   0          11m     10.244.0.52   hw11-control-plane   <none>           <none>
+hw11                 api-f558df8b7-sjlwz                          1/1     Running   0          12m     10.244.0.51   hw11-control-plane   <none>           <none>
+hw11                 client-0                                     1/1     Running   0          6m17s   10.244.0.68   hw11-control-plane   <none>           <none>
+hw11                 client-1                                     1/1     Running   0          6m49s   10.244.0.67   hw11-control-plane   <none>           <none>
+hw11                 client-2                                     1/1     Running   0          7m21s   10.244.0.63   hw11-control-plane   <none>           <none>
+hw11                 client-3                                     1/1     Running   0          7m53s   10.244.0.59   hw11-control-plane   <none>           <none>
+hw11                 grafana-7548bb595d-xxvzg                     1/1     Running   0          21m     10.244.0.39   hw11-control-plane   <none>           <none>
+hw11                 kube-state-metrics-f585c6d66-f4rsj           1/1     Running   0          21m     10.244.0.37   hw11-control-plane   <none>           <none>
+hw11                 prometheus-78c7ccc56f-vmkrk                  1/1     Running   0          21m     10.244.0.38   hw11-control-plane   <none>           <none>
+kube-system          coredns-668d6bf9bc-5vkl2                     1/1     Running   0          32m     10.244.0.3    hw11-control-plane   <none>           <none>
+kube-system          coredns-668d6bf9bc-vwz8b                     1/1     Running   0          32m     10.244.0.4    hw11-control-plane   <none>           <none>
+kube-system          etcd-hw11-control-plane                      1/1     Running   0          33m     172.19.0.2    hw11-control-plane   <none>           <none>
+kube-system          kindnet-dt4z6                                1/1     Running   0          32m     172.19.0.2    hw11-control-plane   <none>           <none>
+kube-system          kube-apiserver-hw11-control-plane            1/1     Running   0          32m     172.19.0.2    hw11-control-plane   <none>           <none>
+kube-system          kube-controller-manager-hw11-control-plane   1/1     Running   0          32m     172.19.0.2    hw11-control-plane   <none>           <none>
+kube-system          kube-proxy-7zk25                             1/1     Running   0          32m     172.19.0.2    hw11-control-plane   <none>           <none>
+kube-system          kube-scheduler-hw11-control-plane            1/1     Running   0          32m     172.19.0.2    hw11-control-plane   <none>           <none>
+kube-system          metrics-server-8b84b76b6-96c4k               1/1     Running   0          28m     10.244.0.6    hw11-control-plane   <none>           <none>
+local-path-storage   local-path-provisioner-7dc846544d-8nk9l      1/1     Running   0          32m     10.244.0.2    hw11-control-plane   <none>           <none>
+652.0K	/prometheus
+29.7M	/var/lib/grafana

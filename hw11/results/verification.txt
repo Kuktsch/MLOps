@@ -1,0 +1,3 @@
+PASS: 13374 unique attempts, 12 x 120 s, four figures, all local report links
+PASS: zero 5xx and unfinished streams across 322 rollout attempts
+PASS: own checks, 2->3->2, both alerts pending/firing/inactive, same histogram population

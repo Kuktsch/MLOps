@@ -1,0 +1,27 @@
+image: hw11-api:1.0.0
+replicas: 2
+modelVersion: A
+failLoad: false
+warmupSeconds: 20
+earlyProbes: false
+maxParallel: 1
+maxWaiting: 12
+queueTimeoutSeconds: 3
+cacheSize: 8
+cacheHitMs: 8
+cacheMissMs: 60
+resources:
+  requests:
+    cpu: 200m
+    memory: 96Mi
+    ephemeral-storage: 32Mi
+  limits:
+    cpu: 850m
+    memory: 192Mi
+    ephemeral-storage: 128Mi
+hpa:
+  enabled: false
+  min: 2
+  max: 3
+  targetCPU: 65
+  downWindowSeconds: 45

@@ -1,0 +1,75 @@
+2026-11-14T20:13:13+03:00
+Client Version: v1.34.1
+Kustomize Version: v5.7.1
+Server Version: v1.32.2
+kind v0.27.0 go1.23.6 linux/amd64
+v3.18.4+gd80839c
+NAME                 STATUS   ROLES           AGE     VERSION   INTERNAL-IP   EXTERNAL-IP   OS-IMAGE                         KERNEL-VERSION                      CONTAINER-RUNTIME
+hw11-control-plane   Ready    control-plane   4m10s   v1.32.2   172.19.0.2    <none>        Debian GNU/Linux 12 (bookworm)   6.18.54.1-microsoft-standard-WSL2   containerd://2.0.2
+apiVersion: kubeproxy.config.k8s.io/v1alpha1
+bindAddress: 0.0.0.0
+bindAddressHardFail: false
+clientConnection:
+  acceptContentTypes: ""
+  burst: 0
+  contentType: ""
+  kubeconfig: /var/lib/kube-proxy/kubeconfig.conf
+  qps: 0
+clusterCIDR: 10.244.0.0/16
+configSyncPeriod: 0s
+conntrack:
+  maxPerCore: 0
+  min: null
+  tcpBeLiberal: false
+  tcpCloseWaitTimeout: null
+  tcpEstablishedTimeout: null
+  udpStreamTimeout: 0s
+  udpTimeout: 0s
+detectLocal:
+  bridgeInterface: ""
+  interfaceNamePrefix: ""
+detectLocalMode: ""
+enableProfiling: false
+healthzBindAddress: ""
+hostnameOverride: ""
+iptables:
+  localhostNodePorts: null
+  masqueradeAll: false
+  masqueradeBit: null
+  minSyncPeriod: 1s
+  syncPeriod: 0s
+ipvs:
+  excludeCIDRs: null
+  minSyncPeriod: 0s
+  scheduler: ""
+  strictARP: false
+  syncPeriod: 0s
+  tcpFinTimeout: 0s
+  tcpTimeout: 0s
+  udpTimeout: 0s
+kind: KubeProxyConfiguration
+logging:
+  flushFrequency: 0
+  options:
+    json:
+      infoBufferSize: "0"
+    text:
+      infoBufferSize: "0"
+  verbosity: 0
+metricsBindAddress: ""
+mode: iptables
+nftables:
+  masqueradeAll: false
+  masqueradeBit: null
+  minSyncPeriod: 0s
+  syncPeriod: 0s
+nodePortAddresses: null
+oomScoreAdj: null
+portRange: ""
+showHiddenMetricsForVersion: ""
+winkernel:
+  enableDSR: false
+  forwardHealthCheckVip: false
+  networkName: ""
+  rootHnsEndpointName: ""
+  sourceVip: ""[{"Subnet":"fc00:f853:ccd:e793::/64","Gateway":"fc00:f853:ccd:e793::1"},{"Subnet":"172.19.0.0/16","Gateway":"172.19.0.1"}]

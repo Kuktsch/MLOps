@@ -1,0 +1,19 @@
+==> Linting hw11/chart
+[INFO] Chart.yaml: icon is recommended
+
+1 chart(s) linted, 0 chart(s) failed
+2026-11-14T20:29:40+03:00
+Client Version: v1.32.2
+Kustomize Version: v5.5.0
+Server Version: v1.32.2
+configmap/api serverside-applied (server dry run)
+service/api serverside-applied (server dry run)
+service/api-sticky serverside-applied (server dry run)
+deployment.apps/api serverside-applied (server dry run)
+horizontalpodautoscaler.autoscaling/api serverside-applied (server dry run)
+Checking /etc/prometheus/prometheus.yaml
+  SUCCESS: 1 rule files found
+ SUCCESS: /etc/prometheus/prometheus.yaml is valid prometheus config file syntax
+
+Checking /etc/prometheus/alerts.yaml
+  SUCCESS: 2 rules found

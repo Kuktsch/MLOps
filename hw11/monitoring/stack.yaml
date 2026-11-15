@@ -1,0 +1,217 @@
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  name: hw11-kube-state
+  namespace: hw11
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: RoleBinding
+metadata:
+  name: hw11-kube-state
+  namespace: hw11
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: Role
+  name: hw11-prometheus
+subjects:
+  - kind: ServiceAccount
+    name: hw11-kube-state
+    namespace: hw11
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: kube-state-metrics
+  namespace: hw11
+spec:
+  replicas: 1
+  selector:
+    matchLabels: {app: kube-state-metrics}
+  template:
+    metadata:
+      labels: {app: kube-state-metrics}
+    spec:
+      serviceAccountName: hw11-kube-state
+      containers:
+        - name: kube-state-metrics
+          image: registry.k8s.io/kube-state-metrics/kube-state-metrics:v2.15.0
+          imagePullPolicy: Never
+          args: ["--namespaces=hw11", "--resources=pods", "--metric-allowlist=kube_pod_status_ready"]
+          ports:
+            - {containerPort: 8080}
+          resources:
+            requests: {cpu: 30m, memory: 32Mi}
+            limits: {cpu: 100m, memory: 96Mi}
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: kube-state-metrics
+  namespace: hw11
+spec:
+  selector: {app: kube-state-metrics}
+  ports:
+    - {port: 8080, targetPort: 8080}
+---
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  name: hw11-prometheus
+  namespace: hw11
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: hw11-prometheus
+rules:
+  - apiGroups: [""]
+    resources: ["nodes"]
+    verbs: ["list", "watch", "get"]
+  - apiGroups: [""]
+    resources: ["nodes/proxy"]
+    verbs: ["get"]
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRoleBinding
+metadata:
+  name: hw11-prometheus
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: ClusterRole
+  name: hw11-prometheus
+subjects:
+  - kind: ServiceAccount
+    name: hw11-prometheus
+    namespace: hw11
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: Role
+metadata:
+  name: hw11-prometheus
+  namespace: hw11
+rules:
+  - apiGroups: [""]
+    resources: ["pods"]
+    verbs: ["list", "watch", "get"]
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: RoleBinding
+metadata:
+  name: hw11-prometheus
+  namespace: hw11
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: Role
+  name: hw11-prometheus
+subjects:
+  - kind: ServiceAccount
+    name: hw11-prometheus
+    namespace: hw11
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: prometheus
+  namespace: hw11
+spec:
+  replicas: 1
+  selector:
+    matchLabels: {app: prometheus}
+  template:
+    metadata:
+      labels: {app: prometheus}
+    spec:
+      serviceAccountName: hw11-prometheus
+      securityContext:
+        fsGroup: 65534
+      containers:
+        - name: prometheus
+          image: prom/prometheus:v3.3.1
+          imagePullPolicy: Never
+          args:
+            - --config.file=/etc/prometheus/prometheus.yaml
+            - --storage.tsdb.path=/prometheus
+            - --storage.tsdb.retention.time=6h
+            - --storage.tsdb.retention.size=96MB
+          ports:
+            - containerPort: 9090
+          readinessProbe:
+            httpGet: {path: /-/ready, port: 9090}
+          resources:
+            requests: {cpu: 100m, memory: 128Mi}
+            limits: {cpu: 400m, memory: 384Mi, ephemeral-storage: 160Mi}
+          volumeMounts:
+            - {name: cfg, mountPath: /etc/prometheus, readOnly: true}
+            - {name: data, mountPath: /prometheus}
+      volumes:
+        - name: cfg
+          configMap: {name: prometheus-config}
+        - name: data
+          emptyDir: {sizeLimit: 128Mi}
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: prometheus
+  namespace: hw11
+spec:
+  selector: {app: prometheus}
+  ports:
+    - {port: 9090, targetPort: 9090}
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: grafana
+  namespace: hw11
+spec:
+  replicas: 1
+  selector:
+    matchLabels: {app: grafana}
+  template:
+    metadata:
+      labels: {app: grafana}
+    spec:
+      automountServiceAccountToken: false
+      securityContext:
+        fsGroup: 472
+      containers:
+        - name: grafana
+          image: grafana/grafana:11.6.1
+          imagePullPolicy: Never
+          env:
+            - {name: GF_AUTH_ANONYMOUS_ENABLED, value: "true"}
+            - {name: GF_AUTH_ANONYMOUS_ORG_ROLE, value: Viewer}
+            - {name: GF_ANALYTICS_REPORTING_ENABLED, value: "false"}
+          ports:
+            - containerPort: 3000
+          readinessProbe:
+            httpGet: {path: /api/health, port: 3000}
+          resources:
+            requests: {cpu: 75m, memory: 128Mi}
+            limits: {cpu: 350m, memory: 384Mi, ephemeral-storage: 96Mi}
+          volumeMounts:
+            - {name: data, mountPath: /var/lib/grafana}
+            - {name: dashboard, mountPath: /etc/grafana/dashboards, readOnly: true}
+            - {name: provision, mountPath: /etc/grafana/provisioning, readOnly: true}
+      volumes:
+        - name: data
+          emptyDir: {sizeLimit: 64Mi}
+        - name: dashboard
+          configMap: {name: grafana-dashboard}
+        - name: provision
+          configMap:
+            name: grafana-provision
+            items:
+              - {key: datasource.yaml, path: datasources/datasource.yaml}
+              - {key: dashboards.yaml, path: dashboards/dashboards.yaml}
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: grafana
+  namespace: hw11
+spec:
+  selector: {app: grafana}
+  ports:
+    - {port: 3000, targetPort: 3000}

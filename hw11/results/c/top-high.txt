@@ -1,0 +1,3 @@
+POD                   NAME   CPU(cores)   MEMORY(bytes)
+api-f558df8b7-kr62t   api    845m         35Mi
+api-f558df8b7-sjlwz   api    4m           34Mi

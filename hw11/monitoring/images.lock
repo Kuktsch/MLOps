@@ -1,0 +1,4 @@
+prom/prometheus:v3.3.1 prom/prometheus@sha256:e2b8aa62b64855956e3ec1e18b4f9387fb6203174a4471936f4662f437f04405
+grafana/grafana:11.6.1 grafana/grafana@sha256:52c3e20686b860c6dc1f623811565773cf51eefa378817a4896dfc863c3c82c8
+registry.k8s.io/metrics-server/metrics-server:v0.7.2 registry.k8s.io/metrics-server/metrics-server@sha256:ffcb2bf004d6aa0a17d90e0247cf94f2865c8901dcab4427034c341951c239f9
+registry.k8s.io/kube-state-metrics/kube-state-metrics:v2.15.0 registry.k8s.io/kube-state-metrics/kube-state-metrics@sha256:db384bf43222b066c378e77027a675d4cd9911107adba46c2922b3a55e10d6fb

@@ -1,0 +1,48 @@
+[
+  {
+    "request_id": "dialogue-blue-BLUE-2",
+    "sent_ns": 6398188089437,
+    "sent_epoch": 1794679059.160318,
+    "status": 200,
+    "first_ns": 6398426979065,
+    "parts": 1,
+    "fragment_ns": [
+      6398426979065
+    ],
+    "outcome": "completed",
+    "pod": "api-f558df8b7-kr62t",
+    "version": "A",
+    "model_sha256": "6684320c6a5a73f762698b90d98a4d34ba23f107c4fbf818673ca3aa2aa8554c",
+    "backend_mode": "simulated",
+    "ready": "true",
+    "client_ip": "10.244.0.68",
+    "cache_hit": "false",
+    "queue_seconds": 0.106522,
+    "text": "BLUE-1 | BLUE-2",
+    "finished_ns": 6398427034168,
+    "finished_epoch": 1794679059.3992624
+  },
+  {
+    "request_id": "dialogue-orange-ORANGE-2",
+    "sent_ns": 6398190875281,
+    "sent_epoch": 1794679059.1631038,
+    "status": 200,
+    "first_ns": 6398320117350,
+    "parts": 1,
+    "fragment_ns": [
+      6398320117350
+    ],
+    "outcome": "completed",
+    "pod": "api-f558df8b7-kr62t",
+    "version": "A",
+    "model_sha256": "6684320c6a5a73f762698b90d98a4d34ba23f107c4fbf818673ca3aa2aa8554c",
+    "backend_mode": "simulated",
+    "ready": "true",
+    "client_ip": "10.244.0.68",
+    "cache_hit": "false",
+    "queue_seconds": 0.000118,
+    "text": "ORANGE-1 | ORANGE-2",
+    "finished_ns": 6398320224956,
+    "finished_epoch": 1794679059.2924533
+  }
+]

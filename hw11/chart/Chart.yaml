@@ -1,0 +1,6 @@
+apiVersion: v2
+name: hw11
+description: Streaming CPU inference lab
+type: application
+version: 1.0.0
+appVersion: "1.0.0"

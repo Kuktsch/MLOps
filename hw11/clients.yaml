@@ -1,0 +1,31 @@
+apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  name: client
+spec:
+  serviceName: clients
+  replicas: 4
+  podManagementPolicy: Parallel
+  selector:
+    matchLabels: {app: hw11-client}
+  template:
+    metadata:
+      labels: {app: hw11-client}
+    spec:
+      automountServiceAccountToken: false
+      containers:
+        - name: client
+          image: hw11-api:1.0.1
+          imagePullPolicy: Never
+          command: ["python", "-c", "import time; time.sleep(86400)"]
+          resources:
+            requests: {cpu: 50m, memory: 32Mi}
+            limits: {cpu: 400m, memory: 96Mi, ephemeral-storage: 64Mi}
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: clients
+spec:
+  clusterIP: None
+  selector: {app: hw11-client}

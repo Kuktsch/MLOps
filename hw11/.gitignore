@@ -1,0 +1,15 @@
+.tools/
+.venv/
+.kubeconfig
+.disk-before.txt
+__pycache__/
+.pytest_cache/
+
+# Local recordings and editing files
+/.video-work/
+*.mp4
+
+# Explorer metadata
+*:Zone.Identifier
+Thumbs.db
+.DS_Store

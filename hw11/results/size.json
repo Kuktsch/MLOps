@@ -1,0 +1,7 @@
+{
+  "volume_delta_gb": 3.0076,
+  "api_mib": 48.445252418518066,
+  "containerd": "2.7G",
+  "prometheus": "652.0K",
+  "grafana": "29.7M"
+}

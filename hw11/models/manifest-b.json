@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "model_id": "B",
+  "artifact_uri": "model-b.txt",
+  "file_hashes": {
+    "model-b.txt": "5949ee1d838bc31b5377a7ca5b9d1e70d8cfa527521f9ee42580bcf1ed793d58"
+  },
+  "model_sha256": "5a0601412888d4e66c2605db73bc8c4613c7eafc300f8598f03d3b42b3d7acd0",
+  "protocol_sha256": "286ab13d2a04be444fff65aced0668e7f5303f71332286cf5cd1b91a70cab75f",
+  "golden_sha256": "249a9c9cbd8c4d593ac33b277d3e4bf76e839ecfdf45b0b907e262a70e925dae",
+  "runtime": {
+    "mode": "simulated",
+    "format": "ndjson"
+  },
+  "runtime_sha256": "19751169d37161a3bbb10ad279d2db84129fee35fce85882507f57c944268f2b"
+}

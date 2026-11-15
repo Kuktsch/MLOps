@@ -1,0 +1,12 @@
+{
+  "TTFC p50 по Pod": ["s", "histogram_quantile(0.50, sum by (pod, le) (rate(api_ttfc_seconds_bucket[30s])))"],
+  "TTFC p95 по Pod": ["s", "histogram_quantile(0.95, sum by (pod, le) (rate(api_ttfc_seconds_bucket[30s])))"],
+  "Полный ответ p95 по Pod": ["s", "histogram_quantile(0.95, sum by (pod, le) (rate(api_response_seconds_bucket[30s])))"],
+  "Активные по Pod": ["short", "api_running"],
+  "Ожидающие по Pod": ["short", "api_waiting"],
+  "Завершённые ответы в секунду": ["reqps", "sum by (pod) (rate(api_requests_total{outcome=\"completed\"}[30s]))"],
+  "Отказы и обрывы в секунду": ["reqps", "sum by (pod, outcome) (rate(api_requests_total{outcome=~\"aborted|rejected\"}[30s]))"],
+  "CPU по Pod": ["cores", "sum by (pod) (rate(container_cpu_usage_seconds_total{namespace=\"hw11\",container=\"api\"}[30s]))"],
+  "RAM по Pod": ["bytes", "sum by (pod) (container_memory_working_set_bytes{namespace=\"hw11\",container=\"api\"})"],
+  "Ready реплики": ["short", "sum(kube_pod_status_ready{namespace=\"hw11\",condition=\"true\",pod=~\"api-.*\"})"]
+}

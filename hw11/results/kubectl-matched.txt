@@ -1,0 +1,4 @@
+2026-11-14T20:29:40+03:00
+Client Version: v1.32.2
+Kustomize Version: v5.5.0
+Server Version: v1.32.2

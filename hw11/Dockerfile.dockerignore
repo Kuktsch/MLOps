@@ -1,0 +1,13 @@
+**
+!hw11/
+!hw11/Dockerfile
+!hw11/requirements.txt
+!hw11/service.py
+!hw11/client.py
+!hw11/checks.py
+!hw11/models/
+!hw11/models/*
+!hw8910-broken/
+!hw8910-broken/artifacts.py
+!hw8910-broken/release.py
+!hw8910-broken/model_backend.py

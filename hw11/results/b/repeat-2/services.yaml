@@ -1,0 +1,72 @@
+apiVersion: v1
+items:
+- apiVersion: v1
+  kind: Service
+  metadata:
+    annotations:
+      meta.helm.sh/release-name: hw11
+      meta.helm.sh/release-namespace: hw11-b2
+    creationTimestamp: "2026-11-14T17:18:12Z"
+    labels:
+      app.kubernetes.io/managed-by: Helm
+    name: api
+    namespace: hw11-b2
+    resourceVersion: "1461"
+    uid: 47ba82d6-762e-41e4-b7dd-64e46a83df89
+  spec:
+    clusterIP: 10.96.35.207
+    clusterIPs:
+    - 10.96.35.207
+    internalTrafficPolicy: Cluster
+    ipFamilies:
+    - IPv4
+    ipFamilyPolicy: SingleStack
+    ports:
+    - name: http
+      port: 8091
+      protocol: TCP
+      targetPort: http
+    selector:
+      app: hw11-api
+    sessionAffinity: None
+    type: ClusterIP
+  status:
+    loadBalancer: {}
+- apiVersion: v1
+  kind: Service
+  metadata:
+    annotations:
+      meta.helm.sh/release-name: hw11
+      meta.helm.sh/release-namespace: hw11-b2
+    creationTimestamp: "2026-11-14T17:18:12Z"
+    labels:
+      app.kubernetes.io/managed-by: Helm
+    name: api-sticky
+    namespace: hw11-b2
+    resourceVersion: "1466"
+    uid: 5f2953e1-effc-4795-883f-0d33332e82d8
+  spec:
+    clusterIP: 10.96.73.180
+    clusterIPs:
+    - 10.96.73.180
+    internalTrafficPolicy: Cluster
+    ipFamilies:
+    - IPv4
+    ipFamilyPolicy: SingleStack
+    ports:
+    - name: http
+      port: 8091
+      protocol: TCP
+      targetPort: http
+    selector:
+      app: hw11-api
+    sessionAffinity: ClientIP
+    sessionAffinityConfig:
+      clientIP:
+        timeoutSeconds: 10800
+    type: ClusterIP
+  status:
+    loadBalancer: {}
+kind: List
+metadata:
+  resourceVersion: ""

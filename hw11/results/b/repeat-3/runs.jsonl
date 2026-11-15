@@ -1,0 +1,4 @@
+{"run": "b3-even-sticky", "target": "http://api-sticky:8091", "start": 1794677854.963, "duration": 120, "rate": 8, "traffic": "even"}
+{"run": "b3-even-plain", "target": "http://api:8091", "start": 1794677977.614, "duration": 120, "rate": 8, "traffic": "even"}
+{"run": "b3-skew-sticky", "target": "http://api-sticky:8091", "start": 1794678100.347, "duration": 120, "rate": 8, "traffic": "skew"}
+{"run": "b3-skew-plain", "target": "http://api:8091", "start": 1794678225.896, "duration": 120, "rate": 8, "traffic": "skew"}
