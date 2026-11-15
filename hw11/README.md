@@ -2,7 +2,7 @@
 
 Решение продолжает FastAPI-сервис ДЗ 8–10. Сборка берёт из предыдущей работы класс backend и проверку манифеста с SHA-256. API расширен NDJSON-потоком, управляемой очередью, LRU-кешем префиксов и метриками. Обязательные опыты используют `backend_mode=simulated`.
 
-[Отчёт PDF](report.pdf) · [Отчёт HTML](report.html) · [Проверка требований](results/audit.md) · [Сырые запросы](results/requests.jsonl) · [Исходное задание](../homework11.html)
+[Отчёт PDF](report.pdf) · [Отчёт HTML](report.html) · [Проверка требований](results/audit.md) · [Сырые запросы](results/requests.jsonl) · [Исходное задание](homework11.html)
 
 ## Запуск
 
